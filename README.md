@@ -136,8 +136,8 @@
 		- 9.4 lazy evaluation and immutability
 		- 9.5 reactor schedulers
 	- code challenge
-        - 9.1 flux
-        - 9.2 mono
-        - 9.3 operations
-        - 9.4 transformations
-        - 9.5 merges
+		- 9.1 flux
+		- 9.2 mono
+		- 9.3 operations
+		- 9.4 transformations
+		- 9.5 merges
