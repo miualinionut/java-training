@@ -1,4 +1,4 @@
-package code._2_challenge;
+package code._2_challenge._3_operations;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -6,7 +6,7 @@ import reactor.core.publisher.Mono;
 import java.util.Arrays;
 import java.util.List;
 
-public class Challenge03 {
+public class OperationsChallenge {
     private static List<String> words = Arrays.asList(
             "the",
             "quick",

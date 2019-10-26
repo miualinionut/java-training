@@ -1,4 +1,4 @@
-package code._2_challenge;
+package code._2_challenge._4_transformations;
 
 public class User {
     public final String firstName;

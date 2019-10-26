@@ -1,4 +1,4 @@
-package code._2_challenge;
+package code._2_challenge._5_merges;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -7,7 +7,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
-public class Challenge05 {
+public class MergingChallenge {
     private static List<String> words1 = Arrays.asList(
             "alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
 

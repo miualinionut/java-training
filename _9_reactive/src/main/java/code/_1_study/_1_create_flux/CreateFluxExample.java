@@ -1,4 +1,4 @@
-package code._1_study;
+package code._1_study._1_create_flux;
 
 import reactor.core.publisher.Flux;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class CreateFlux {
+public class CreateFluxExample {
     public static void main(String[] args) {
         // Creates a Flux containing the values 1, 2, 3.
         Flux<Integer> integerFlux = Flux.just(1, 2, 3);

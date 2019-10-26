@@ -1,8 +1,8 @@
-package code._2_challenge;
+package code._2_challenge._2_mono;
 
 import reactor.core.publisher.Mono;
 
-public class Challenge02 {
+public class MonoChallenge {
     public static void main(String[] args) {
         emptyMono().subscribe(System.out::println);
         System.out.println();

@@ -1,11 +1,11 @@
-package code._2_challenge;
+package code._2_challenge._1_flux;
 
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
 import java.util.Arrays;
 
-public class Challenge01 {
+public class FluxChallenge {
     public static void main(String[] args) {
         emptyFlux().subscribe(System.out::println);
         System.out.println();

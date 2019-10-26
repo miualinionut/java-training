@@ -1,10 +1,10 @@
-package code._1_study;
+package code._1_study._5_reactor_schedulers;
 
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
 
-public class CodeStudy03 {
+public class ReactorSchedulersExample {
     public static void main(String[] args) {
         //Type type = Type.PUBLISH_ON;
         Type type = Type.SUBSCRIBE_ON;

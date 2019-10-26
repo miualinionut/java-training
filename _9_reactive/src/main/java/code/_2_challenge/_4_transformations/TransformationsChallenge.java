@@ -1,4 +1,4 @@
-package code._2_challenge;
+package code._2_challenge._4_transformations;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -6,7 +6,7 @@ import reactor.core.publisher.Mono;
 import java.util.Arrays;
 import java.util.List;
 
-public class Challenge04 {
+public class TransformationsChallenge {
     private static List<User> users = Arrays.asList(
             new User("Project", "Reactor", "reactor"),
             new User("Java", "King", "javaking"),

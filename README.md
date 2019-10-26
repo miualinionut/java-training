@@ -130,4 +130,14 @@
 		- 8.3 lambda
 # 9 reactive
 	- code study
-		- 9.1 
+		- 9.1 create flux
+		- 9.2 create mono
+		- 9.3 java9 and reactor
+		- 9.4 lazy evaluation and immutability
+		- 9.5 reactor schedulers
+	- code challenge
+        - 9.1 flux
+        - 9.2 mono
+        - 9.3 operations
+        - 9.4 transformations
+        - 9.5 merges
