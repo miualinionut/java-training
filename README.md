@@ -141,3 +141,5 @@
 		- 9.3 operations
 		- 9.4 transformations
 		- 9.5 merges
+# clean code projects
+    - chess game		
