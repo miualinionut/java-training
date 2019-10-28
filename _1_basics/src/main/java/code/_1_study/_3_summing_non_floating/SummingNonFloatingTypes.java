@@ -18,13 +18,13 @@ public class SummingNonFloatingTypes {
     short x = 5;
     short y = 10;
     short sum;
-    sum = (byte) (x + y);
+    sum = (short) (x + y);
   }
 
   private static void sumInts() {
     int x = 5;
     int y = 10;
     int sum;
-    sum = (byte) (x + y);
+    sum = x + y;
   }
 }
