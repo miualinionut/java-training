@@ -1,4 +1,4 @@
-# java-training
+# java-traininggg
 
 # 1 basics
 	- code study
