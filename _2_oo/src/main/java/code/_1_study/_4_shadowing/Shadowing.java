@@ -13,14 +13,9 @@ public class Shadowing {
     }
   }
 
-  public void run() {
-    FirstLevel firstLevel = new FirstLevel();
-    firstLevel.methodInFirstLevel(2);
-  }
-
-
   public static void main(String[] args) {
     Shadowing shadowing = new Shadowing();
-    shadowing.run();
+    Shadowing.FirstLevel firstLevel = shadowing.new FirstLevel();
+    firstLevel.methodInFirstLevel(2);
   }
 }
