@@ -7,6 +7,13 @@ public class MultipleInheritance implements I1, I2 {
     I1.super.m();
     I2.super.m();
   }
+
+  public static void main(String[] args) {
+    MultipleInheritance multipleInheritance = new MultipleInheritance();
+    multipleInheritance.m1();
+    multipleInheritance.m2();
+    multipleInheritance.m();
+  }
 }
 
 interface I1 {
