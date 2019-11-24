@@ -16,7 +16,7 @@ public class ArrayCustomIterator {
 
     public int next(){
 
-        return this.arr[this.i]++;
+        return this.arr[this.i++];
     }
     public static void main(String[] args) {
         int arr[] = new int[] {1,2,3};
