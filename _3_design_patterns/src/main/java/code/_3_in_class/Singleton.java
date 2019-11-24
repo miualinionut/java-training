@@ -7,7 +7,7 @@ public class Singleton {
     static Singleton INSTANCE = null;
     private Singleton(){
         this.nrInstante = this.nrInstante + 1;
-        System.out.println("s-a apelat constr " + this.nrInstante + " ori");
+        System.out.println("s-a apelat constructorul de " + this.nrInstante + " ori");
     }
     public static Singleton getInstante(){
 
@@ -17,3 +17,4 @@ public class Singleton {
             return INSTANCE;
     }
 }
+

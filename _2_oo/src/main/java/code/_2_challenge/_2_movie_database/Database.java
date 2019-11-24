@@ -1,6 +1,6 @@
 package code._2_challenge._2_movie_database;
 
-public class Database {
+public class oDatabase {
 
   public static Studio[] getData() {
     Premiu oscar1990 = new Premiu("oscar", 1990);
@@ -60,6 +60,7 @@ public class Database {
       }
     }
   }
+
 
   public static void main(String[] args) {
     printAllStudioNamesThatHavePublishedMoreThen2Movies();
