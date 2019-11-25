@@ -5,10 +5,7 @@ public class ArrayCustomIterator {
     private int pos;
 
     public ArrayCustomIterator(int[] v){
-        this.arr = new int[v.length];
-        for(int i = 0; i<v.length;i++){
-            arr[i] = v[i];
-        }
+        this.arr = v;
         this.pos = 0;
     }
 
