@@ -13,7 +13,6 @@ public class ArrayCustomIterator {
     return this.i < this.arr.length;
 
     }
-
     public int next(){
 
         return this.arr[this.i++];
