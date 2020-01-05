@@ -1,6 +1,6 @@
 package code._2_challenge._2_movie_database;
 
-public class oDatabase {
+public class Database {
 
   public static Studio[] getData() {
     Premiu oscar1990 = new Premiu("oscar", 1990);
