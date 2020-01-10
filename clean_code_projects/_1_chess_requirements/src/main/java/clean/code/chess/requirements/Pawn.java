@@ -1,59 +1,29 @@
-package clean.code.chess.requirements;
+package main.java.clean.code.chess.requirements;
 
-public class Pawn {
+public class Pawn extends Piece{
 
-    private ChessBoard chessBoard;
-    private int xCoordinate;
-    private int yCoordinate;
-    private PieceColor pieceColor;
+
+    private CheckPosition checkPosition;
+    private int movement;
 
     public Pawn(PieceColor pieceColor) {
-        this.pieceColor = pieceColor;
-    }
-
-    public ChessBoard getChesssBoard() {
-        return chessBoard;
-    }
-
-    public void setChessBoard(ChessBoard chessBoard) {
-        this.chessBoard = chessBoard;
-    }
-
-    public int getXCoordinate() {
-        return xCoordinate;
-    }
-
-    public void setXCoordinate(int value) {
-        this.xCoordinate = value;
-    }
-
-    public int getYCoordinate() {
-        return yCoordinate;
-    }
-
-    public void setYCoordinate(int value) {
-        this.yCoordinate = value;
-    }
-
-    public PieceColor getPieceColor() {
-        return this.pieceColor;
-    }
-
-    private void setPieceColor(PieceColor value) {
-        pieceColor = value;
+        super(pieceColor);
+        checkPosition = new CheckPosition();
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
-    }
+        if(movementType == MovementType.MOVE){
+            move(newX,newY);
+        }else if(movementType == MovementType.CAPTURE){
+            capture(newX,newY);
+        }
 
+    }
     @Override
-    public String toString() {
-        return CurrentPositionAsString();
+    public boolean isValidNewPosition(int xPosition,int yPosition){
+        return checkPosition.isValidNewMovementX(xPosition) || checkPosition.isValidNewMovementY(yPosition);
     }
 
-    protected String CurrentPositionAsString() {
-        String eol = System.lineSeparator();
-        return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
-    }
+
+
 }

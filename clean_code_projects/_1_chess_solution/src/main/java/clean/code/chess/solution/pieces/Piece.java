@@ -35,15 +35,15 @@ public abstract class Piece {
 
     public abstract boolean isValidNewPosition(int newX, int newY);
 
-    public int getXCoordinate() {
+    public static int getXCoordinate() {
         return this.chessBoard.getPosition(this).getX();
     }
 
-    public int getYCoordinate() {
+    public static int getYCoordinate() {
         return this.chessBoard.getPosition(this).getY();
     }
 
-    public Color getColor() {
+     public static Color getColor() {
         return this.color;
     }
 
