@@ -6,7 +6,8 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class SetExample {
 
   public static void main(String[] args) {
-    Collection<Integer> withDups = new HashSet<>(List.of(1, 1, 2, 1, 3, 2));
+    Collection<Integer> withDups = List.of(1, 1, 2, 1, 3, 2);
+    System.out.println(withDups);
     System.out.println(removeDups(withDups));
 
     Set<Integer> set01 = new HashSet<>(); //O(1)
