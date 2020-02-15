@@ -1,4 +1,4 @@
-package main.java.clean.code.chess.requirements;
+package clean.code.chess.requirements;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
@@ -39,7 +39,7 @@ public class ChessBoardTest extends TestCase {
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
-        assertTrue(isValidPosition);
+        assertFalse(isValidPosition);
     }
 
     @Test

@@ -1,4 +1,4 @@
-package main.java.clean.code.chess.requirements;
+package clean.code.chess.requirements;
 
 public enum PieceColor {
 

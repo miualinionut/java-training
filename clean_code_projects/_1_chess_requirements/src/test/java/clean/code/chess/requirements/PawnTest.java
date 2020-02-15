@@ -1,4 +1,4 @@
-package main.java.clean.code.chess.requirements;
+package clean.code.chess.requirements;
 
 import org.junit.Before;
 import org.junit.Test;

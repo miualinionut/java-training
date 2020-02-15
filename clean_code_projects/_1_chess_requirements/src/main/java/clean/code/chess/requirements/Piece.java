@@ -1,4 +1,4 @@
-package main.java.clean.code.chess.requirements;
+package clean.code.chess.requirements;
 
 public abstract  class Piece {
 
@@ -25,7 +25,8 @@ public abstract  class Piece {
         }
 
     }
-    public abstract boolean isValidNewPosition(int newX, int newY);
+    public abstract boolean isValidNewPosition(int xPosition, int yPosition);
+
     public int getXCoordinate() {
         return this.chessBoard.getPositon(this).getX();
     }
@@ -37,5 +38,7 @@ public abstract  class Piece {
     public  PieceColor getPieceColor(){
         return pieceColor;
     }
+
+
 
 }
