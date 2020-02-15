@@ -6,12 +6,13 @@ import java.util.List;
 public class ContentionExample {
 
   public static long v = 0;
+  private static Object monitor = new Object();
 
   public static void main(String[] args) throws InterruptedException {
     long threadsNr = 5_000;
     List<MyThread> list = new ArrayList<>();
     for(int i=0;i<threadsNr;i++) {
-      list.add(new MyThread());
+      list.add(new MyThread(monitor));
     }
 
     //start all
