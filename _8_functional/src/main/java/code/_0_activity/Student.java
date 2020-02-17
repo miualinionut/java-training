@@ -55,4 +55,8 @@ public class Student {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    public boolean getNota() {
+        return false ;
+    }
 }
