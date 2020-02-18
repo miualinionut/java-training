@@ -11,7 +11,7 @@ public class Pawn extends Piece implements Movement{
         if(PieceColor.BLACK == getPieceColor()) {
             return -1;
         }
-        return +1;
+        return 1;
     }
     @Override
     public boolean isValidNewX(int xPosition) {

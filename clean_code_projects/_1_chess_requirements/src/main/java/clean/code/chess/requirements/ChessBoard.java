@@ -4,8 +4,8 @@ import java.util.*;
 
 public class ChessBoard implements CheckPosition {
 
-    public static final int MAX_BOARD_WIDTH = 7;
-    public static final int MAX_BOARD_HEIGHT = 7;
+    public static int MAX_BOARD_WIDTH = 7;
+    public static int MAX_BOARD_HEIGHT = 7;
 
     private Map<Piece,Position> mapOfPiece;
     private Map<Position,Piece> mapOfPosition;
