@@ -46,6 +46,7 @@ public class PawnTest {
     }
 
     @Test
+    //Nu are cum sa se intample niciodata
     public void testPawn_Move_LegalCoordinates_Forward_UpdatesCoordinates() {
         chessBoard.Add(testSubject, 6, 3, PieceColor.BLACK);
         testSubject.Move(MovementType.MOVE, 6, 2);
