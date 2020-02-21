@@ -1,6 +1,5 @@
 package clean.code.chess.requirements;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 public class Pawn {
 
