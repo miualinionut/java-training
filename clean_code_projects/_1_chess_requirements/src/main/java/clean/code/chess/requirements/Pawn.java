@@ -24,8 +24,12 @@ public class Pawn extends Piece implements Movement{
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-
-            move(newX,newY);
+            if(movementType == MovementType.MOVE){
+                move(newX,newY);
+            }
+            else if(movementType == MovementType.CAPTURE){
+                capture(newX,newY);
+            }
 
 
     }

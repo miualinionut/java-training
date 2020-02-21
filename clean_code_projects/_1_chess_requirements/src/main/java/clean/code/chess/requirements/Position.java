@@ -19,18 +19,5 @@ public class Position {
         return y;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o != null && o instanceof Position) {
-            Position l = (Position) o;
-            return (x == l.getX() &&
-                    y == l.getY());
-        }
-        return false;
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(x, y);
-    }
 }
