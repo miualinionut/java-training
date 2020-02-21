@@ -5,25 +5,25 @@ import java.util.*;
 
 public class Main {
 
-   /* public static void main(String[] args) {
+    /* public static void main(String[] args) {
 
-        List<String> collectionOfInputs = new ArrayList<>();
-        String input = null;
-Scanner scanner = new Scanner(System.in);
-        while (!(input = scanner.next()).equalsIgnoreCase("exit")) {
-        collectionOfInputs.add(input);
+         List<String> collectionOfInputs = new ArrayList<>();
+         String input = null;
+ Scanner scanner = new Scanner(System.in);
+         while (!(input = scanner.next()).equalsIgnoreCase("exit")) {
+         collectionOfInputs.add(input);
 
-        }
-        display(collectionOfInputs);
-    }
+         }
+         display(collectionOfInputs);
+     }
 
-  private static void display(List<String> collectionOfInputs) {
-      for(String input: collectionOfInputs){
-        System.out.println(input + ",");
-      }
-  }*/
-   public  class CheckedList {
-
+   private static void display(List<String> collectionOfInputs) {
+       for(String input: collectionOfInputs){
+         System.out.println(input + ",");
+       }
+   }*/
+    public class CheckedList {
+/*
      public static void main(String[] args)
      {
        List list = new ArrayList<>();
@@ -41,4 +41,7 @@ Scanner scanner = new Scanner(System.in);
 
      }
    }
-  }
+
+ */
+    }
+}

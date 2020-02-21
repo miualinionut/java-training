@@ -1,5 +1,7 @@
 package clean.code.chess.requirements;
 
+import junit.framework.TestCase;
+
 public class ChessBoard {
 
     public static int MAX_BOARD_WIDTH = 7;
@@ -9,14 +11,30 @@ public class ChessBoard {
 
     public ChessBoard() {
         pieces = new Pawn[MAX_BOARD_WIDTH][MAX_BOARD_HEIGHT];
-
     }
 
     public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor) {
-        throw new UnsupportedOperationException("Need to implement ChessBoard.add()");
+        if (pieceColor == PieceColor.WHITE && xCoordinate == 1) {
+            pawn.setXCoordinate(xCoordinate);
+            pawn.setYCoordinate(yCoordinate);
+        } else {
+            if (pieceColor == PieceColor.BLACK && xCoordinate == 6) {
+                pawn.setXCoordinate(xCoordinate);
+                pawn.setYCoordinate((yCoordinate));
+            } else {
+                pawn.setXCoordinate(-1);
+                pawn.setYCoordinate(-1);
+            }
+        }
+
     }
 
     public boolean IsLegalBoardPosition(int xCoordinate, int yCoordinate) {
-        throw new UnsupportedOperationException("Need to implement ChessBoard.IsLegalBoardPosition()");
+        if (xCoordinate <= 7 && xCoordinate >= 0 && yCoordinate <= 7 && yCoordinate >= 0) {
+            return true;
+        }
+        return false;
     }
+
+
 }

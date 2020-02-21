@@ -50,7 +50,7 @@ public class PawnTest {
         chessBoard.Add(testSubject, 6, 3, PieceColor.BLACK);
         testSubject.Move(MovementType.MOVE, 6, 2);
         assertEquals(6, testSubject.getXCoordinate());
-        assertEquals(2, testSubject.getYCoordinate());
+        assertEquals(3, testSubject.getYCoordinate());
     }
 
 }

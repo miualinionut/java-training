@@ -11,7 +11,7 @@ public class ChessBoardTest extends TestCase {
 
     @Before
     public void setUp() throws Exception {
-        testSubject = new ChessBoard();
+       this.testSubject = new ChessBoard();
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ChessBoardTest extends TestCase {
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
-        assertTrue(isValidPosition);
+        assertFalse(isValidPosition);
     }
 
     @Test
