@@ -12,9 +12,9 @@
     <artifactId>clean_code_projects</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>_1_chess_requirements</module>
-        <module>_1_chess_solution</module>
-        <module>_2_design_patterns_project</module>
+        <module>_1_project_requirements_chess</module>
+        <module>_1_project_solution_chess</module>
+        <module>_2_project_requirements_design_patterns</module>
     </modules>
 
 
