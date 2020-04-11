@@ -142,4 +142,5 @@
 		- 9.4 transformations
 		- 9.5 merges
 # clean code projects
+    - design patterns
     - chess game		
