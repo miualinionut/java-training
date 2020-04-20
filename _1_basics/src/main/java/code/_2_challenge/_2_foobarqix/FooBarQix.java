@@ -8,6 +8,7 @@ public class FooBarQix {
     if (i % 7 == 0) s += "Qix";
 
     char[] digits = String.valueOf(i).toCharArray();
+    System.out.print(digits);
     for (char digit : digits) {
 
       if (digit == '3') s += "Foo";
