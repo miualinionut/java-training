@@ -1,5 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.Challenge1;
 
+//FizzBuzz - Challenge 1
 public class Main {
 
   public static void main(String[] args) {
@@ -16,6 +17,16 @@ public class Main {
       else if(i%3==0)
       {
         System.out.println("Fizz");
+      }
+
+      if(i%7==0)
+      {
+        System.out.println("Rizz");
+      }
+      else if(i%11==0)
+      {
+
+        System.out.println("Jazz");
       }
       else
         System.out.println(i);
