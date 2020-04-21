@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    //TODO put your code changes in here
-    Scanner sc  = new Scanner(System.in);
-    int nr = Integer.parseInt(sc.nextLine());
 
-
-    //System.out.print(FooBarQix.compute(nr));
-    System.out.println(FooBarQix.compute2(nr));
-
+ int arr[] =   {1,1,0,-1,-1,1};
+  // int arr[] = {1,-1,-1,2};
+  //int arr[] = {0,-1,1,2,-3};
+    //int n = arr.length;
+  System.out.println(PairOfTwo.findPair(arr));
+ // System.out.println(PairOfThree.PairOf3(arr));
 
   }
 }

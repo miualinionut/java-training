@@ -52,7 +52,7 @@ public class FooBarQix {
 
     static String compute2(int i) {
         int reversed = 0;
-     
+
         String output = "";
         output = output + i;
         output = output + " =>";
