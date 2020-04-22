@@ -1,8 +1,8 @@
-package code._3_in_class;
+package code._4_student_effort;
 
 public class FooBarQix {
     public static void main(String[] args) {
-        int x = 303;
+        int x = 33;
         System.out.println(compute(x));
     }
 
