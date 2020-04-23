@@ -1,5 +1,4 @@
 package code._3_in_class;
-
 import java.util.Date;
 
 public class Main {
