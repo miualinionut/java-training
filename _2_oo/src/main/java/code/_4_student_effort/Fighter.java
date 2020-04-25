@@ -14,8 +14,9 @@ public class Fighter {
 
     public void attack(Fighter opponent) {
         opponent.health -= this.damagePerAttack;
-        System.out.println("health: " + opponent.health);
+        System.out.println( "name: " + opponent.name +" "+"health: " + opponent.health);
     }
+
 
 
 }
