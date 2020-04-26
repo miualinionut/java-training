@@ -1,9 +1,9 @@
 package code._4_student_effort.two_fighters_one_winner;
 
 public class Fighter {
-    protected String name;
-    protected int health;
-    protected int damagePerAttack;
+    private final String name;
+    private int health;
+    private final int damagePerAttack;
 
     public Fighter(String name, int health, int damagePerAttack) {
         this.name = name;
@@ -23,7 +23,12 @@ public class Fighter {
         return damagePerAttack;
     }
 
+    public void setHealth(int health) {
+        if (health < getHealth())
+            this.health = health;
+    }
+
     public void attack(Fighter opponent) {
-        opponent.health = opponent.health - damagePerAttack;
+        opponent.setHealth(opponent.getHealth() - getDamagePerAttack());
     }
 }
