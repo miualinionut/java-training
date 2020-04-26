@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.tema1;
 import java.util.Arrays;
 
 public class Challenge4 {
