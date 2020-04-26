@@ -30,7 +30,7 @@ public class Masina {
     }
 
     // Behavior
-    void start() {
+    void start()  {
         System.out.println("Masina porneste");
     }
 

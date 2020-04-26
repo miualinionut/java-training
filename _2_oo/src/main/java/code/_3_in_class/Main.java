@@ -5,7 +5,7 @@ public class Main {
   public static void main(String[] args) {
     int i = 5;
 
-    Masina m = new Masina();
+    Masina m = new Masina("gri", "mercedez");
     m.start();
     m.steer();
     m.stop();
