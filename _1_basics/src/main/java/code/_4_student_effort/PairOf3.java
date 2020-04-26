@@ -2,7 +2,7 @@ package code._4_student_effort;
 
 public class PairOf3 {
     public static void main(String[] args) {
-        int[] array = {-1, -1, -1, 2};
+        int[] array = {-1, -1, -1, 2, 4, -2, -2, 1, 0};
         int nrOfPairs = 0;
         int len = array.length;
         for (int i = 0; i < len - 2; i++){
