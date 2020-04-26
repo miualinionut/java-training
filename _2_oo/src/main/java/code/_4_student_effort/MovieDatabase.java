@@ -51,12 +51,12 @@ public class MovieDatabase {
         }
     }
 
-    public static void getMovieNamesActorUnder50() {
+    public static void getMovieNamesActorAbove50() {
         int count = 0;
         for (Studio studio : getMovieDatabase()) {
             for (Film film : studio.film) {
                 for (Actor actor : film.actori) {
-                    if (actor.varsta < 50)
+                    if (actor.varsta >50)
                         count++;
                     if (count > 0)
                         System.out.println("Numele filmului este: " + " " + film.nume);
@@ -69,7 +69,7 @@ public class MovieDatabase {
     public static void main(String[] args) {
         getStudioNamesWithMoreTwoMovies();
         getStudioNamesWithActorWith2Oscars();
-        getMovieNamesActorUnder50();
+        getMovieNamesActorAbove50();//corectare metoda
 
     }
 }
