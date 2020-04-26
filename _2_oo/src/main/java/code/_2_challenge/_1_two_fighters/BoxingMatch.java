@@ -22,7 +22,7 @@ public class BoxingMatch {
   }
 
   public static void main(String[] args) {
-    Fighter f1 = new Fighter("F1", 100, 10);
+    Fighter f1 = new Fighter("1111111F1", 100, 10);
     Fighter f2 = new Fighter("F2", 100, 10);
     BoxingMatch boxingMatch = new BoxingMatch(f1, f2);
     String winner = boxingMatch.fight();
