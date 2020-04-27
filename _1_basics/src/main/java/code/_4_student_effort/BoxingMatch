@@ -1,0 +1,23 @@
+package code._4_student_effort;
+public class BoxingMatch{
+    public Fighter f;
+    public Fighter f1;
+    public BoxingMatch(Fighter f,Fighter f1)
+    { this.f=f;
+    this.f1=f1;
+    }
+    public String fight(){
+        do
+            {f.attack(f1);
+            f1.attack(f);
+        }
+        if(f.health<=0){return f.name;}
+        else {return f1.name;}
+    }
+}
+public void main(String[]args){
+    Fighter f=new Fighter("Subzero",2,8);
+    Fighter f1=new Fighter("Scorpion",4,16);
+    Boxing Match boxing=new BoxingMatch(f,f1);
+    System.out.println(boxing.fight());
+}
