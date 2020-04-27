@@ -1,6 +1,6 @@
 package code._4_student_effort;
 
-public class Challenge_4 {
+public class Challenge_1_4 {
     public void countPairs(int[] x){
         boolean[] indexIncluded = new boolean[x.length];
         int pairs=0;

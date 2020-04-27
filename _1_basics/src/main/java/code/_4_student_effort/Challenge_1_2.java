@@ -1,6 +1,6 @@
 package code._4_student_effort;
 
-public class Challenge_2 {
+public class Challenge_1_2 {
 
     public boolean containsDigit(int n, int d){
         while (n != 0){
