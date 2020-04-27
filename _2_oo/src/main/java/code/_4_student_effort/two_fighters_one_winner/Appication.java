@@ -1,6 +1,6 @@
 package code._4_student_effort.two_fighters_one_winner;
 
-public class TestBoxingMatch {
+public class Appication {
     public static void main(String[] args) {
         Fighter bute =
                 new Fighter("Bute", 100, 27);
