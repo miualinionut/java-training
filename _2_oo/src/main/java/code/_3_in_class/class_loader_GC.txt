@@ -1,0 +1,13 @@
+Class Loader
+  -> scaneaza proiectul si incarca in memorie doar codul
+    cu clasele de care are nevoie aplicatia curenta
+
+  Ce pasi urmeaza:
+    1) se executa blocurile statice
+        -> toate staticeel din clasele parinte
+    2) se executa new si aloca spatiu gol in heap
+    3) blocurile regular in ordinea in care sunt declarate
+    4) constructor
+
+Garbage Collecter
+  -> Cand un obiect e GC eligible aceta este sters din memorie;
