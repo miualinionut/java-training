@@ -1,0 +1,62 @@
+package code._4_student_effort;
+public abstract class Animal
+{
+    protected Integer legs;
+    protected Animal(Integer legs){ this.legs=legs; }
+    abstract void eat();
+    abstract void walk() {
+        System.out.println("Animalele merg cu ajutorul" + this.legs);
+    }
+    }
+}
+
+public class Spider extends Animal{
+    Spider()
+    {
+        walk();
+        superclass(8);
+    }
+    void eat{
+        System.out.println("Paianjenul mananca");
+    }
+}
+public String getName(){
+    return this.name;
+}
+public void setName(String name){
+    this.name=name;
+}
+public interface Pet{
+    public String getName();
+    public void setName(String name);
+    public void play();
+}
+
+public class Cat extends Animal implements Pet{
+    private string name;
+    public Cat(String name){
+        superclass(4);
+        walk();
+        this.name=name;
+    }
+
+    public void eat(){
+        System.out.println("pisica cu numele"+name+"mananca");
+    }
+}
+public class Fish extends Animal implements Pet
+{ private String name;
+Fish(){
+    if(this.legs==0){System.out.println("Pestele nu poate merge");}
+}
+}
+public class TestAnimals{
+    public void main(String[]args)
+    {
+        Fish d=new Fish();
+        Cat c=new Cat("Fluffy");
+        Animal a=new Fish();
+        Animal e=new Spider();
+        Pet p=new Cat();
+    }
+}
