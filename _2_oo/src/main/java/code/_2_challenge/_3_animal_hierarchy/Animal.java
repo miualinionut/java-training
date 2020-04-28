@@ -10,6 +10,6 @@ public abstract class Animal {
   public abstract void eat();
 
   public void walk() {
-    System.out.println("animal with " + legs + " legs is walking");
+    System.out.println("This animal with" + legs + " is walking");
   }
 }
