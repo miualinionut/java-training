@@ -1,6 +1,6 @@
 package code._4_student_effort;
 
-public class Challenge_1_1 {
+public class FizzBuzz {
 
     public void printNumbers () {
         for (int i = 1; i <= 100; i++) {
