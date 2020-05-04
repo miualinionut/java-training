@@ -1,4 +1,4 @@
-package code._4_student_effort.oberver_code_challenge;
+package code._4_student_effort._4_oberver_code_challenge;
 
 interface ObservedSubject {
 

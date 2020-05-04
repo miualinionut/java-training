@@ -1,4 +1,4 @@
-package code._4_student_effort.template_method_code_challenge;
+package code._4_student_effort._5_template_method_code_challenge;
 
 class AscBubbleSort extends TemplateMethodBubbleSort{
 

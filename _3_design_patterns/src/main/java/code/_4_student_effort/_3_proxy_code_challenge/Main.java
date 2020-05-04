@@ -1,4 +1,4 @@
-package code._4_student_effort.proxy_code_challenge;
+package code._4_student_effort._3_proxy_code_challenge;
 
 public class Main {
 
