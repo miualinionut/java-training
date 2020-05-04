@@ -1,6 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.strategy_code_challenge;
 
-public class BubbleSort implements SortingStrategy {
+class BubbleSort implements SortingStrategy {
 
     @Override
     public void sort(Integer[] arr) {

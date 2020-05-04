@@ -1,6 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.strategy_code_challenge;
 
-public class MergeSort implements SortingStrategy {
+class MergeSort implements SortingStrategy {
 
     void merge(Integer[] arr, int l, int m, int r) {
         int n1 = m - l + 1;

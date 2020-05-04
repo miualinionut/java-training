@@ -1,9 +1,9 @@
-package code._4_student_effort;
+package code._4_student_effort.proxy_code_challenge;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RealEstateAgentProxy {
+class RealEstateAgentProxy {
 
     private List<Apartment> representedApartments = new ArrayList<>();
 

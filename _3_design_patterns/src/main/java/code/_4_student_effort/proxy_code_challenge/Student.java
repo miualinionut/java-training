@@ -1,6 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.proxy_code_challenge;
 
-public class Student {
+class Student {
 
     private final String name;
     private int money;

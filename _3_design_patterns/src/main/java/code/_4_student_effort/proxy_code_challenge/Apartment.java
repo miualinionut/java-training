@@ -1,6 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.proxy_code_challenge;
 
-public class Apartment {
+class Apartment {
 
     private final String location;
     private int monthlyRentCost;

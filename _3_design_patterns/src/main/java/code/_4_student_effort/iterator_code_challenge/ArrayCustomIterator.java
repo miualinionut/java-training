@@ -1,6 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.iterator_code_challenge;
 
-public class ArrayCustomIterator {
+class ArrayCustomIterator {
 
     private int[] workingArray;
     private int currentIndex;
