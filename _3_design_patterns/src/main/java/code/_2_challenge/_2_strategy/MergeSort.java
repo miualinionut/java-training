@@ -14,7 +14,9 @@ public class MergeSort implements SortingStrategy {
 
     sort(left);
     sort(right);
-    merge(left, right, list);
+
+    merge(left,right,list);
+
   }
 
   private void merge(Integer[] left, Integer[] right, Integer[] list) {
