@@ -32,6 +32,7 @@ public class TestAnimals {
         //casting objects
         ((Cat)p).eat();//am facut cast de la Pet la Cat ca sa putem  accesa metoda respectiva
         ((Cat)p).walk();
+
         //polymorphism
         //nu se regasesc in Spider si Cat, dar sunt mostenite din Animal
         e.walk();
