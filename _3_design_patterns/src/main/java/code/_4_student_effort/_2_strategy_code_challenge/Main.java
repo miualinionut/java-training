@@ -1,4 +1,4 @@
-package code._4_student_effort.strategy_code_challenge;
+package code._4_student_effort._2_strategy_code_challenge;
 
 import java.util.Arrays;
 

@@ -1,0 +1,23 @@
+Principii OOP:
+    - Abstractizare - stabilire de contract
+        - mostenire
+        - interfate
+    - Polimorfism
+        - Static - overloading
+        - Dinamic - la Tree si Readwood - overriding
+    - Compozitie / Delegare
+
+TODO: Read it!
+DESIGN PATTERN: - GOF - 23 DE DESIGN PATTERNS (carte)
+    Creational
+    - nevoi de creare obiecte in mai multi pasi /
+        astfel de folosirea operatorului new
+
+    Structural
+    - ne ajuta sa structuram codul in obiecte/
+        clase/ fisiere si sa facem mentenanta mai usor  /
+        modific mai usor
+
+    Comportament/ Behaivior
+    - ne ajuta sa extindem mai usor
+        comportamentul existent fara a modifica codul existent

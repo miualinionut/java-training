@@ -1,4 +1,4 @@
-package code._4_student_effort.iterator_code_challenge;
+package code._4_student_effort._1_iterator_code_challenge;
 
 class ArrayCustomIterator {
 
