@@ -21,7 +21,6 @@ public class Teacher implements ObservedSubject {
       }
     }
     System.arraycopy(this.observers, removedIndex + 1, this.observers, removedIndex, this.observers.length - 1 - removedIndex);
-
   }
 
   @Override
