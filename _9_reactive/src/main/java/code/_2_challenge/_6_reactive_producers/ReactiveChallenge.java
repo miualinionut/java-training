@@ -5,14 +5,19 @@ import code._2_challenge._6_reactive_producers.vanilla.NetflixVanilla;
 import reactor.core.publisher.DirectProcessor;
 import reactor.core.publisher.EmitterProcessor;
 import reactor.core.publisher.ReplayProcessor;
+import reactor.core.publisher.TopicProcessor;
 
 public class ReactiveChallenge {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Observed<String> netflix = new NetflixVanilla<>();
 
         // same as vanilla
         // has no history; directly calls the observer::receiveNotification method for each observer
-        //Observed<String> netflix = new NetflixUsingReactor<>(DirectProcessor.create());
+        // Observed<String> netflix = new NetflixUsingReactor<>(DirectProcessor.create());
+
+        // same as vanilla
+        // a thread pool will be used and each observer will receive notification in a different thread then Main-Thread
+        //Observed<String> netflix = new NetflixUsingReactor<>(TopicProcessor.create());
 
         // has history; queue size has default size of 256;
         // queue can be bounded or unbounded; .create(params) can set that
@@ -20,7 +25,7 @@ public class ReactiveChallenge {
 
         // using backpressure
         // has no history; will not add new items to the processor's queue while the queue is full;
-        // the addition will be suspended thread until queue space is freed;
+        // the addition will be suspended thread until queue space is freed; other thread will need to come and consume the queue
         // can control queue size from .create(1) or .create(10)
         //Observed<String> netflix = new NetflixUsingReactor<>(EmitterProcessor.create());
 
@@ -47,6 +52,7 @@ public class ReactiveChallenge {
         netflix.notifyObservers("Game Of Thrones new episode: E10");
         System.out.println();
 
+        Thread.sleep(1000L);
     }
 }
 

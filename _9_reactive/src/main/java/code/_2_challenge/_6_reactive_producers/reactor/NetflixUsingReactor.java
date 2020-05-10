@@ -13,7 +13,7 @@ public class NetflixUsingReactor<T> implements Observed<T> {
         this.processor = processor;
     }
 
-    public void subscribe(Observer observer) {
+    public void subscribe(Observer<T> observer) {
         Consumer<T> consumerReference = observer::receiveNotification;
         this.processor.subscribe(consumerReference); //subscribe can receive a Consumer functional interface or a org.reactivestreams.Subscriber
     }

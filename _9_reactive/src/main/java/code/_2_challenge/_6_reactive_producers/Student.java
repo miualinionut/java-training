@@ -9,6 +9,7 @@ public class Student<T> implements Observer<T> {
 
     @Override
     public void receiveNotification(T message) {
-        System.out.println(this.name + " received: " + message);
+        String text = Thread.currentThread().getName() + " - " + this.name + " received: " + message;
+        System.out.println(text);
     }
 }
