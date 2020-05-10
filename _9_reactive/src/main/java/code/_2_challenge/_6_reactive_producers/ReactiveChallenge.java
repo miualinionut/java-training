@@ -10,18 +10,19 @@ public class ReactiveChallenge {
     public static void main(String[] args) {
         Observed<String> netflix = new NetflixVanilla<>();
 
-        // has no history; directly calls the observer::receiveNotification method for each observer
         // same as vanilla
+        // has no history; directly calls the observer::receiveNotification method for each observer
         //Observed<String> netflix = new NetflixUsingReactor<>(DirectProcessor.create());
-
-        // has no history; will not add new items to the processor's queue while the queue is full;
-        // the addition will be suspended thread until queue space is freed;
-        // can control queue size from .create(1) or .create(10)
-        //Observed<String> netflix = new NetflixUsingReactor<>(EmitterProcessor.create());
 
         // has history; queue size has default size of 256;
         // queue can be bounded or unbounded; .create(params) can set that
         //Observed<String> netflix = new NetflixUsingReactor<>(ReplayProcessor.create());
+
+        // using backpressure
+        // has no history; will not add new items to the processor's queue while the queue is full;
+        // the addition will be suspended thread until queue space is freed;
+        // can control queue size from .create(1) or .create(10)
+        //Observed<String> netflix = new NetflixUsingReactor<>(EmitterProcessor.create());
 
         Observer s01 = new Student("S01");
         Observer s02 = new Student("S02");
