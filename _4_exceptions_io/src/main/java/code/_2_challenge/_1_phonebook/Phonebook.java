@@ -13,7 +13,7 @@ public class Phonebook {
         try {
             String abbey = "Abbey";
             String abdul = "Abdul";
-            String[] wordsInPhoneBook = readPhoneBook("_4_exceptions_io\\_test_files\\in\\phonebook.txt");
+            String[] wordsInPhoneBook = readPhoneBook("_4_exceptions_io/_test_files/in/phonebook.txt");
             System.out.println(searchPhoneNumberByName(abbey, wordsInPhoneBook));
             System.out.println(searchPhoneNumberByName(abdul, wordsInPhoneBook));
         } catch (FileNotFoundException e) {
