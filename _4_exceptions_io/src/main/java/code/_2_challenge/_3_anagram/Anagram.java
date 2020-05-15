@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Anagram {
 
-    private static final String SMALL_LIST_FILE = "_4_exceptions_io\\_test_files\\in\\small_list.txt";
-    private static final String BIG_LIST_FILE = "_4_exceptions_io\\_test_files\\in\\big_list.txt";
-    private static final String OUTPUT_FILE = "_4_exceptions_io\\_test_files\\out\\anagram.txt";
+    private static final String SMALL_LIST_FILE = "_4_exceptions_io/_test_files/in/small_list.txt";
+    private static final String BIG_LIST_FILE = "_4_exceptions_io/_test_files/in/big_list.txt";
+    private static final String OUTPUT_FILE = "_4_exceptions_io/_test_files/out/anagram.txt";
 
     static int anagramCount = 0;
     static String[] anagramWords;
