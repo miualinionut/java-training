@@ -6,8 +6,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class NumberToLcd {
-    private static final String INPUT_FILE = "_4_exceptions_io\\_test_files\\in\\input_number.txt";
-    private static final String OUTPUT_FILE = "_4_exceptions_io\\_test_files\\out\\output_number.txt";
+    private static final String INPUT_FILE = "_4_exceptions_io/_test_files/in/input_number.txt";
+    private static final String OUTPUT_FILE = "_4_exceptions_io/_test_files/out/output_number.txt";
 
     public static void main(String[] args) {
         String[] numbersFromFile = new String[0];
