@@ -8,6 +8,7 @@ public class ArrayCustomIterator implements IteratorInterface {
     private int position;
 
     public ArrayCustomIterator(int []list){
+        position=0;
         for(int i = 0; i<list.length; i++)
             lista.add(list[i]);
     }
