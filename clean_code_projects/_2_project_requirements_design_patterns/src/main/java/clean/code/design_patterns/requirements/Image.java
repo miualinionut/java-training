@@ -1,5 +1,5 @@
 package clean.code.design_patterns.requirements;
 
-public class Main {
-
+public interface Image {
+    void display();
 }
