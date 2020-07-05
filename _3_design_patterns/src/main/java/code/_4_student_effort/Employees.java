@@ -13,9 +13,7 @@ public class Employees {
 
     }
 
-
-
-    static abstract class Person {
+static abstract class Person {
 
         Person(String name) {
             this.name = name;
