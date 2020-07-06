@@ -1,6 +1,6 @@
 package code._2_challenge._2_pairs;
 
-public class Running implements Shoe {
+public class  Running implements Shoe {
   private String color;
   private double size;
 
