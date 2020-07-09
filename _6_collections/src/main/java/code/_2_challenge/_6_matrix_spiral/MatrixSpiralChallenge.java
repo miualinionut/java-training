@@ -70,6 +70,7 @@ public class MatrixSpiralChallenge {
     String s = "";
     Integer n = a.size();
     for (int step = 0; step < n / 2; step++) {
+
       for (int r1 = step; r1 < n - step; r1++) {
         s += a.get(step).get(r1) + ", ";
       }
