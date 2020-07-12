@@ -31,7 +31,7 @@ public class LambdaChallenge {
      * Create a string that consists of the first letter of each word in the list
      * of Strings.
      */
-    private void exercise1() {
+    public void exercise1() {
         List<String> words = Arrays.asList(
                 "alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
 
