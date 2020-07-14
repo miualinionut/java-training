@@ -7,7 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class CreateFluxExample {
+public class
+CreateFluxExample {
     public static void main(String[] args) {
         // Creates a Flux containing the values 1, 2, 3.
         Flux<Integer> integerFlux = Flux.just(1, 2, 3);
