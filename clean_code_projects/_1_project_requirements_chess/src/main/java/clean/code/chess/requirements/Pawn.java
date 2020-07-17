@@ -44,7 +44,22 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        if (movementType == MovementType.MOVE) {
+            if (newY - yCoordinate == 2) {
+                if (yCoordinate == 1) {
+                    xCoordinate = newX;
+                    yCoordinate = newY;
+                }
+            } else if (newX == xCoordinate) {
+                xCoordinate = newX;
+                yCoordinate = newY;
+            }
+        } else if (movementType == MovementType.CAPTURE) {
+            if ((newX == xCoordinate + 1) || (newX == xCoordinate - 1) && (newY - yCoordinate == 1)) {
+                xCoordinate = newX;
+                yCoordinate = newY;
+            }
+        }
     }
 
     @Override
