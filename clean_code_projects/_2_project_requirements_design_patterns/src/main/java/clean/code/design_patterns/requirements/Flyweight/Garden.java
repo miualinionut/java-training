@@ -7,9 +7,14 @@ public class Garden {
     private ArrayList<SpecificFlower> flowers = new ArrayList<>();
 
     public void plantFlower(String type, String color, int x, int y){
-        Flower baseFlower= FlowerFactory.create(type,color);
-        SpecificFlower flower = new SpecificFlower(baseFlower,x,y);
 
+        SpecificFlower flower = new SpecificFlower(FlowerFactory.create(type,color),x,y);
+        flowers.add(flower);
+        flower.plant();
+    }
+
+    public void plantFlower(Flower baseFlower, int x, int y){
+        SpecificFlower flower = new SpecificFlower(baseFlower, x, y);
         flowers.add(flower);
         flower.plant();
     }

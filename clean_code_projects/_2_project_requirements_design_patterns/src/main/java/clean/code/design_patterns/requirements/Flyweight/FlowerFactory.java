@@ -12,7 +12,7 @@ public class FlowerFactory {
         Flower newFlower = new Flower(type,color);
         for(Flower flower: flowersCache){
             if(flower.equals(newFlower) )
-                return newFlower;
+                return flower;
         }
         flowersCache.add(newFlower);
         return newFlower;

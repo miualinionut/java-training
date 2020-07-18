@@ -25,6 +25,8 @@ public class Main {
         Garden garden = new Garden();
         garden.plantFlower("crin","portocaliu",34,56);
         garden.plantFlower("ghiocel","alb",67,87);
-
+        garden.plantFlower("crin","portocaliu",12,39);
+        garden.plantFlower(FlowerFactory.flowersCache.get(0), 7,80); // o lalea roz la pozitia(7,80)
+        garden.plantFlower("lalea","roz", 25, 21); // o lalea roz la pozitia(25,21)
     }
 }
