@@ -1,5 +1,6 @@
 package clean.code.chess.solution.pieces;
 
+import clean.code.chess.solution.ChessBoard;
 import clean.code.chess.solution.pieces.attributes.Color;
 
 import java.util.logging.Logger;
