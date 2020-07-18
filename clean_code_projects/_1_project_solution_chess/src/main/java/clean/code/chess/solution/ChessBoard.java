@@ -54,7 +54,7 @@ public class ChessBoard {
         return chessBoardValidator.isValidCoordinates(xCoordinate, yCoordinate) && chessBoardValidator.isFreePosition(xCoordinate, yCoordinate);
     }
 
-    private class ChessBoardValidator {
+    public class ChessBoardValidator {
 
         public boolean isFreePosition(int xCoordinate, int yCoordinate) {
             return getPiece(new Position(xCoordinate, yCoordinate)) == null;
@@ -65,7 +65,8 @@ public class ChessBoard {
         }
 
         public boolean isInsideTheTable(int coordinate, int tableLimit) {
-            return 0 <= coordinate && coordinate < tableLimit;
+            if (0 <= coordinate) if (coordinate < tableLimit) return true;
+            return false;
         }
 
         public boolean isValidPieceRow(int xCoordinate, Color color) {
