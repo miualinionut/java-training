@@ -44,7 +44,28 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        // we call the function created in the class chessboard
+        this.chessBoard.makeThePawnMove(this, movementType, newX, newY);
+    }
+
+    public boolean legalNewX(int newX){
+        if(Math.abs(this.getXCoordinate() - newX )== 1)
+            return true;
+        return false;
+    }
+
+    public boolean legalNewY(int newY){
+        if(Math.abs(this.getXCoordinate() - newY )== 1)
+            return true;
+        return false;
+    }
+
+    //to make sure that the future position is legal for a pawn(just one row forward, left, or right)
+    public boolean isLegalNewPosition(int newX, int newY){
+        if(Math.abs(this.getXCoordinate() - newX) == 1 && this.getYCoordinate() == newY) return true;
+        if(Math.abs(this.getYCoordinate() - newY) == 1 && this.getXCoordinate() == newX) return true;
+        if(Math.abs(this.getXCoordinate() - newX) == 1 && Math.abs(this.getYCoordinate() - newY) == 1) return true;
+        return false;
     }
 
     @Override

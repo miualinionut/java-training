@@ -11,12 +11,13 @@ public class ChessBoardTest extends TestCase {
 
     @Before
     public void setUp() throws Exception {
-        testSubject = new ChessBoard();
+           testSubject = new ChessBoard();
     }
+
 
     @Test
     public void testHas_MaxBoardWidth_of_7() {
-        assertEquals(7, ChessBoard.MAX_BOARD_HEIGHT);
+        assertEquals(7, ChessBoard.MAX_BOARD_WIDTH);
     }
 
     @Test
@@ -39,7 +40,7 @@ public class ChessBoardTest extends TestCase {
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
-        assertTrue(isValidPosition);
+        assertFalse(isValidPosition);
     }
 
     @Test
@@ -71,6 +72,7 @@ public class ChessBoardTest extends TestCase {
         assertEquals(-1, secondPawn.getXCoordinate());
         assertEquals(-1, secondPawn.getYCoordinate());
     }
+
 
     @Test
     public void testLimits_The_Number_Of_Pawns()
