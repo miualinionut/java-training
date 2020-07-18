@@ -10,6 +10,7 @@ public class Main {
                 .openingBalance(100)
                 .atRate(2.5)
                 .build();
+
         BankAccount anotherAccount = new BankAccount.Builder(4567L)
                 .withOwner("Homer")
                 .atBranch("Springfield")
@@ -17,5 +18,6 @@ public class Main {
                 .atRate(2.5)
                 .build();
     }
+
 }
 
