@@ -1,5 +1,5 @@
 package clean.code.design_patterns.requirements;
-
+// clasa concreta
 class ING implements Bank{
     private final String Bank_NAME;
     public ING(){

@@ -1,5 +1,5 @@
 package clean.code.design_patterns.requirements;
-
+// clasa factory care mosteneste clasa AbstractFactory pentru a genera obiectul clasei concrete pe baza info. date
 class LoanFactory extends AbstractFactory {
 
     public Bank getBank(String bank) {

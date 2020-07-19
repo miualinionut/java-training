@@ -1,6 +1,6 @@
 package clean.code.design_patterns.requirements;
 
-// Am creat o clasă FactoryCreator care utilizeaza Singleton Pattern astfel incat clasa FactoryCreator, ce parseaza informatia din clasele Bank sau Loan sa poata exista ca o singura instanta.
+// Am creat o clasă FactoryCreator care utilizeaza Singleton Pattern astfel incat clasa FactoryCreator, ce parseaza informatia din clasele Bank sau Loan ca sa poata exista ca o singura instanta.
 class FactoryCreator {
     private static final FactoryCreator instance = new FactoryCreator();
 

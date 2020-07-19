@@ -3,7 +3,7 @@ package clean.code.design_patterns.requirements;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+// utilizez clasa FactoryCreator pentru a realiza AbstractFactory astfel incat sa obtinem "factories" a claselor concrete.
 public class Main {
 
 
@@ -23,8 +23,8 @@ public class Main {
         Bank b = bankFactory.getBank(bankName);
 
         System.out.print("\n");
-        System.out.print("Intoduceti rata dobanzii pentru " + b.getBankName() + ": ");
-
+        System.out.println("Rata dobanzii pentru unul dintre imprumuturile de care vreti sa dispuneti este home = 11.85, business = 12.95 si education 10.9; \n");
+        System.out.print("Intoduceti rata dobanzii pentru " + b.getBankName() + " ,fiindca ati ales mai sus tipul de imprumut: "+ loanName + " este = ");
         double rate = Double.parseDouble(br.readLine());
         System.out.print("\n");
         System.out.print("Introduceti suma pe care doriti sa o imprumutati: ");
