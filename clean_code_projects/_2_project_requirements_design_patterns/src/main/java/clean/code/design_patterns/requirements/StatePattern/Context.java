@@ -6,6 +6,7 @@ package clean.code.design_patterns.requirements.StatePattern;
 public class Context {
     private CarEngineState state;
 
+
     public Context() {
         state= new Combustion();
     }
@@ -17,4 +18,10 @@ public class Context {
    public void engine(){
         state.engine(this);
     }
+
+    public void showConsumption(){
+        state.consumption(this);
+    }
+
+
 }

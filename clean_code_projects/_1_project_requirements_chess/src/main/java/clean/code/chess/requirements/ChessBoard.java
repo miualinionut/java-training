@@ -55,11 +55,12 @@ public class ChessBoard {
         if(pawn.getPieceColor().toString().equals("WHITE")){
 
             if(pawn.getYCoordinate()-yCoordinate==-1 && pawn.getXCoordinate()==xCoordinate) return true;
-            if( pawn.getYCoordinate()-yCoordinate==-1 && Math.abs(pawn.getXCoordinate()-xCoordinate)==1) return true;
+            if(pawn.getYCoordinate()-yCoordinate==-1 && Math.abs(pawn.getXCoordinate()-xCoordinate)==1) return true;
         }
         if(pawn.getPieceColor().toString().equals("BLACK")){
             if(pawn.getYCoordinate()-yCoordinate==1 && pawn.getXCoordinate()==xCoordinate) return true;
-            if( pawn.getYCoordinate()-yCoordinate==1 && Math.abs(pawn.getXCoordinate()-xCoordinate)==1) return true;
+
+            if(pawn.getYCoordinate()-yCoordinate==1 && Math.abs(pawn.getXCoordinate()-xCoordinate)==1) return true;
         }
         return false;
 
