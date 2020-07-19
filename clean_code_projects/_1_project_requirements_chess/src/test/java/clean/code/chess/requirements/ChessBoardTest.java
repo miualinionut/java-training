@@ -39,7 +39,7 @@ public class ChessBoardTest extends TestCase {
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
-        assertTrue(isValidPosition);
+        assertFalse(isValidPosition);
     }
 
     @Test
@@ -75,7 +75,7 @@ public class ChessBoardTest extends TestCase {
     @Test
     public void testLimits_The_Number_Of_Pawns()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 7; i++)
         {
             Pawn pawn = new Pawn(PieceColor.BLACK);
             int row = i / ChessBoard.MAX_BOARD_WIDTH;

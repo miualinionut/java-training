@@ -3,6 +3,12 @@ package clean.code.design_patterns.requirements;
 public class BuilderPattern {
 
     static class Apartament {
+        private String zona;
+        private boolean balcon;
+        private int etaj;
+        private int dimensiune;
+        private int pret;
+
         private Apartament(Builder builder) {
             this.zona = builder.zona;
             this.balcon = builder.balcon;
@@ -10,12 +16,6 @@ public class BuilderPattern {
             this.dimensiune = builder.dimensiune;
             this.pret = builder.pret;
         }
-
-        private String zona;
-        private boolean balcon;
-        private int etaj;
-        private int dimensiune;
-        private int pret;
 
         public static class Builder {
             private String zona;

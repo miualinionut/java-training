@@ -2,11 +2,10 @@ package clean.code.design_patterns.requirements;
 
 public class FactoryPattern {
     public static class ColetFactory {
-        public static Colet getColet(String produs,
-                                       String statusLivrare) {
-            if(statusLivrare.equalsIgnoreCase("D")){
+        public static Colet getColet(String produs, String statusLivrare) {
+            if (statusLivrare.equalsIgnoreCase("D")) {
                 return new Expediat(produs);
-            }else if(statusLivrare.equalsIgnoreCase("N")){
+            } else if (statusLivrare.equalsIgnoreCase("N")) {
                 return new Neexpediat(produs);
             }
             return null;
@@ -14,17 +13,17 @@ public class FactoryPattern {
     }
 
     static abstract class Colet {
-        Colet(String produs){
-            this.produs = produs;
-        }
         private String produs;
         abstract String getMessage();
-        String getProdusAndMessage(){
+        Colet(String produs) {
+            this.produs = produs;
+        }
+        String getProdusAndMessage() {
             return getMessage() + " " + produs;
         }
     }
 
-    static class Expediat extends Colet{
+    static class Expediat extends Colet {
         public Expediat(String produs) {
             super(produs);
         }
@@ -36,7 +35,7 @@ public class FactoryPattern {
 
     }
 
-    static class Neexpediat extends Colet{
+    static class Neexpediat extends Colet {
         public Neexpediat(String produs) {
             super(produs);
         }
@@ -49,9 +48,9 @@ public class FactoryPattern {
     }
 
     public static void main(String[] args) {
-        Colet expediat = ColetFactory.getColet("bormasina","D");
+        Colet expediat = ColetFactory.getColet("bormasina", "D");
         System.out.println(expediat.getProdusAndMessage());
-        Colet neexpediat = ColetFactory.getColet("scaun de birou","N");
+        Colet neexpediat = ColetFactory.getColet("scaun de birou", "N");
         System.out.println(neexpediat.getProdusAndMessage());
     }
 }
