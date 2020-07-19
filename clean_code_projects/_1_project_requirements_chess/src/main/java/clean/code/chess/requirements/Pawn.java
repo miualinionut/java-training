@@ -1,5 +1,5 @@
 package clean.code.chess.requirements;
-
+import java.math.*;
 public class Pawn {
 
     private ChessBoard chessBoard;
@@ -44,7 +44,38 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        if(chessBoard.IsLegalBoardPosition(newX,newY)==false)return;
+        if(movementType==MovementType.MOVE) {
+            if (pieceColor == PieceColor.BLACK && chessBoard.canMove(xCoordinate,yCoordinate-1)==true) {
+                if(yCoordinate-1==newY)yCoordinate--;
+                chessBoard.Move(this,xCoordinate,yCoordinate);
+            }
+            if (pieceColor == PieceColor.WHITE && chessBoard.canMove(xCoordinate,yCoordinate+1)==true) {
+                if(yCoordinate+1==newY)yCoordinate++;
+                chessBoard.Move(this,xCoordinate,yCoordinate);
+            }
+        }
+        if(movementType==MovementType.CAPTURE){
+            if (pieceColor == PieceColor.BLACK) {
+                if(yCoordinate-1==newY && Math.abs(newX-xCoordinate)==1){
+                    if(chessBoard.canCapture(newX,newY,pieceColor)==true) {
+                        yCoordinate--;
+                        xCoordinate = newX;
+                        chessBoard.Move(this,xCoordinate,yCoordinate);
+                    }
+                }
+            }
+            if (pieceColor == PieceColor.WHITE) {
+                if(yCoordinate+1==newY && Math.abs(newX-xCoordinate)==1){
+                    if(chessBoard.canCapture(newX,newY,pieceColor)==true) {
+                        yCoordinate++;
+                        xCoordinate = newX;
+                        chessBoard.Move(this, xCoordinate, yCoordinate);
+                    }
+                }
+            }
+        }
+        //throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
     }
 
     @Override
