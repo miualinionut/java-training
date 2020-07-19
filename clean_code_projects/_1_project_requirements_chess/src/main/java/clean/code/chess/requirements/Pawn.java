@@ -1,59 +1,39 @@
 package clean.code.chess.requirements;
 
-public class Pawn {
+import clean.code.chess.requirements.PieceColor;
 
-    private ChessBoard chessBoard;
-    private int xCoordinate;
-    private int yCoordinate;
-    private PieceColor pieceColor;
+public class Pawn extends Piece {
 
-    public Pawn(PieceColor pieceColor) {
-        this.pieceColor = pieceColor;
-    }
+    private PawnValidator pawnValidator;
 
-    public ChessBoard getChesssBoard() {
-        return chessBoard;
-    }
-
-    public void setChessBoard(ChessBoard chessBoard) {
-        this.chessBoard = chessBoard;
-    }
-
-    public int getXCoordinate() {
-        return xCoordinate;
-    }
-
-    public void setXCoordinate(int value) {
-        this.xCoordinate = value;
-    }
-
-    public int getYCoordinate() {
-        return yCoordinate;
-    }
-
-    public void setYCoordinate(int value) {
-        this.yCoordinate = value;
-    }
-
-    public PieceColor getPieceColor() {
-        return this.pieceColor;
-    }
-
-    private void setPieceColor(PieceColor value) {
-        pieceColor = value;
-    }
-
-    public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+    public Pawn(PieceColor color) {
+        super(color);
+        this.pawnValidator = new PawnValidator();
     }
 
     @Override
-    public String toString() {
-        return CurrentPositionAsString();
+    public boolean isValidNewPosition(int newX, int newY) {
+        return pawnValidator.isValidNewX(newX) && pawnValidator.isValidNewY(newY);
     }
 
-    protected String CurrentPositionAsString() {
-        String eol = System.lineSeparator();
-        return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
+    private class PawnValidator {
+
+        private int getMovingDirection() {
+            if (getColor() == PieceColor.BLACK) {
+                return -1;
+            }
+            return +1;
+        }
+
+        public boolean isValidNewX(int newX) {
+            return newX == getXCoordinate() + getMovingDirection() * 0 ||
+                    newX == getXCoordinate() + getMovingDirection() * 1;
+        }
+
+        public boolean isValidNewY(int newY) {
+            return newY == getYCoordinate() - 1 ||
+                    newY == getYCoordinate() ||
+                    newY == getYCoordinate() + 1;
+        }
     }
 }
