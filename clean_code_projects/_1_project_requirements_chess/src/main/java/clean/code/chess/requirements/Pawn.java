@@ -44,13 +44,25 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        //throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        switch(movementType) {
+            case MOVE:
+                if(newY == yCoordinate - 1)
+                    yCoordinate--;
+                break;
+            case CAPTURE:
+                if(newX == xCoordinate + 1 || newX == xCoordinate - 1)
+                    if(newY == yCoordinate - 1){
+                        xCoordinate = newX;
+                        yCoordinate = newY;
+                    }
+                break;
     }
 
     @Override
-    public String toString() {
-        return CurrentPositionAsString();
-    }
+   // public String toString() {
+   //     return CurrentPositionAsString();
+   // }
 
     protected String CurrentPositionAsString() {
         String eol = System.lineSeparator();
