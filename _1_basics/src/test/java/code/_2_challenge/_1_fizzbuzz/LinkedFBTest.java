@@ -6,7 +6,7 @@ import java.util.Map;
 
 import static java.util.Map.entry;
 
-public class FizzBuzzTest {
+public class LinkedFBTest {
   public static Map<Integer, String> stage1 = Map.ofEntries(
           entry(1, "1"),
           entry(2, "2"),
