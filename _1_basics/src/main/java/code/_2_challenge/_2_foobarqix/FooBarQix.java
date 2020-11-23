@@ -22,7 +22,7 @@ public class FooBarQix {
     return s;
   }
 
-  public String compute2(int i) {
+  public static String compute2(int i) {
     String s = "";
 
     boolean isDivisible = false;
@@ -50,5 +50,9 @@ public class FooBarQix {
     }
 
     return s;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(compute2(101));
   }
 }
