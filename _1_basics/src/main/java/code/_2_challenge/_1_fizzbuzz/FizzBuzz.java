@@ -20,7 +20,6 @@ public class FizzBuzz {
       s = String.valueOf(i);
     }
 
-
     return s;
   }
 
