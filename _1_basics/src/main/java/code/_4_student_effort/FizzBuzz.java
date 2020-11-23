@@ -67,6 +67,7 @@ public class FizzBuzz{
         System.out.println("\n\nStage 3: ");
         Stage3();
 
+
     }
 
 }
