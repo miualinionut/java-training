@@ -1,13 +1,9 @@
 package code._4_student_effort;
 
 public class FooBarQix {
-    static String outStr = null;
+    private static String outStr = null;
     static boolean gasit = false;
 
-    static String compute2(int nr)
-    {
-
-    }
     static String compute(int nr)
     {
         if(outStr == null) {
@@ -43,9 +39,40 @@ public class FooBarQix {
         return outStr;
     }
 
+    static String compute2(int nr)
+    {
+        String outString = "";
+        if (nr % 3 == 0) {
+            outString = "Foo";
+            gasit = true;
+        }
+        if (nr % 5 == 0) {
+            outString = outString + "Bar";
+            gasit = true;
+        }
+        if (nr % 7 == 0) {
+            outString = outString + "Qix";
+            gasit = true;
+        }
+        char[] digits = String.valueOf(nr).toCharArray();
+        for(char digit: digits)
+        {
+            if(digit == '3') outString += "Foo";
+            else if(digit == '5') outString += "Bar";
+            else if(digit == '7') outString += "Qix";
+            else if(digit == '0') outString += "*";
+            else if(!gasit) outString += String.valueOf(digit);
+        }
+        return outString;
+    }
+
+
     public static void main(String[] args)
     {
         int nr = 51;
-        System.out.print(compute(nr));
+        System.out.println(compute(nr));
+        gasit = false;
+        nr = 105;
+        System.out.println(compute2(nr));
     }
 }
