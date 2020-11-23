@@ -41,6 +41,7 @@ public class FooBarQix {
 
     static String compute2(int nr)
     {
+        gasit = false;
         String outString = "";
         if (nr % 3 == 0) {
             outString = "Foo";
@@ -57,22 +58,25 @@ public class FooBarQix {
         char[] digits = String.valueOf(nr).toCharArray();
         for(char digit: digits)
         {
-            if(digit == '3') outString += "Foo";
-            else if(digit == '5') outString += "Bar";
-            else if(digit == '7') outString += "Qix";
-            else if(digit == '0') outString += "*";
-            else if(!gasit) outString += String.valueOf(digit);
+            switch (digit)
+            {
+                case '3': outString += "Foo"; gasit = true; break;
+                case '5': outString += "Bar"; gasit = true; break;
+                case '7': outString += "Qix"; gasit = true; break;
+                case '0': outString +=  "*";  gasit = true; break;
+            }
         }
+        if(!gasit) outString += String.valueOf(nr);
         return outString;
     }
 
 
     public static void main(String[] args)
     {
-        int nr = 51;
+        int nr = 67;
         System.out.println(compute(nr));
-        gasit = false;
-        nr = 105;
+
+        nr = 67;
         System.out.println(compute2(nr));
     }
 }
