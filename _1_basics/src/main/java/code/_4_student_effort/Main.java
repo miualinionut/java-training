@@ -7,6 +7,10 @@ public class Main {
 
     //Code Challenge 1
     FizzBuzz fizzbuzz = new FizzBuzz(); //instance of Class FizzBuzz used to call the method FizzBuzz
-    fizzbuzz.FizzBuzz();
+    //fizzbuzz.FizzBuzz();
+
+    //Code Challenge 2
+    FooBarQix foobarqix = new FooBarQix(); //instance of Class FizzBuzz used to call the method FizzBuzz
+    System.out.println(foobarqix.compute(51)); //insert any number to test the compute method on it
   }
 }
