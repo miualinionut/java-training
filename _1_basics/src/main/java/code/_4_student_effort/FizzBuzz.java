@@ -2,24 +2,28 @@ package code._4_student_effort;
 
 public class FizzBuzz {
     public static void main(String[] args) {
-        for (int i = 1; i <= 105; i++) {
-            String output="";
+        for (int i = 1; i <= 100; i++) {
+            if (i%3==0 && i%5==0) {
+                System.out.println("FizzBuzz");
+                continue;
+            }
             if (i%3==0) {
-                output+="Fizz";
+                System.out.println("Fizz");
+                continue;
             }
             if (i%5==0) {
-                output+="Buzz";
+                System.out.println("Buzz");
+                continue;
             }
-            //stage 2
             if (i%7==0) {
-                output+="Rizz";
+                System.out.println("Rizz");
+                continue;
             }
             if (i%11==0) {
-                output+="Jazz";
+                System.out.println("Jazz");
+                continue;
             }
-            if (output!="")
-                System.out.println(output); else
-                System.out.println(i);
+            System.out.println(i);
         }
     }
 }
