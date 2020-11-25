@@ -29,7 +29,9 @@ public class PairOf3 {
                     if (indexesExist == false && arr[i] + arr[j] + arr[k] == 0) {
                         nrOfPairs++;
                         accessedIndexes[l + 1] = i;
+                        l++;
                         accessedIndexes[l + 1] = j;
+                        l++;
                         accessedIndexes[l + 1] = k;
                     }
                 }

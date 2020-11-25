@@ -27,6 +27,7 @@ public class PairOf2 {
                     if (indexesExist == false && arr[i] + arr[j] == 0){
                         nrOfPairs++;
                         accessedIndexes[k+1] = i;
+                        k++;
                         accessedIndexes[k+1] = j;
                     }
                 }
