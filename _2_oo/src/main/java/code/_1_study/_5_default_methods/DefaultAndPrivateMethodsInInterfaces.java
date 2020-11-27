@@ -7,10 +7,12 @@ public interface DefaultAndPrivateMethodsInInterfaces {
   }
 
   default int difference(int a, int b) {
+
     return diff(a,b);
   }
 
   private int diff(int a, int b) {
+
     return a - b;
   }
 }

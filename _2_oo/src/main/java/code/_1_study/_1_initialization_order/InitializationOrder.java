@@ -2,6 +2,7 @@ package code._1_study._1_initialization_order;
 
 public class InitializationOrder {
   public static void main(String[] args) {
+
     Child c = new Child();
   }
 }
@@ -30,6 +31,7 @@ class Child extends Parent {
   }
 
   public Child() {
+
     System.out.println("child  constructor");
   }
 }

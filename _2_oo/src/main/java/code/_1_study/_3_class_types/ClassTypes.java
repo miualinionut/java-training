@@ -18,6 +18,7 @@ public class ClassTypes {
 
     @Override
     void doStuff() {
+
       System.out.println("concreteInnerClass - doStuff");
     }
   }
