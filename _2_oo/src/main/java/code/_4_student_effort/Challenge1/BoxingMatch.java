@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.Challenge1;
 //stage2
 public class BoxingMatch {
     public Fighter Player1;

@@ -1,6 +1,5 @@
-package code._4_student_effort;
+package code._4_student_effort.Challenge1;
 
-import java.sql.SQLOutput;
 //STAGE 1
 //class Fighter
 //name, health, dmg
