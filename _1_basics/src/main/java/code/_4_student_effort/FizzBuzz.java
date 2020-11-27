@@ -2,7 +2,7 @@ package code._4_student_effort;
 
 public class FizzBuzz {
 
-    public static void main (String[] args){ fizzBuzz(100);}
+    public static void main (String[] args){ fizzBuzz(110);}
 
 
     public static void fizzBuzz(int n){
