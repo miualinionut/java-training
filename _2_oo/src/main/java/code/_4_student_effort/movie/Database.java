@@ -69,10 +69,4 @@ public class Database {
         database.getStudiosWithActorWithSpecificName(studios, "actor cu 2 oscaruri");
         database.getMoviesWithAnActorAboveASpecificAge(studios, 50);
     }
-
-/*    film cu actori fara premii2
-    film cu actori fara premii3
-    film cu actori de oscar
-    film cu actori de oscar
-    film cu actori fara premii5*/
 }
