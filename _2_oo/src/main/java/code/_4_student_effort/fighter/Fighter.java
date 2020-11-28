@@ -20,6 +20,6 @@ public class Fighter {
     }
 
     public void attack(Fighter opponent) {
-        opponent.health =- this.damagePerAttack;
+        opponent.health -= this.damagePerAttack;
     }
 }
