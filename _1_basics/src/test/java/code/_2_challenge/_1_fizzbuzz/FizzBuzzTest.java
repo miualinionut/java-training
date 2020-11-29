@@ -1,5 +1,6 @@
 package code._2_challenge._1_fizzbuzz;
 
+import code._4_student_effort.Challenge1.fizzbuzz;
 import org.junit.Assert;
 
 import java.util.Map;
@@ -40,20 +41,20 @@ public class FizzBuzzTest {
 
   public static Map<Integer, String> stage2 = Map.ofEntries(
           entry(7, "Rizz"),
-          entry(9, "FizzJazz"),
+          entry(9, "Fizz"),
           entry(14, "Rizz"),
-          entry(18, "FizzJazz"),
+          entry(18, "Fizz"),
           entry(21, "FizzRizz"),
-          entry(27, "FizzJazz"),
+          entry(44, "Jazz"),
           entry(28, "Rizz")
   );
 
   @org.junit.Test
   public void stage1() {
-    FizzBuzz FizzBuzz = new FizzBuzz();
+    fizzbuzz FizzBuzz = new fizzbuzz();
     for (Map.Entry<Integer, String> entry : stage1.entrySet()) {
       Integer input = entry.getKey();
-      String actual = FizzBuzz.fizzBuzz(entry.getKey());
+      String actual = FizzBuzz.fizzbuzz1(entry.getKey());
       String expected = entry.getValue();
       Assert.assertEquals("for input: " + input, expected, actual);
     }
@@ -61,10 +62,10 @@ public class FizzBuzzTest {
 
   @org.junit.Test
   public void stage2() {
-    FizzBuzz FizzBuzz = new FizzBuzz();
+    fizzbuzz FizzBuzz = new fizzbuzz();
     for (Map.Entry<Integer, String> entry : stage2.entrySet()) {
       Integer input = entry.getKey();
-      String actual = FizzBuzz.fizzBuzz2(entry.getKey());
+      String actual = FizzBuzz.fizzbuzz2(entry.getKey());
       String expected = entry.getValue();
       Assert.assertEquals("for input: " + input, expected, actual);
     }

@@ -1,5 +1,6 @@
 package code._2_challenge._3_pair_of_2;
 
+import code._4_student_effort.Challenge3.pairof2;
 import org.junit.Assert;
 
 import java.util.Arrays;
@@ -16,7 +17,7 @@ public class PairOf2Test {
 
   @org.junit.Test
   public void test() {
-    PairOf2 PairOf2 = new PairOf2();
+    code._4_student_effort.Challenge3.pairof2 PairOf2 = new pairof2();
     for (Map.Entry<Integer[], Integer> entry : data.entrySet()) {
       Integer[] input = entry.getKey();
       Integer expected = entry.getValue();

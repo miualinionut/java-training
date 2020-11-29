@@ -1,5 +1,6 @@
 package code._2_challenge._2_foobarqix;
 
+import code._4_student_effort.Challenge2.FooBarQix;
 import org.junit.Assert;
 
 import java.util.Map;
@@ -35,7 +36,7 @@ public class FooBarQixTest {
 
   @org.junit.Test
   public void stage1() {
-    FooBarQix FooBarQix = new FooBarQix();
+    code._4_student_effort.Challenge2.FooBarQix FooBarQix = new code._4_student_effort.Challenge2.FooBarQix();
     for (Map.Entry<Integer, String> entry : stage1.entrySet()) {
       Integer input = entry.getKey();
       String actual = FooBarQix.compute(entry.getKey());
@@ -46,7 +47,7 @@ public class FooBarQixTest {
 
   @org.junit.Test
   public void stage2() {
-    FooBarQix FooBarQix = new FooBarQix();
+    code._4_student_effort.Challenge2.FooBarQix FooBarQix = new FooBarQix();
     for (Map.Entry<Integer, String> entry : stage2.entrySet()) {
       Integer input = entry.getKey();
       String actual = FooBarQix.compute2(entry.getKey());
