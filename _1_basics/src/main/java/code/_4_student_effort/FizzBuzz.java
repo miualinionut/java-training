@@ -6,25 +6,38 @@ public class FizzBuzz {
         int i;
         for(i=1; i<=100; i++)
         {
-
-
                 if (i % 3 == 0)
                 {
                     System.out.println("Fizz");
-                    i++;
+                    //i++;
+                }
+               // else
                     if (i % 5 == 0)
                     {
                         System.out.println("Buzz");
-                        i++;
+                        //i++;
+                    }
+                    //else
+                    if (i % 7 == 0)
+                    {
+                        System.out.println("Rizz");
+                        //i++;
+                    }
+                    //else
+                    if (i % 11 == 0)
+                    {
+                        System.out.println("Jazz");
+                        //i++;
+                    }
+                    //else
+                        System.out.println(i);
                         if (i % 3 == 0 && i % 5 == 0)
                         {
                             System.out.println("FizzBuzz");
-                            i++;
+                            //i++;
                         }
-                    }
-                }
-                else
-                    System.out.println(i);
+                //else
+                   // System.out.println(i);
         }
     }
 }
