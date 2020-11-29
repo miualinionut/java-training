@@ -13,5 +13,7 @@ public class Main {
     System.out.println(FooBarQix.compute(15));
     System.out.println(FooBarQix.compute2(105));
 
+    int[] numbers2 = {-1,-1,-1,2};
+    System.out.println(PairOf3.countPairs(numbers2));
   }
 }
