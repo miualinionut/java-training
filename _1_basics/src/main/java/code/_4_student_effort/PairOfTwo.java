@@ -8,6 +8,7 @@ public class PairOfTwo {
         for (int n:v){
             if (values.containsKey(-n)){
                 pairs++;
+                values.remove(-n);
             }else {
                 values.put(n, 1);
             }
