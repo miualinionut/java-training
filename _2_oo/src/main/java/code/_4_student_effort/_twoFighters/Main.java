@@ -4,8 +4,8 @@ public class Main {
 
   public static void main(String[] args) {
     String winner;
-    Fighter fighter_1 = new Fighter("Mike Tyson", 100, 20);
-    Fighter fighter_2 = new Fighter("Muhammad Ali ", 100, 35);
+    Fighter fighter_1 = new Fighter("Mike Tyson", 100, 10);
+    Fighter fighter_2 = new Fighter("Muhammad Ali ", 100, 11);
 
     BoxingMatch finalMatch = new BoxingMatch(fighter_1, fighter_2);
 

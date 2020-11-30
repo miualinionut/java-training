@@ -15,9 +15,10 @@ public class BoxingMatch {
             Fighter_1.attack(Fighter_2);
             Fighter_2.attack(Fighter_1);
         }
-        if(Fighter_1.getHeath() > 0)
+
+        if(Fighter_1.getHeath() > Fighter_2.getHeath())
             winner = "Winner is: " + Fighter_1.getName();
-        else if (Fighter_2.getHeath() > 0)
+        else if (Fighter_1.getHeath() < Fighter_2.getHeath())
             winner = "Winner is: " + Fighter_2.getName();
         else
             winner = "Deuce";
