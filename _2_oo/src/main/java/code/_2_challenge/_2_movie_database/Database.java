@@ -30,7 +30,8 @@ public class Database {
   }
 
   public static void printAllStudioNamesThatHavePublishedMoreThen2Movies() {
-    for (Studio studio : getData()) {
+    Studio[] S = getData();
+    for (Studio studio : S) {
       if (studio.filme.length > 2) {
         System.out.println(studio.nume);
       }
