@@ -10,7 +10,7 @@ public class Cat extends Animal implements Pet{
     }
 
     public Cat() {
-        this("");
+        this(""); //calling the above constructor. I can write them in any order as this does not affect the chaining
     }
 
     @Override

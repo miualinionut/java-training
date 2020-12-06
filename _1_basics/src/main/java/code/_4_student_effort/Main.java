@@ -74,6 +74,9 @@ public class Main {
     c.setName("Lisa");
     c.getName();
 
+    Cat x = new Cat(); //called the no parameter constructor
+    System.out.println("Cat x is named: " + x.name);
+
     System.out.println();
 
     System.out.println("Fish a has " + a.legs + " legs.");
