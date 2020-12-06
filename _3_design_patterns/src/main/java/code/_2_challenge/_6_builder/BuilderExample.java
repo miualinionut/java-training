@@ -4,7 +4,8 @@ public class BuilderExample {
 
   public static void main(String[] args) {
 
-    Person person01 = new Person.Builder("Popescu")
+    Person person01 = new Person.Builder(
+            "Popescu")
             .job("java developer")
             .university("FMI")
             .isMarried(false)
