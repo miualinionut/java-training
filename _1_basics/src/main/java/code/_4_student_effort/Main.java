@@ -52,8 +52,38 @@ public class Main {
 //    }
 
 
+//    ####Challenge 3####
+
+    Fish d = new Fish();
+    Cat c = new Cat("Fluffy");
+    Animal a = new Fish();
+    Animal e = new Spider();
+    Pet p = new Cat();
+
+    System.out.println();
+
+    d.eat();
+    d.walk();
+
+    System.out.println();
+
+    c.eat();
+    c.walk();
+    c.play();
+    c.getName();
+    c.setName("Lisa");
+    c.getName();
+
+    System.out.println();
+
+    System.out.println("Fish a has " + a.legs + " legs.");
+    a.eat();
+    a.walk();
 
 
+    System.out.println();
 
+    e.walk();
+    e.eat();
   }
 }
