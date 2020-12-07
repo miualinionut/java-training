@@ -11,6 +11,11 @@ public class Main {
 
     //Code Challenge 2
     FooBarQix foobarqix = new FooBarQix(); //instance of Class FizzBuzz used to call the method FizzBuzz
-    System.out.println(foobarqix.compute(51)); //insert any number to test the compute method on it
+    //System.out.println(foobarqix.compute(51)); //insert any number to test the compute method on it
+
+    //Code Challenge 3
+    PairOfTwo pairoftwo = new PairOfTwo();
+    int[] array = {3, 2, -3, -2, 3, 0};
+    System.out.println(pairoftwo.pairOfTwo(array));
   }
 }

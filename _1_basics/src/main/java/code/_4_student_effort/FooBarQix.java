@@ -36,8 +36,7 @@ public class FooBarQix {
             number = number / 10;
         }
 
-
-
         return message;
     }
+
 }
