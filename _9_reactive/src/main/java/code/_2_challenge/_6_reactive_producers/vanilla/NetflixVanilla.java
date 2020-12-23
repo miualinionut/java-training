@@ -16,7 +16,7 @@ public class NetflixVanilla<T> implements Observed<T> {
 
     @Override
     public void notifyObservers(T message) {
-        for(Observer o: observers) {
+        for (Observer o : observers) {
             o.receiveNotification(message);
         }
     }

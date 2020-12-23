@@ -1,10 +1,6 @@
 package code._2_challenge._6_reactive_producers;
 
-import code._2_challenge._6_reactive_producers.reactor.NetflixUsingReactor;
 import code._2_challenge._6_reactive_producers.vanilla.NetflixVanilla;
-import reactor.core.publisher.DirectProcessor;
-import reactor.core.publisher.EmitterProcessor;
-import reactor.core.publisher.ReplayProcessor;
 //import reactor.core.publisher.TopicProcessor;
 
 public class ReactiveChallenge {

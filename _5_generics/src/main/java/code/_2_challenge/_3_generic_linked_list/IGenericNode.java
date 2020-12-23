@@ -1,11 +1,11 @@
 package code._2_challenge._3_generic_linked_list;
 
 public interface IGenericNode<T> {
-  T getValue();
+    T getValue();
 
-  void setValue(T value);
+    void setValue(T value);
 
-  IGenericNode<T> getNext();
+    IGenericNode<T> getNext();
 
-  void setNext(IGenericNode<T> next);
+    void setNext(IGenericNode<T> next);
 }

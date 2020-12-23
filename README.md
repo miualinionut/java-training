@@ -1,6 +1,7 @@
 # java-training
 
 # 1 basics
+
 	- code study
 		- 1.1 hello world
 		- 1.2 postfix increment
@@ -13,7 +14,9 @@
 		- 1.2 foobarqix
 		- 1.3 pair of 2
 		- 1.4 pair of 3
+
 # 2 oo
+
 	- code study
 		- 2.1 initialization order
 		- 2.2 covariant return
@@ -25,7 +28,9 @@
 		- 2.1 two fighters
 		- 2.2 movie database
 		- 2.3 animal hierarchy
+
 # 3 design patterns
+
 	- code study
 		- 3.1 design patterns used in java apis
 	- code challenges
@@ -37,7 +42,9 @@
 		- 3.6 builder
 		- 3.7 decorations (hard)
 		- 3.8 drinking time (hard)
+
 # 4 exceptions & IO
+
 	- code study
 		- 4.1 exceptions
 		- 4.2 multicatch
@@ -56,7 +63,9 @@
 		- 4.3 anagram
 		- 4.4 number to lcd
 		- 4.5 occurence
+
 # 5 generics
+
 	- activity 
 		- 5.1 generic sort
 	- code study
@@ -70,7 +79,9 @@
 		- 5.3 generic linked list
 		- 5.4 generic iterator
 		- 5.5 generic binary search
+
 # 6 collectinos
+
 	- activity
 		- 6.1 resizable array
 	- code study
@@ -99,7 +110,9 @@
 		- 6.7 my hashtable
 		- 6.8 my arraylist
 		- 6.9 my set
+
 # 7 concurrency
+
 	- code study
 		- 7.1 contention
 		- 7.2 lack of coordination
@@ -115,7 +128,9 @@
 		- 7.2 bank transactions
 		- 7.3 rock paper scissors
 		- 7.4 dining philosopers (hard)
+
 # 8 functional
+
 	- acitvity
 		- 8.1 get highest score from a collection of objects
 	- code study
@@ -128,7 +143,9 @@
 		- 8.1 consumer
 		- 8.2 predicate
 		- 8.3 lambda
+
 # 9 reactive
+
 	- code study
 		- 9.1 create flux
 		- 9.2 create mono
@@ -141,6 +158,8 @@
 		- 9.3 operations
 		- 9.4 transformations
 		- 9.5 merges
+
 # clean code projects
+
     - design patterns
     - chess game		

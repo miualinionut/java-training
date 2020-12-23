@@ -19,10 +19,6 @@ public class ReactorSchedulersExample {
         }
     }
 
-    private static enum Type {
-        PUBLISH_ON, SUBSCRIBE_ON
-    }
-
     private static void publishOn() {
         Scheduler s2 = Schedulers.newParallel("t2", 4);
         Scheduler s3 = Schedulers.newParallel("t3", 4);
@@ -57,5 +53,9 @@ public class ReactorSchedulersExample {
                     return "value " + i;
                 });
         new Thread(() -> flux.subscribe(System.out::println), "t1").start();
+    }
+
+    private static enum Type {
+        PUBLISH_ON, SUBSCRIBE_ON
     }
 }

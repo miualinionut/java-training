@@ -21,7 +21,7 @@ public class StreamExample {
     }
 
     private void createStreamFromArray() {
-        Stream<Double> doubleStream = Arrays.stream(new Double[]{ 1.01, 1d, 0.99, 1.02, 1d, 0.99 });
+        Stream<Double> doubleStream = Arrays.stream(new Double[]{1.01, 1d, 0.99, 1.02, 1d, 0.99});
     }
 
     private void createStreamFromString() {
