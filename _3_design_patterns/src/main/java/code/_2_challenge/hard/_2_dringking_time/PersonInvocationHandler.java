@@ -6,32 +6,32 @@ import java.time.Duration;
 import java.time.Instant;
 
 public class PersonInvocationHandler implements java.lang.reflect.InvocationHandler {
-  private IPerson target;
+    private IPerson target;
 
-  public PersonInvocationHandler(IPerson target) {
-    this.target = target;
-  }
-
-  @Override
-  public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-    Instant start = Instant.now();
-    Object result = method.invoke(target, args);
-    Instant stop = Instant.now();
-
-    if (isLoggable(method)) {
-      Duration duration = Duration.between(start, stop);
-      System.out.println(target.getName() + " has been " + method.getName() + "ing for " + duration);
+    public PersonInvocationHandler(IPerson target) {
+        this.target = target;
     }
-    return result;
-  }
 
-  private boolean isLoggable(Method method) {
-    Annotation[] annotations = method.getAnnotations();
-    for (Annotation annotation : annotations) {
-      if (annotation instanceof LogExecutionTime) {
-        return true;
-      }
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        Instant start = Instant.now();
+        Object result = method.invoke(target, args);
+        Instant stop = Instant.now();
+
+        if (isLoggable(method)) {
+            Duration duration = Duration.between(start, stop);
+            System.out.println(target.getName() + " has been " + method.getName() + "ing for " + duration);
+        }
+        return result;
     }
-    return false;
-  }
+
+    private boolean isLoggable(Method method) {
+        Annotation[] annotations = method.getAnnotations();
+        for (Annotation annotation : annotations) {
+            if (annotation instanceof LogExecutionTime) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

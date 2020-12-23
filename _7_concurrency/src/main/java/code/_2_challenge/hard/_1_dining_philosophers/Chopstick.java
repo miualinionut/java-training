@@ -7,11 +7,11 @@ public class Chopstick {
     private Lock lock = new ReentrantLock(true);
 
     public boolean lock() {
-      lock.lock();
-      return true;
+        lock.lock();
+        return true;
     }
 
     public void unlock() {
-      lock.unlock();
+        lock.unlock();
     }
-  }
+}

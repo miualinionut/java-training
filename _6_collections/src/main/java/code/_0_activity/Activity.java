@@ -6,15 +6,15 @@ import java.util.Scanner;
 
 public class Activity {
 
-  public static void main(String[] args) {
-    List<String> inputs = new ArrayList<>();
-    Scanner scanner = new Scanner(System.in);
-    String input;
-    System.out.println("Enter you input strings:");
-    while (!(input = scanner.next()).equalsIgnoreCase("exit")) {
-      inputs.add(input);
-    }
+    public static void main(String[] args) {
+        List<String> inputs = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        String input;
+        System.out.println("Enter you input strings:");
+        while (!(input = scanner.next()).equalsIgnoreCase("exit")) {
+            inputs.add(input);
+        }
 
-    System.out.print(inputs);
-  }
+        System.out.print(inputs);
+    }
 }

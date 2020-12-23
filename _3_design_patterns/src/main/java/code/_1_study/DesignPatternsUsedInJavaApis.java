@@ -2,7 +2,7 @@ package code._1_study;
 
 public class DesignPatternsUsedInJavaApis {
 
-  public static class Creational {
+    public static class Creational {
   /*
   SINGLETON:
   java.langRuntime
@@ -33,9 +33,9 @@ public class DesignPatternsUsedInJavaApis {
   Cloneable interface
   clone method
    */
-  }
+    }
 
-  public static class Structural {
+    public static class Structural {
   /*
   ADAPTER
   java.util.Arrays#asList()
@@ -73,9 +73,9 @@ public class DesignPatternsUsedInJavaApis {
   DECORATOR
   Java IO classes, such as FileReader, BufferedReader
    */
-  }
+    }
 
-  public static class Behavioral {
+    public static class Behavioral {
   /*
   TEMPLATE METHOD
   All non-abstract methods of java.io.InputStream, java.io.OutputStream, java.io.Reader, java.io.Writer, java.util.AbstractList, java.util.AbstractSet and java.util.AbstractMap.
@@ -130,5 +130,5 @@ public class DesignPatternsUsedInJavaApis {
   -
    */
 
-  }
+    }
 }

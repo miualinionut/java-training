@@ -44,7 +44,7 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
     }
 
     @Override

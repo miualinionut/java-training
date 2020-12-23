@@ -23,7 +23,7 @@ public class Anagram {
 
         String[] words = new String[0];
         int countOfWords = 0;
-        for(int i =0 ; i< anagramWords.length; i++) {
+        for (int i = 0; i < anagramWords.length; i++) {
             try {
                 words = Arrays.copyOf(words, words.length + 1);
                 words[countOfWords++] = searchWord(anagramWords[i], readListOfWords(SMALL_LIST_FILE));

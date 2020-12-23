@@ -2,7 +2,7 @@ package code._1_study._3_good_coordination;
 
 public interface IChannel {
 
-  String take();
+    String take();
 
-  void put(String message);
+    void put(String message);
 }

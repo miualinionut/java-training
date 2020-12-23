@@ -1,16 +1,16 @@
 package code._2_challenge._9_my_set;
 
 public interface MySet<T> {
-  void add(T e);
+    void add(T e);
 
-  void remove(T e);
+    void remove(T e);
 
-  T get(int index);
+    T get(int index);
 
-  void set(int index, T e);
+    void set(int index, T e);
 
-  int size();
+    int size();
 
-  boolean contains(T e);
+    boolean contains(T e);
 
 }

@@ -1,8 +1,8 @@
 package clean.code.chess.solution;
 
+import clean.code.chess.solution.pieces.Piece;
 import clean.code.chess.solution.pieces.attributes.Color;
 import clean.code.chess.solution.pieces.attributes.Position;
-import clean.code.chess.solution.pieces.Piece;
 
 import java.util.HashMap;
 import java.util.Map;

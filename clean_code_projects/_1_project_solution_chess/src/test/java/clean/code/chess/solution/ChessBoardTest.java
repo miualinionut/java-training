@@ -75,20 +75,15 @@ public class ChessBoardTest extends TestCase {
     }
 
     @Test
-    public void testLimits_The_Number_Of_Pawns()
-    {
-        for (int i = 0; i < 10; i++)
-        {
+    public void testLimits_The_Number_Of_Pawns() {
+        for (int i = 0; i < 10; i++) {
             Pawn pawn = new Pawn(Color.BLACK);
             int row = i / ChessBoard.MAX_BOARD_WIDTH;
             testSubject.addPieceOnChessBoard(pawn, 6 + row, i % ChessBoard.MAX_BOARD_WIDTH);
-            if (row < 1)
-            {
+            if (row < 1) {
                 assertEquals(6 + row, pawn.getXCoordinate());
                 assertEquals(i % ChessBoard.MAX_BOARD_WIDTH, pawn.getYCoordinate());
-            }
-            else
-            {
+            } else {
                 assertEquals(-1, pawn.getXCoordinate());
                 Assert.assertEquals(-1, pawn.getYCoordinate());
             }
