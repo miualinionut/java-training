@@ -1,4 +1,4 @@
-package clean.code.design_patterns.requirements;
+package main;
 
 public class Main {
 
