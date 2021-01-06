@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class Editor {
     //Singleton
     public static Editor INSTANCE;
@@ -37,6 +39,38 @@ public class Editor {
         }
     }
 
+    public void exportToTxt(String filename) {
+        BufferedOutputStream outputStream = null;
+        try {
+            outputStream = new BufferedOutputStream(new FileOutputStream(new File(filename)));
+        } catch (FileNotFoundException e) {
+            System.out.println("Cannot create file.");
+            return;
+        }
+        char[][] canvas = image.Decorate();
+        for (int i = 0; i < image.getHeight(); i ++) {
+            for (int j = 0; j < image.getWidth(); j ++) {
+                try {
+                    outputStream.write(canvas[i][j]);
+                } catch (IOException e) {
+                    System.out.println("Cannot write to file.");
+                    return;
+                }
+            }
+            try {
+                outputStream.write('\n');
+            } catch (IOException e) {
+                System.out.println("Cannot write to file.");
+                return;
+            }
+        }
+        try {
+            outputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         //Simple test example
         Editor editor = Editor.getInstance();
@@ -57,6 +91,7 @@ public class Editor {
         editor.add("square", 13, 11, 1, '*');
         editor.add("square", 20, 11, 1, '*');
         editor.add("square", 14, 10, 1, '*');
+        editor.exportToTxt("sample.txt");
         editor.print();
     }
 
