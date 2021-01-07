@@ -17,6 +17,10 @@ public class Image implements DecoratableImage {
         }
     }
 
+    public DecoratableImage lastImage() {
+        return this;
+    }
+
     public int getHeight() {
         return height;
     }

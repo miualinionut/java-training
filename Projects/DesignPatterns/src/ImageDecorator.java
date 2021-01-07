@@ -8,6 +8,10 @@ public class ImageDecorator implements DecoratableImage{
         this.object = object;
     }
 
+    public DecoratableImage lastImage() {
+        return image;
+    }
+
     @Override
     public int getHeight() {
         return image.getHeight();

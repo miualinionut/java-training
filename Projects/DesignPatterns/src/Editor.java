@@ -29,6 +29,10 @@ public class Editor {
         image = new ImageDecorator(image, obj);
     }
 
+    public void undo() {
+        image = image.lastImage();
+    }
+
     public void print() {
         char[][] canvas = image.Decorate();
         for (int i = 0; i < image.getHeight(); i ++) {
@@ -40,7 +44,7 @@ public class Editor {
     }
 
     public void exportToTxt(String filename) {
-        BufferedOutputStream outputStream = null;
+        BufferedOutputStream outputStream;
         try {
             outputStream = new BufferedOutputStream(new FileOutputStream(new File(filename)));
         } catch (FileNotFoundException e) {
@@ -92,7 +96,10 @@ public class Editor {
         editor.add("square", 20, 11, 1, '*');
         editor.add("square", 14, 10, 1, '*');
         editor.exportToTxt("sample.txt");
+        editor.add("square", 5, 5, 100, '$');
+        editor.undo();
         editor.print();
+
     }
 
 }
