@@ -1,8 +1,15 @@
 package clean.code.design_patterns.requirements;
 
-public class Main {
+import java.io.FileNotFoundException;
 
+public class Main {
     public static void main(String[] args) {
-        //TODO implement your design patterns in this package
+        try {
+            StandardCond.standardRun();
+        }
+        catch(FileNotFoundException fileNotFoundException){
+            System.out.println("standard condition files could not be found");
+            fileNotFoundException.printStackTrace();
+        }
     }
 }
