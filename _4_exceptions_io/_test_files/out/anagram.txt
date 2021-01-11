@@ -1,5 +1,6 @@
-    _  _     _  _  _  _  _
-  | _| _||_||_ |_   ||_||_|
-  ||_  _|  | _||_|  ||_| _|
-
-
+listen
+inlets
+slinte
+silent
+tinsel
+enlist
