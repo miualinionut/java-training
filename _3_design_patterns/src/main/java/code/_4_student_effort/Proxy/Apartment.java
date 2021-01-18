@@ -1,6 +1,6 @@
 package code._4_student_effort.Proxy;
 
-public class Apartment implements Info{
+public class Apartment{
     private String Location;
     private int rentCost;
 
@@ -16,7 +16,10 @@ public class Apartment implements Info{
     }
 
     @Override
-    public void display() {
-        System.out.println("Apartment location is in: " + Location + "and cost / month is " + rentCost);
+    public String toString() {
+        return "Apartment{" +
+                "location='" + Location + '\'' +
+                ", monthlyRentCost=" + rentCost +
+                '}';
     }
 }

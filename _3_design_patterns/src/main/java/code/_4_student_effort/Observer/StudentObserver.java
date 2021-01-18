@@ -1,6 +1,5 @@
 package code._4_student_effort.Observer;
 
-import code._2_challenge._4_observer.Teacher;
 
 public class StudentObserver implements Observer{
     private final String Name;
@@ -9,8 +8,9 @@ public class StudentObserver implements Observer{
         this.Name = Name;
     }
 
-    public void listenTo(Teacher teacher){
-        teacher.register(this::update);
+    public void listenTo(TeacherObserver teacher){
+
+        teacher.register(this);
     }
     @Override
     public void update(String message) {

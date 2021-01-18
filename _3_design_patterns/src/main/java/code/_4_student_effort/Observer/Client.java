@@ -1,14 +1,14 @@
 package code._4_student_effort.Observer;
 
-import code._2_challenge._4_observer.Teacher;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
+
 
 public class Client {
     public static void main(String[] args) {
-        Teacher teacher = new Teacher();
+        TeacherObserver teacher = new TeacherObserver();
 
         StudentObserver s01 = new StudentObserver("Popescu");
         StudentObserver s02 = new StudentObserver("Ionescu");

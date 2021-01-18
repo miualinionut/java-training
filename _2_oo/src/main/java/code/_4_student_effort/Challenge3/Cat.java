@@ -1,7 +1,6 @@
 package code._4_student_effort.Challenge3;
 
-public class Cat extends Animal
-        implements Pet {
+public class Cat extends Animal implements Pet {
     public String name;
 
     public Cat(String Name) {

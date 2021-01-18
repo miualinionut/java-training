@@ -1,6 +1,6 @@
 package code._4_student_effort.Proxy;
 
-public class Student implements Info{
+public class Student {
     private String Name;
     private int money;
 
@@ -16,7 +16,10 @@ public class Student implements Info{
     }
 
     @Override
-    public void display() {
-        System.out.println("Student name is: " + Name + "and has " + money + " money.");
+    public String toString() {
+        return "Student{" +
+                "name='" + Name + '\'' +
+                ", money=" + money +
+                '}';
     }
 }

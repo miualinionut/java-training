@@ -1,20 +1,30 @@
 package code._4_student_effort.Proxy;
 
+
+
 import java.util.Arrays;
 
 public class RealEstateAgentProxy {
-    private Apartment apartment;
-    private Student student;
+    private Apartment[] appartments = new Apartment[0];
 
-    public void represent(Apartment appartment, Student student) {
-        this.apartment = appartment;
-        this.student = student;
+
+    public void represent (Apartment appartment){
+        this.appartments = Arrays.copyOf(this.appartments, this.appartments.length + 1);
+        this.appartments[this.appartments.length - 1] = appartment;
     }
 
-    public Apartment rent(Student student) {
-        if (this.student.getName().substring(0, 1) == "P" || this.apartment.getRentCost() > this.student.getMoney()) {
-            System.out.println("This appartament can't be rented!");
-        }System.out.println(this.apartment + " was rented by student: " + this.student);
-        return this.apartment;
+    public Apartment rent (Student student){
+        Apartment rentedapartment = null;
+        if(!student.getName().startsWith("P")){
+            for(int i = 0; i < appartments.length; i++) {
+                if(this.appartments[i].getRentCost() < student.getMoney()){
+                      rentedapartment = this.appartments[i];
+                      int removedIndex = i;
+                      System.arraycopy(this.appartments, removedIndex +1, this.appartments, removedIndex, this.appartments.length - 1 - removedIndex);
+                }
+            }
+        }
+        return rentedapartment;
     }
+
 }
