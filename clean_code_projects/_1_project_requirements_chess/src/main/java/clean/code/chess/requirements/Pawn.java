@@ -44,7 +44,20 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        if(movementType.equals(MovementType.MOVE) &
+                chessBoard.IsLegalBoardPosition(newX, newY)){ //Should we check if the move goes to a free position
+            if(this.xCoordinate == newX){                     //if we know it's a MOVE type of move and not a CAPTURE?
+                if(this.pieceColor == PieceColor.BLACK &
+                        (this.yCoordinate - newY == 1 || ((this.yCoordinate == 1 || this.yCoordinate == 6) & this.yCoordinate - newY == 2))) {
+                    this.yCoordinate = newY;
+                }
+                else if(this.pieceColor == PieceColor.WHITE &
+                        (newY - this.yCoordinate == 1 || ((this.yCoordinate == 1 || this.yCoordinate == 6) & newY - this.yCoordinate == 2))) {
+                    this.yCoordinate = newY;
+                }
+            }
+
+        }
     }
 
     @Override
