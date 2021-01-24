@@ -1,5 +1,8 @@
 package clean.code.chess.requirements;
 
+import static clean.code.chess.requirements.MovementType.CAPTURE;
+import static clean.code.chess.requirements.MovementType.MOVE;
+
 public class Pawn {
 
     private ChessBoard chessBoard;
@@ -44,7 +47,24 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
+        switch (movementType) {
+            case MOVE:
+                if(newX != getXCoordinate()) {
+                    //don't move piece
+                    break;
+                }
+                if(getPieceColor() == PieceColor.BLACK && newY < getYCoordinate())
+                    setYCoordinate(newY);
+                else if (getPieceColor() ==PieceColor.WHITE && newY > getYCoordinate())
+                    setYCoordinate(newY);
+                break;
+
+            // don't need to implement yet, see requirements
+            case CAPTURE:
+                break;
+
+
+        }
     }
 
     @Override
