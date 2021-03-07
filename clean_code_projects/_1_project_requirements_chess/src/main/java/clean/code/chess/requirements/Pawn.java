@@ -44,7 +44,72 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+
+
+            if(!chessBoard.IsLegalBoardPosition(newX, newY))
+                return;
+
+            if(pieceColor.equals(PieceColor.WHITE)) {
+
+                if (movementType.equals(MovementType.MOVE)) {
+                    if (xCoordinate == newX) {
+
+                        if(newY == yCoordinate + 1) {
+                            chessBoard.MoveChess(this, newX, newY);
+                            setXCoordinate(newX);
+                            setYCoordinate(newY);
+                        }
+                        else
+                            if (newY == yCoordinate + 2 && yCoordinate == 0) {
+                                chessBoard.MoveChess(this, newX, newY);
+                                setXCoordinate(newX);
+                                setYCoordinate(newY);
+                            }
+                    }
+                }
+
+                if (movementType.equals(MovementType.CAPTURE)) {
+                    if (xCoordinate == newX - 1 || xCoordinate == newX + 1) {
+                        if (newY == yCoordinate + 1) {
+                            chessBoard.MoveChess(this, newX, newY);
+                            setXCoordinate(newX);
+                            setYCoordinate(newY);
+                        }
+                    }
+                }
+            }
+
+        if(pieceColor.equals(PieceColor.BLACK)) {
+
+            if (movementType.equals(MovementType.MOVE)) {
+                if (xCoordinate == newX) {
+
+                    if(newY == yCoordinate - 1) {
+                        chessBoard.MoveChess(this, newX, newY);
+                        setXCoordinate(newX);
+                        setYCoordinate(newY);
+                    }
+                    else
+                    if (newY == yCoordinate - 2 && yCoordinate == 7) {
+                        chessBoard.MoveChess(this, newX, newY);
+                        setXCoordinate(newX);
+                        setYCoordinate(newY);
+                    }
+
+                }
+            }
+
+            if (movementType.equals(MovementType.CAPTURE)) {
+                if (xCoordinate == newX - 1 || xCoordinate == newX + 1) {
+                    if (newY == yCoordinate - 1) {
+                        chessBoard.MoveChess(this, newX, newY);
+                        setXCoordinate(newX);
+                        setYCoordinate(newY);
+                    }
+                }
+            }
+        }
+
     }
 
     @Override

@@ -3,7 +3,7 @@ package clean.code.chess.requirements;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class PawnTest {
 
@@ -14,6 +14,7 @@ public class PawnTest {
     public void setUp() {
         this.chessBoard = new ChessBoard();
         this.testSubject = new Pawn(PieceColor.BLACK);
+        this.testSubject.setChessBoard(this.chessBoard);
     }
 
     @Test
