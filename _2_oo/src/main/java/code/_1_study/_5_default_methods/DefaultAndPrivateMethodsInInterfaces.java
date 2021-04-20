@@ -8,6 +8,7 @@ public interface DefaultAndPrivateMethodsInInterfaces {
 
   default int difference(int a, int b) {
     return diff(a,b);
+    //lalala
   }
 
   private int diff(int a, int b) {
