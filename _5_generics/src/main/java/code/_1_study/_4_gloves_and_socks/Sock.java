@@ -1,8 +1,8 @@
 package code._1_study._4_gloves_and_socks;
 
 public class Sock implements ClothingItem {
-    private int size;
-    private String color;
+    private final int size;
+    private final String color;
 
     public Sock(int size, String color) {
         this.size = size;

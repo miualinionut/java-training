@@ -1,8 +1,8 @@
 package code._2_challenge._4_generic_iterator;
 
 public class Sock {
-    private int size;
-    private String color;
+    private final int size;
+    private final String color;
 
     public Sock(int size, String color) {
         this.size = size;

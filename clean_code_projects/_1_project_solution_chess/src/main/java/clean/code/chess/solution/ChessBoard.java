@@ -12,9 +12,9 @@ public class ChessBoard {
     public static final int MAX_BOARD_WIDTH = 7;
     public static final int MAX_BOARD_HEIGHT = 7;
 
-    private Map<Position, Piece> mapOfPositionAndPiece;
-    private Map<Piece, Position> mapOfPieceAndPosition;
-    private ChessBoardValidator chessBoardValidator;
+    private final Map<Position, Piece> mapOfPositionAndPiece;
+    private final Map<Piece, Position> mapOfPieceAndPosition;
+    private final ChessBoardValidator chessBoardValidator;
 
     public ChessBoard() {
         this.mapOfPieceAndPosition = new HashMap<>(MAX_BOARD_WIDTH * MAX_BOARD_HEIGHT);

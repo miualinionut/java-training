@@ -2,7 +2,7 @@ package code._1_study._3_good_coordination;
 
 public class Consumer extends Thread {
 
-    private IChannel channel;
+    private final IChannel channel;
 
     public Consumer(IChannel channel) {
         this.channel = channel;

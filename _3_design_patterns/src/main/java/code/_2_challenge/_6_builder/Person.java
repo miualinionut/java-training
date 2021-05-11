@@ -1,11 +1,11 @@
 package code._2_challenge._6_builder;
 
 public class Person {
-    private String name;
-    private String job;
-    private String university;
-    private String drivingLicense;
-    private boolean isMarried;
+    private final String name;
+    private final String job;
+    private final String university;
+    private final String drivingLicense;
+    private final boolean isMarried;
 
     public Person(Builder builder) {
         this.name = builder.name;

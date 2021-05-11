@@ -1,7 +1,7 @@
 package code._2_challenge._1_rabbit_race;
 
 public class RabbitThread extends Thread {
-    private int nr;
+    private final int nr;
 
     public RabbitThread(int nr) {
         this.nr = nr;

@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Chopstick {
-    private Lock lock = new ReentrantLock(true);
+    private final Lock lock = new ReentrantLock(true);
 
     public boolean lock() {
         lock.lock();

@@ -1,7 +1,7 @@
 package code._1_study._5_intrinsic_locks;
 
 public class BankAccount {
-    private String name;
+    private final String name;
     private int debit;
 
     public BankAccount(String name, int debit) {
