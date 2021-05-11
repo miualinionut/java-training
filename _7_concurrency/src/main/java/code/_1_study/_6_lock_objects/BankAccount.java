@@ -4,9 +4,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BankAccount {
-    private final String name;
+    private String name;
     private int debit;
-    private final Lock lock = new ReentrantLock(true);
+    private Lock lock = new ReentrantLock(true);
 
     public BankAccount(String name, int debit) {
         this.name = name;

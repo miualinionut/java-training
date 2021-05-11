@@ -27,7 +27,7 @@ public class StacktraceExample {
     }
 
     private static void printStacktrace(Exception ex) {
-        StackTraceElement[] elements = ex.getStackTrace();
+        StackTraceElement elements[] = ex.getStackTrace();
         for (int i = elements.length - 1; i >= 0; i--) {
             System.err.println(elements[i].getFileName()
                     + ":" + elements[i].getLineNumber()

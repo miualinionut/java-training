@@ -2,7 +2,7 @@ package code._2_challenge._3_generic_linked_list;
 
 public class GenericList<T> implements IGenericList<T> {
 
-    private final IGenericNode<T> root;
+    private IGenericNode<T> root;
 
     public GenericList(T rootValue) {
         this.root = new GenericNode<>();

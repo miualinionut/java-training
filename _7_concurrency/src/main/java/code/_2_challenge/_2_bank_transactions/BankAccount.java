@@ -1,7 +1,7 @@
 package code._2_challenge._2_bank_transactions;
 
 public class BankAccount {
-    private final String name;
+    private String name;
     private int debit;
 
     public BankAccount(String name, int debit) {

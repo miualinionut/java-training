@@ -1,8 +1,8 @@
 package code._2_challenge._2_pairs;
 
 class Pair<S extends Shoe> {
-    private final S first;
-    private final S second;
+    private S first;
+    private S second;
 
     public Pair(S firstElement, S secondElement) {
         first = firstElement;

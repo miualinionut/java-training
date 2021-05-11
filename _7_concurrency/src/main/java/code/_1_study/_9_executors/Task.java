@@ -2,7 +2,7 @@ package code._1_study._9_executors;
 
 public class Task implements Runnable {
 
-    private final String name;
+    private String name;
 
     public Task(String name) {
         this.name = name;

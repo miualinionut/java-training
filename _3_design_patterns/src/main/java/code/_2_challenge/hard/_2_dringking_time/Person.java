@@ -1,7 +1,7 @@
 package code._2_challenge.hard._2_dringking_time;
 
 public class Person implements IPerson {
-    private final String name;
+    private String name;
 
     private Person(Builder builder) {
         this.name = builder.name;

@@ -127,7 +127,7 @@ public class Main {
     }
 
     public static class MyThread implements Runnable {
-        private final List<Student> students;
+        private List<Student> students;
 
         public MyThread(List<Student> students) {
             this.students = students;

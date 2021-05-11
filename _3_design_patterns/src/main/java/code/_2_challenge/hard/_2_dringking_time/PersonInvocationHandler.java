@@ -6,7 +6,7 @@ import java.time.Duration;
 import java.time.Instant;
 
 public class PersonInvocationHandler implements java.lang.reflect.InvocationHandler {
-    private final IPerson target;
+    private IPerson target;
 
     public PersonInvocationHandler(IPerson target) {
         this.target = target;

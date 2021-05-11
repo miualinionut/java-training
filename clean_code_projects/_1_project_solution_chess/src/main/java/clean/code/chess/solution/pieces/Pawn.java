@@ -4,7 +4,7 @@ import clean.code.chess.solution.pieces.attributes.Color;
 
 public class Pawn extends Piece {
 
-    private final PawnValidator pawnValidator;
+    private PawnValidator pawnValidator;
 
     public Pawn(Color color) {
         super(color);

@@ -1,10 +1,10 @@
 package code._2_challenge._1_iterator;
 
 public class ArrayCustomIterator {
-    private final int[] arr;
+    private int[] arr;
     private int currentIndex;
 
-    public ArrayCustomIterator(int[] arr) {
+    public ArrayCustomIterator(int arr[]) {
         this.arr = arr;
         this.currentIndex = 0;
     }

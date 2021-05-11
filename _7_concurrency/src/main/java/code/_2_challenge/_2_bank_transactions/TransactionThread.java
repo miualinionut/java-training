@@ -1,9 +1,9 @@
 package code._2_challenge._2_bank_transactions;
 
 public class TransactionThread extends Thread {
-    private final BankAccount from;
-    private final BankAccount to;
-    private final int amount;
+    private BankAccount from;
+    private BankAccount to;
+    private int amount;
 
     public TransactionThread(String name, BankAccount from, BankAccount to, int amount) {
         super(name);

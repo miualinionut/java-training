@@ -2,7 +2,7 @@ package code._1_study._2_lack_of_coordination;
 
 public class Consumer extends Thread {
 
-    private final IChannel channel;
+    private IChannel channel;
 
     public Consumer(IChannel channel) {
         this.channel = channel;

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class OperationsChallenge {
-    private static final List<String> words = Arrays.asList(
+    private static List<String> words = Arrays.asList(
             "the",
             "quick",
             "brown",

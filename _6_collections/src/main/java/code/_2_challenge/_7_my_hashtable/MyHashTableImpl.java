@@ -2,7 +2,7 @@ package code._2_challenge._7_my_hashtable;
 
 public class MyHashTableImpl<K, V> implements MyHashTable<K, V> {
 
-    private final Object[] values = new Object[Integer.MAX_VALUE / 100]; //naive implementation
+    private Object[] values = new Object[Integer.MAX_VALUE / 100]; //naive implementation
     private int nrOfElements = 0;
 
     @Override

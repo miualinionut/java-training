@@ -1,7 +1,7 @@
 package code._2_challenge._4_generic_iterator;
 
 public class ArrayIterator<T> implements IArrayIterator<T> {
-    private final T[] arr;
+    private T[] arr;
     private int currentIndex = 0;
 
     public ArrayIterator(T[] arr) {
