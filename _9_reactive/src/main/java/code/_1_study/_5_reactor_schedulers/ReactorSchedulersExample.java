@@ -55,7 +55,7 @@ public class ReactorSchedulersExample {
         new Thread(() -> flux.subscribe(System.out::println), "t1").start();
     }
 
-    private static enum Type {
+    private enum Type {
         PUBLISH_ON, SUBSCRIBE_ON
     }
 }

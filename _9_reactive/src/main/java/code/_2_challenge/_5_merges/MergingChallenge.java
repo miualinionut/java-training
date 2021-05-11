@@ -8,10 +8,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MergingChallenge {
-    private static List<String> words1 = Arrays.asList(
+    private static final List<String> words1 = Arrays.asList(
             "alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
 
-    private static List<String> words2 = Arrays.asList(
+    private static final List<String> words2 = Arrays.asList(
             "the",
             "quick",
             "brown",

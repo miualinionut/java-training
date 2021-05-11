@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class ChristmasTree implements DecorableTree {
-    private List<List<String>> tree;
-    private int size;
+    private final List<List<String>> tree;
+    private final int size;
 
     public ChristmasTree() {
         this.size = 10;

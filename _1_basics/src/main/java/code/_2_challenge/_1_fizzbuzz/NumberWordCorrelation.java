@@ -1,8 +1,8 @@
 package code._2_challenge._1_fizzbuzz;
 
 public class NumberWordCorrelation {
-    private Integer number;
-    private String word;
+    private final Integer number;
+    private final String word;
 
     public NumberWordCorrelation(Integer number, String word) {
         this.number = number;

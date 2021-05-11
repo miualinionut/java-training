@@ -1,7 +1,7 @@
 package code._2_challenge._5_occurence;
 
 public class WordOccurrence {
-    private String word;
+    private final String word;
     private Integer occurrence;
 
     public WordOccurrence(String word) {

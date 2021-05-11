@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TransformationsChallenge {
-    private static List<User> users = Arrays.asList(
+    private static final List<User> users = Arrays.asList(
             new User("Project", "Reactor", "reactor"),
             new User("Java", "King", "javaking"),
             new User("Duke", "Awesome", "theduke"),

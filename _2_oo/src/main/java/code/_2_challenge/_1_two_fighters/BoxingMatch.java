@@ -1,8 +1,8 @@
 package code._2_challenge._1_two_fighters;
 
 public class BoxingMatch {
-    private Fighter f1;
-    private Fighter f2;
+    private final Fighter f1;
+    private final Fighter f2;
 
     public BoxingMatch(Fighter f1, Fighter f2) {
         this.f1 = f1;

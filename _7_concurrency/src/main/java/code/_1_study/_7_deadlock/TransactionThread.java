@@ -1,9 +1,9 @@
 package code._1_study._7_deadlock;
 
 public class TransactionThread extends Thread {
-    private BankAccount from;
-    private BankAccount to;
-    private int amount;
+    private final BankAccount from;
+    private final BankAccount to;
+    private final int amount;
 
     public TransactionThread(String name, BankAccount from, BankAccount to, int amount) {
         super(name);

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NetflixVanilla<T> implements Observed<T> {
-    private List<Observer> observers = new ArrayList<>();
+    private final List<Observer> observers = new ArrayList<>();
 
     @Override
     public void subscribe(Observer observer) {

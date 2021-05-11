@@ -1,8 +1,9 @@
 package code._2_challenge.hard._1_dining_philosophers;
 
 public class Philosopher extends Thread {
-    private String name;
-    private Chopstick left, right;
+    private final String name;
+    private final Chopstick left;
+    private final Chopstick right;
 
     public Philosopher(String name, Chopstick left, Chopstick right) {
         super(name);

@@ -5,7 +5,7 @@ public class ChessBoard {
     public static int MAX_BOARD_WIDTH = 7;
     public static int MAX_BOARD_HEIGHT = 7;
 
-    private Pawn[][] pieces;
+    private final Pawn[][] pieces;
 
     public ChessBoard() {
         pieces = new Pawn[MAX_BOARD_WIDTH][MAX_BOARD_HEIGHT];
