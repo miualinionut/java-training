@@ -8,6 +8,9 @@ public class codeChallenge2 {
     static String compute(int number) {
         String value1 = "", value2 = "", value;
 
+        if (number == 0)
+            return "*";
+
         if (divThree(number))
             value1 += "Foo";
         if (divFive(number))
@@ -16,7 +19,7 @@ public class codeChallenge2 {
             value1 += "Qix";
 
         if (value1 == "")
-            value = String.valueOf(number);
+            value = replaceWithZero(number);
         else
             value = value1 + fooBarQix(number, value2);
 
@@ -51,9 +54,28 @@ public class codeChallenge2 {
                 case 7:
                     value = "Qix" + value;
                     break;
+                case 0:
+                    value = "*" + value;
+                    break;
             }
             number /= 10;
         }
         return value;
+    }
+
+    static String replaceWithZero(int number) {
+        int digit;
+        String newNumber = "";
+
+        while(number != 0) {
+            digit = number % 10;
+            if (digit == 0)
+                newNumber = newNumber + "*";
+            else
+                newNumber = newNumber + String.valueOf(digit);
+            number /= 10;
+        }
+
+        return newNumber;
     }
 }
