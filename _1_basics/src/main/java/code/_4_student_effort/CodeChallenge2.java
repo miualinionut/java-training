@@ -5,42 +5,35 @@ public class CodeChallenge2 {
         int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 15, 21, 33, 51, 53};
 
         for(int i = 0; i < arr1.length; i++){
-            String output = compute(arr1[i]);
-            // when the returned string is "" (has a length of 0), the output is the number
-            output = output.length() == 0 ? Integer.toString(arr1[i]) : output;
-
-            System.out.println(arr1[i] + " => " + output);
+            System.out.println(arr1[i] + " => " + compute(arr1[i]));
         }
 
         System.out.println();
         int[] arr2 = {101, 303, 105, 10101};
         for(int i = 0; i < arr2.length; i++){
-            String output = compute2(arr2[i]);
-            // when the returned string is "" (has a length of 0), the output is the number
-            output = output.length() == 0 ? Integer.toString(arr2[i]) : output;
-
-            System.out.println(arr2[i] + " => " + output);
+            System.out.println(arr2[i] + " => " + compute2(arr2[i]));
         }
     }
 
     public static String compute(int number){
-        String output1 = "";
+        String output = "";
         String output2 = "";
 
-        // check if divisible
+        // check divisibility
         if(number % 3 == 0){
-            output1 += "Foo";
+            output += "Foo";
         }
         if(number % 5 == 0){
-            output1 += "Bar";
+            output += "Bar";
         }
         if(number % 7 == 0){
-            output1 += "Qix";
+            output += "Qix";
         }
 
         // check each digit
-        while(number > 0){
-            int digit = number % 10;
+        int auxNumber = number;
+        while(auxNumber > 0){
+            int digit = auxNumber % 10;
             if(digit == 3){
                 output2 = "Foo" + output2;
             }
@@ -50,44 +43,69 @@ public class CodeChallenge2 {
             else if(digit == 7){
                 output2 = "Qix" + output2;
             }
-            number /= 10;
+            auxNumber /= 10;
         }
 
-        return output1 + output2;
+        // if the String is empty (has length of 0), get the value of number
+        output += output2;
+        if(output.isEmpty()){
+            output = String.valueOf(number);
+        }
+
+        return output;
     }
 
     public static String compute2(int number){
-        String output1 = "";
-        String output2 = "";
+        String output = "";
 
-        // check if divisible
-        if(number % 3 == 0){
-            output1 += "Foo";
+        // if the previous rules are not meet, replaces each 0 with *
+        if(compute(number).equals(String.valueOf(number))){
+            while(number > 0){
+                int digit = number % 10;
+                if(digit == 0){
+                    output = "*" + output;
+                }
+                else {
+                    output = digit + output;
+                }
+                number /= 10;
+            }
         }
-        if(number % 5 == 0){
-            output1 += "Bar";
-        }
-        if(number % 7 == 0){
-            output1 += "Qix";
+        // if the previous rules are meet, implement the new one as well
+        else {
+            // check divisibility
+            if(number % 3 == 0){
+                output += "Foo";
+            }
+            if(number % 5 == 0){
+                output += "Bar";
+            }
+            if(number % 7 == 0){
+                output += "Qix";
+            }
+
+            String output2 = "";
+            // check each digit
+            while(number > 0){
+                int digit = number % 10;
+                if(digit == 3){
+                    output2 = "Foo" + output2;
+                }
+                else if(digit == 5){
+                    output2 = "Bar" + output2;
+                }
+                else if(digit == 7){
+                    output2 = "Qix" + output2;
+                }
+                else if(digit == 0){
+                    output2 = "*" + output2;
+                }
+                number /= 10;
+            }
+
+            output += output2;
         }
 
-        // check each digit
-        while(number > 0){
-            int digit = number % 10;
-            if(digit == 3){
-                output2 = "Foo" + output2;
-            }
-            else if(digit == 5){
-                output2 = "Bar" + output2;
-            }
-            else if(digit == 7){
-                output2 = "Qix" + output2;
-            }
-            else if(digit == 0){
-                output2 = "*" + output2;
-            }
-            number /= 10;
-        }
-        return output1 + output2;
+        return output;
     }
 }

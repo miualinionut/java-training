@@ -13,7 +13,7 @@ public class CodeChallenge1 {
             if(i % 11 == 0)
                 output += "Jazz";
             // when the output string is "" (has a length of 0), the output is the number
-            output = output.length() == 0 ? Integer.toString(i) : output;
+            output = output.isEmpty() ? String.valueOf(i) : output;
             System.out.println(i + " => " + output);
         }
     }
