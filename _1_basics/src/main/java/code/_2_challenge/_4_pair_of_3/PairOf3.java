@@ -1,7 +1,7 @@
 package code._2_challenge._4_pair_of_3;
 
 public class PairOf3 {
-    public Integer countPairs(Integer[] numbers, int sum) {
+    public static Integer countPairs(Integer[] numbers, int sum) {
         Integer pairs = 0;
         Integer[] indexesIncludedInPairs = new Integer[numbers.length];
         int nrOfIndexesIncludedInPairs = 0;
@@ -26,6 +26,11 @@ public class PairOf3 {
             }
         }
         return pairs;
+    }
+
+    public static void main(String[] args) {
+        Integer[] numbers1 = new Integer[0];
+        countPairs(numbers1, 0);
     }
 
 }
