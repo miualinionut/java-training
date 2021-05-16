@@ -1,7 +1,7 @@
 package code._2_challenge._3_pair_of_2;
 
 public class PairOf2 {
-    public Integer countPairs(Integer[] numbers) {
+    public static Integer countPairs(Integer[] numbers) {
         Integer pairs = 0;
         Integer[] indexesIncludedInPairs = new Integer[numbers.length];
         int nrOfIndexesIncludedInPairs = 0;
@@ -25,5 +25,13 @@ public class PairOf2 {
         }
         return pairs;
     }
+
+    public static void main(String[] args) {
+        Integer[] numbers = new Integer[0];
+        countPairs(numbers);
+    }
+
+
+
 
 }

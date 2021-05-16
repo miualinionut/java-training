@@ -2,7 +2,7 @@ package code._2_challenge._1_fizzbuzz;
 
 public class FizzBuzz {
 
-    public String fizzBuzz(int i) {
+    public static String fizzBuzz(int i) {
         String s = "";
 
         NumberWordCorrelation[] correlations = {
@@ -19,12 +19,10 @@ public class FizzBuzz {
         if (!isDivisible) {
             s = String.valueOf(i);
         }
-
-
         return s;
     }
 
-    public String fizzBuzz2(int i) {
+    public static String fizzBuzz2(int i) {
         String s = "";
 
         NumberWordCorrelation[] correlations = {
@@ -46,5 +44,16 @@ public class FizzBuzz {
 
 
         return s;
+    }
+
+    public static void main(String[] args) {
+        int n = 100;
+        for (int i = 1; i <= n; i++) {
+            System.out.println(fizzBuzz(i));
+        }
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println(fizzBuzz2(i));
+        }
     }
 }

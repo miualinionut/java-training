@@ -1,7 +1,7 @@
 package code._2_challenge._2_foobarqix;
 
 public class FooBarQix {
-    public String compute(int i) {
+    public static String compute(int i) {
         String s = "";
         if (i % 3 == 0) s += "Foo";
         if (i % 5 == 0) s += "Bar";
@@ -22,7 +22,7 @@ public class FooBarQix {
         return s;
     }
 
-    public String compute2(int i) {
+    public static String compute2(int i) {
         String s = "";
 
         boolean isDivisible = false;
@@ -50,5 +50,15 @@ public class FooBarQix {
         }
 
         return s;
+    }
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 200; i++) {
+            System.out.println(compute(i));
+        }
+
+        for (int i = 1; i <= 200; i++) {
+            System.out.println(compute2(i));
+        }
     }
 }
