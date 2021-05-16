@@ -15,6 +15,14 @@ public class Main {
                 System.out.print("Buzz");
                 printnumber = false;
             }
+            if (i % 7 == 0) {
+                System.out.print("Rizz");
+                printnumber = false;
+            }
+            if (i % 11 == 0) {
+                System.out.print("Jazz");
+                printnumber = false;
+            }
             if (printnumber) {
                 System.out.print(i);
             }
