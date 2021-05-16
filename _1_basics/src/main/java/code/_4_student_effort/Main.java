@@ -4,40 +4,62 @@ import com.sun.nio.sctp.SctpSocketOption;
 
 public class Main {
 
-    public static void main(String[] args) {
-        //TODO put your code changes in here
-        //3 Fizz
-        //5 BUzz
-        //15 FizzBuzz
-        //7 Rizz
-        //11 Jazz
-        //77 RizzJazz
-        for(int i = 1; i<=99; i++){
-
-            if(i % 15 == 0){
-                System.out.print("FizzBuzz, ");
-            }
-            else if(i % 3 == 0){
-                System.out.print("Fizz, ");
-            }
-            else if(i % 5 == 0){
-                System.out.print("Buzz, ");
-            }
-            else if(i % 7 == 0){
-                System.out.print("Rizz, ");
-            }
-            else if(i % 11 == 0){
-                System.out.print("Jazz, ");
-            }
-            else if(i % 77 == 0){
-                System.out.print("RizzJazz, ");
-            }
-            else {
-                System.out.print(i  + ", ");
-            }
+    public static String Compute(int j){
+        String a = "";
+        String f = "Foo";
+        String b = "Bar";
+        String q = "Qix";
+        if(j % 3 == 0){
+            a += f;
+        }
+        else if(j % 5 == 0){
+            a += b;
+        }
+        else if(j % 7 == 0){
+            a += q;
+        }
+        else{
+            a += j;
         }
 
-        System.out.print(100 + ".");
+        while(j!=0){
+
+            if((j%10) == 3) {
+                a += f;
+                j = j/10;
+                continue;
+            }
+            else if((j%10) == 5) {
+                a += b;
+                j = j/10;
+                continue;
+            }
+            else if((j%10) == 7) {
+                a += q;
+                j = j/10;
+                continue;
+            }
+
+            j = j/10;
+        }
+
+        return a;
+    }
+    public static void main(String[] args) {
+        //TODO put your code changes in here
+        // 3 Foo
+        // 5 Bar
+        // 7 Qix
+        //
+        //FooBarQix
+
+        for(int i = 1; i<=53; i++){
+
+            String b = Compute(i);
+            System.out.println(b);
+
+        }
 
     }
+
 }
