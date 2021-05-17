@@ -17,11 +17,13 @@ public class CodeChallenge4 {
         // check each number with all to its right
         for(int i = 0; i < n - 2; i++){
             for(int j = i + 1; j < n - 1; j++){
+                boolean isPair = false;
                 for(int k = i + 2; k < n; k++){
                     // get the sum of 3 numbers to check the requirement for pairs (their sum is 0)
                     int sum = array[i] + array[j] + array[k];
                     // if the requirement is satisfied increment counter
                     if(sum == 0){
+                        isPair = true;
                         nr_pairs++;
                         // if the 3 numbers are not consecutive, bring the second one next to the first one
                         if(j != i + 1){
@@ -42,7 +44,7 @@ public class CodeChallenge4 {
                     }
                 }
                 // stop the second for if the pair is found
-                if(j < i){
+                if(isPair){
                     break;
                 }
             }
