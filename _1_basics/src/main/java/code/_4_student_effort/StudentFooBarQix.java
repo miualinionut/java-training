@@ -21,12 +21,14 @@ public class StudentFooBarQix implements Command {
         this.divStrings.put("7", "Qix");
     }
 
+    /**
+     *      Converts integer to String using divStrings rules
+     *      3 => "FooFoo"
+     *      14 => "Qix"
+     *      15 => "FooBar"
+     *      37 => ""
+     */
     private String addFromDivisibility(int number) {
-        //Converts integer to String using divStrings rules
-        //3 => "FooFoo"
-        //14 => "Qix"
-        //15 => "FooBar"
-        //37 => ""
         StringBuilder string = new StringBuilder();
         for (Map.Entry<String, String> stringEntry : this.divStrings.entrySet()) {
             String divNumber = stringEntry.getKey();
@@ -36,16 +38,18 @@ public class StudentFooBarQix implements Command {
         return string.toString();
     }
 
+    /**
+     *     Converts integer to String using digitsToString rules, considering fromDivIsEmpty boolean
+     *     When addFromDigits is called, the boolean fromDivIsEmpty will be:
+     *          True if the function addFromDivisibility returns an empty string
+     *          False if the function addFromDivisibility returns a non-empty string
+     *          fromDivIsEmpty = (addFromDivisibility(number).equals(""))
+     *     If the fromDivIsEmpty boolean is True, we write the digits of the numbers
+     *     101 => 1*1
+     *     If the fromDivIsEmpty boolean is False, we concatenate to it only special keywords
+     *     10101 => FooQix**
+     */
     private String addFromDigits(int number, boolean fromDivIsEmpty) {
-        //Converts integer to String using digitsToString rules, considering fromDivIsEmpty boolean
-        //When addFromDigits is called, the boolean fromDivIsEmpty will be:
-        //     True if the function addFromDivisibility returns an empty string
-        //     False if the function addFromDivisibility returns a non-empty string
-        //     fromDivIsEmpty = (addFromDivisibility(number).equals(""))
-        //If the fromDivIsEmpty boolean is True, we write the digits of the numbers
-        //101 => 1*1
-        //If the fromDivIsEmpty boolean is False, we concatenate to it only special keywords
-        //10101 => FooQix**
         StringBuilder newstring = new StringBuilder();
         String string = String.valueOf(number);
         for (int i = 0; i < string.length(); i++) {

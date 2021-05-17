@@ -14,7 +14,7 @@ public class StudentFizzBuzz implements Command {
                 toPrint = "Rizz"; //Challenge statement unclear, I assumed complete override is required
             if (toPrint.equals(""))
                 toPrint = String.valueOf(i);
-            if (i != 100)
+            if (i != maxLimit)
                 toPrint += ", ";
             System.out.print(toPrint);
         }
