@@ -4,25 +4,20 @@ import java.security.PublicKey;
 
 public class Main {
 
-    String result="";
+    int counter = 0;
 
-    public String compute1(int input){
-        if(input % 3 == 0 && input == 3){
-            result = "FooFoo";
-        }else if(input % 3 == 0)
-            return result = "Foo";
-
-        if(input % 5 == 0 && input == 5){
-            result = "BarBar";
-        }else if(input % 5 == 0)
-            return result = "Bar";
-
-        if(input % 7 == 0 && input == 7){
-            result = "QixQix";
-        }else if(input % 7 == 0)
-            return result = "Qix";
-
-        return result;
+    public int pairOf2(int[] ints) {
+        for (int i = 0; i < ints.length-1; i++) {
+            for (int j = 0; j < ints.length; j++) {
+                if (ints[i] + ints[j] == 0 && ints[i] != ints[j]){
+                    ints[i] = 0;
+                    ints[j] = 0;
+                    counter += 1;
+                    break;
+                }
+            }
+        }
+        return counter;
     }
 
 
@@ -30,7 +25,9 @@ public class Main {
     public static void main(String[] args) {
         //TODO put your code changes in here
     Main main = new Main();
-        System.out.println(main.compute1(15));
+    int[] integers = new int[]{3,2,-3,-2,3,0};
+        System.out.println(main.pairOf2(integers));
+
     }
 }
 
