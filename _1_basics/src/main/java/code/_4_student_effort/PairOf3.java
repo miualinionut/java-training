@@ -20,7 +20,7 @@ public class PairOf3 {
         else {
             int i, j,k,ok, numberofpairs = 0;
             for (i = 0; i < length; i++) {
-                numbers[i] = sc.nextInt();
+                numbers[i] = sc.nextInt();}
 
             for (i = 0; i < length - 2; i++){
                 ok=0;
@@ -45,14 +45,15 @@ public class PairOf3 {
                 if(ok==1){
                     remove_element_at_index(i,numbers);
                     length--;
-                    break;
+                    //break;
+                    i--;
                 }
 
         }
-
-        }
             System.out.println(numberofpairs);
+        }
+
     }
 }
-}
+
 
