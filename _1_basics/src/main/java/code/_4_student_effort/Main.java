@@ -1,5 +1,7 @@
 package code._4_student_effort;
 
+import java.util.ArrayList;
+
 public class Main {
 
 
@@ -146,9 +148,34 @@ public class Main {
         System.out.println(compute2(10101));*/
 
 
-        //Code Challenge 3:
+        //Code Challenge 3:    Ceva este gresit. Nu pot sa imi dau seama ce. Merge pentru unele cazuri, dar nu pentru toate. Am incercat si fara vector de frecventa dar nu am reusit.
+
+        /*int[] array = {3,2,-3,-2,3,0};
+        int[] verified = new int[array.length];
+        int count=0;
+        int k=0;
+        boolean found = false;
+        for (int i:array){
+            found=false;
+            for(int j:array){
+                if(!found){
+                    if(i+j==0){
+                        if(i>0){
+                            verified[i]++;
+                        }
+                        found=true;
+                    }
+                }
+            }
+        }
+        for(int item:verified)
+            count+=item;
+        System.out.println(count);*/
 
 
+
+
+        //Code Challenge 4: Trebuie sa imi dau seama de greseala de la code challenge 3 inainte de a ma apuca de 4.
 
     }
 }
