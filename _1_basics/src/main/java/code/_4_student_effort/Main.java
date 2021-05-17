@@ -149,6 +149,10 @@ public class Main {
 
 
         //Code Challenge 3:    Ceva este gresit. Nu pot sa imi dau seama ce. Merge pentru unele cazuri, dar nu pentru toate. Am incercat si fara vector de frecventa dar nu am reusit.
+        //sa incerc sa fac sortare ( sa fac un "merge sort")
+        //cand gaseste o pereche, sa le faca 0
+        //sa impart in 2 vectori, unul cu elem negative si unul cu elemente pozitive
+
 
         /*int[] array = {3,2,-3,-2,3,0};
         int[] verified = new int[array.length];
@@ -176,6 +180,6 @@ public class Main {
 
 
         //Code Challenge 4: Trebuie sa imi dau seama de greseala de la code challenge 3 inainte de a ma apuca de 4.
-
+        
     }
 }
