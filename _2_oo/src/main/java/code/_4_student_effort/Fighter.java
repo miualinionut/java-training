@@ -11,7 +11,7 @@ public class Fighter {
             this.damagePerAttack = damagePerAttack;
         }
 
-        public void attack(code._2_challenge._1_two_fighters.Fighter opponent) {
+        public void attack(Fighter opponent) {
             opponent.health = opponent.health - this.damagePerAttack;
         }
 }
