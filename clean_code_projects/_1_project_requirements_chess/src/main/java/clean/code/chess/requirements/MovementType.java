@@ -1,6 +1,6 @@
 package clean.code.chess.requirements;
 
-public enum MovementType {
-
+public enum MovementType
+{
     MOVE, CAPTURE;
 }

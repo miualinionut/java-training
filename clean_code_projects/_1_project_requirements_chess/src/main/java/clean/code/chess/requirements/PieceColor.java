@@ -1,7 +1,6 @@
 package clean.code.chess.requirements;
 
-public enum PieceColor {
-
+public enum PieceColor
+{
     BLACK, WHITE;
-
 }
