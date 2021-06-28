@@ -7,6 +7,10 @@ public class Main {
 
         //Notite din timpul cursului - sapt 3
 
+
+        //de citit despre springboot
+        //de citit despre cross cutting concerns
+
         /*
         *
         * -design pattern = solutie a unei probleme intr-un context dat
@@ -68,12 +72,54 @@ public class Main {
         * -in design patternurile structurale exista:
         *
         * -ADAPTER
+        *
+        *
         * -COMPOSITE
+        *
+        *
+        *           -OOP: mostenire, compunere
+        *           - o masina are un camp de tip motor/un motor are un camp de tip piston (asta se numeste compunere)
+        * class Motor{
+        *   void accelerate(); //accelereaza viteza cu 1 km/h
+        * }
+        * class MotorTunat{
+        *    Motor motor;
+         *   void accelerate(){
+         *      motor.accelerate();
+         *      motor.accelerate();
+         *      motor.accelerate();
+         *      motor.accelerate();
+         *      motor.accelerate();
+         *      motor.accelerate();
+         *  }
+         *
+         * }
+        *
+        * class Masina{
+        *   Motor motor;
+        *   void drive(){
+        *       motor.accelerate();
+        *   }
+        * }
+        * * class Masina2{
+         *   MotorTunat motor;
+         *   void drive(){
+         *       motor.accelerate(); //accelereaza cu 6 km/h
+         *   }
+         * }
+        *
+        *
+        *
+        *
         * -PROXY
         * -FLYWEIGHT
         * -FACADE
         * -BRIDGE
         * -DECORATOR
+        *
+        *       //la decorator, am un obiect existent cu o anumita functionalitate si vreau sa ii adaug ceva. Atunci cand ii adaug noi functionalitati, fara sa modific clasa respectiva, se numeste decorator
+        *       //practic imi declar un obiect de tipul clasei respective si dupa fac noi metode ce folosesc acel obiect pentru a adauga noi functionalitati
+        *       //decoratorul este folosit in librariile de IO din java, la citire fisier si scriere fisier
         *
         * */
     }
