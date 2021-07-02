@@ -20,14 +20,18 @@ public class AccountBuilder implements Serializable {
     public AbstractAccount create(String type, IBank bank, Scanner scanner, final String IBAN, String pin,
                                   final double sold) {
         IFactoryAccount builder;
-        if (type.equals("Basic")) {
-            builder = new FactoryBasicAccount();
-        } else if (type.equals("Silver")) {
-            builder = new FactorySilverAccount();
-        } else if (type.equals("Gold")) {
-            builder = new FactoryGoldAccount();
-        } else {
-            return null;
+        switch (type) {
+            case "Basic":
+                builder = new FactoryBasicAccount();
+                break;
+            case "Silver":
+                builder = new FactorySilverAccount();
+                break;
+            case "Gold":
+                builder = new FactoryGoldAccount();
+                break;
+            default:
+                return null;
         }
 
         return builder.create(bank, scanner, IBAN, pin, bank.getName(), sold);
