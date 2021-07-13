@@ -1,11 +1,45 @@
+package code._4_student_effort._2_movie_database;
 
-package code._2_challenge._2_movie_database;
 
-import code._2_challenge._2_movie_database.*;
+public class Main {
 
-public class Database {
+    static String GetStudioCu2Premii(Studio[] studios){
+        StringBuilder names = new StringBuilder();
+        for(Studio studio: studios){
+            if(studio.getFilme().length > 1) {
+                names.append(studio.getNume()).append(' ');
+            }
+        }
+        return names.toString();
+    }
 
-    public static Studio[] getData() {
+    static String GetStudioNamesByActor(Studio[] studios){
+        StringBuilder nume = new StringBuilder();
+        for(Studio studio: studios){
+            FOR_FILME:for(Film film: studio.getFilme())
+                for(Actor actor: film.getActori())
+                    if(actor.getNume().equals("actor cu 2 oscaruri")){
+                        nume.append(studio.getNume()).append(" ");
+                        break FOR_FILME;
+                    }
+        }
+        return nume.toString();
+    }
+
+    static String GetMovieNameByActorAge(Studio[] studios){
+        StringBuilder nume = new StringBuilder();
+        for(Studio studio: studios){
+            for(Film film: studio.getFilme())
+                for(Actor actor: film.getActori())
+                    if(actor.getVarsta()>50){
+                        nume.append(film.getNume()).append(" ");
+                        break;
+                    }
+        }
+        return nume.toString();
+    }
+
+    public static void main(String[] args) {
         Premiu oscar1990 = new Premiu("oscar", 1990);
         Premiu oscar2000 = new Premiu("oscar", 2000);
         Premiu oscar2010 = new Premiu("oscar", 2010);
@@ -28,45 +62,8 @@ public class Database {
         Studio studio2 = new Studio("Disney", new Film[]{film3, film4, film5});
 
         Studio[] studioDatabase = new Studio[]{studio1, studio2};
-
-        return studioDatabase;
-    }
-
-    public static void printAllStudioNamesThatHavePublishedMoreThen2Movies() {
-        for (Studio studio : getData()) {
-            if (studio.filme.length > 2) {
-                System.out.println(studio.nume);
-            }
-        }
-    }
-
-    public static void printStudioNamesInWitchPlaysTheActorWithNameActorCu2Oscaruri() {
-        for (Studio studio : getData()) {
-            for (Film film : studio.filme) {
-                for (Actor actor : film.actori) {
-                    if (actor.nume.equals("actor cu 2 oscaruri")) {
-                        System.out.println(studio.nume);
-                    }
-                }
-            }
-        }
-    }
-
-    public static void printMovieNamesInWitchPlaysAtLeastAnActorWithAgeAbove50() {
-        for (Studio studio : getData()) {
-            for (Film film : studio.filme) {
-                for (Actor actor : film.actori) {
-                    if (actor.varsta > 50) {
-                        System.out.println(film.nume);
-                    }
-                }
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        printAllStudioNamesThatHavePublishedMoreThen2Movies();
-        printStudioNamesInWitchPlaysTheActorWithNameActorCu2Oscaruri();
-        printMovieNamesInWitchPlaysAtLeastAnActorWithAgeAbove50();
+        System.out.println(GetStudioCu2Premii(studioDatabase));
+        System.out.println(GetStudioNamesByActor(studioDatabase));
+        System.out.println(GetMovieNameByActorAge(studioDatabase));
     }
 }
