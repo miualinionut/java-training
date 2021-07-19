@@ -1,4 +1,4 @@
-package clean.code.design_patterns.requirements;
+package code._1_builder_design_pattern;
 
 public class Sandwich {
     private String name;
