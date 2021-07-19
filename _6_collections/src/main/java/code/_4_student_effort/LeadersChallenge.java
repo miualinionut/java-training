@@ -15,6 +15,7 @@ public class LeadersChallenge {
         List<Integer> leaders = new ArrayList<>();
         boolean ok = true;
         for(int i=0; i<list.size(); i++){
+            ok=true;
             for(int j=i+1; j<list.size(); j++){
                 if(list.get(i)<list.get(j))
                     ok=false;
