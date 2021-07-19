@@ -11,7 +11,7 @@ public class Main {
 
         //Code Challenge 2
 
-        /*Running runningShoe1 = new Running("RED", 41);
+        Running runningShoe1 = new Running("RED", 41);
         Running runningShoe2 = new Running("RED", 41);
         Pair<Running> pairOK = new Pair<>(runningShoe1,runningShoe2);
 
@@ -21,11 +21,20 @@ public class Main {
         //Pair<Running> pairKO = new Pair<>(runningShoe1,bootShoe);   //compilation error
 
 
-        //tot nu functioneaza cum trebuie, nu stiu de ce*/
+        //tot nu functioneaza cum trebuie, nu stiu de ce
 
         //Code challenge 3
 
 
 
+
+        //quiz
+
+
+
     }
 }
+
+
+
+
