@@ -27,6 +27,7 @@ public class Pawn {
         this.xCoordinate = value;
     }
 
+
     public int getYCoordinate() {
         return yCoordinate;
     }
@@ -39,7 +40,7 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
