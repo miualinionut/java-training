@@ -37,6 +37,7 @@ public class ChessBoard {
         }
 
         pawn.setPieceColor(pieceColor);
+        //backup2
 
 
     }
