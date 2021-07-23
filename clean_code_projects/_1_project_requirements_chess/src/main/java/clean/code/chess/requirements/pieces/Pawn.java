@@ -1,4 +1,8 @@
-package clean.code.chess.requirements;
+package clean.code.chess.requirements.pieces;
+
+import clean.code.chess.requirements.ChessBoard;
+import clean.code.chess.requirements.attributes.MovementType;
+import clean.code.chess.requirements.attributes.PieceColor;
 
 public class Pawn {
 
@@ -11,7 +15,7 @@ public class Pawn {
         this.pieceColor = pieceColor;
     }
 
-    public ChessBoard getChesssBoard() {
+    public ChessBoard getChessBoard() {
         return chessBoard;
     }
 
@@ -39,12 +43,29 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        // throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        switch (movementType) {
+            case MOVE:
+                if (ChessBoard.IsLegalBoardPosition(newX, newY)) {
+                    if (xCoordinate == newX) {
+                        if (yCoordinate == newY - 1 && pieceColor == PieceColor.WHITE) {
+                            yCoordinate += 1;
+                        }
+
+                        if (yCoordinate == newY + 1 && pieceColor == PieceColor.BLACK) {
+                            yCoordinate -= 1;
+                        }
+                    }
+                }
+                break;
+
+            case CAPTURE: break;
+        }
     }
 
     @Override
