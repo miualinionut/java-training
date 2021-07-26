@@ -4,6 +4,92 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+
+/*
+*
+* programare imperativa:
+*
+* - instructiunile se vor executa intotdeauna in ordinea in care au fost scrise
+* - se vor executa doar instructiunile care au fost scrise si exact asa cum au fost scrise
+* NFR- non functional requirements -> site-ul sa se incarce in browser in mai putin de 3 secunde
+* FR - functional requirments -> sa avem un catalog de produse si un landing page
+*
+*
+* programare structurala: (se introduce de regula in liceu)
+*
+* int metodaCareCalculeazaAvg(int a, int b)
+* {
+* int sum=a+b;
+* int avg = sum/2;
+* return avg;
+* }
+*
+*
+* for{}
+* while{}
+* do while{}
+*
+* in interiorul unui bloc de cod folosim programare imperativa
+*
+*
+*
+* programare functionala:
+*
+* f(x) = x^2 + 3 + x;
+* x=5  ?cat este valoarea lui f?
+*
+*
+* structura codului "functional" este identica intre secvential vs paralel
+* structura codului "imperativ" NU este identica intre secvential vs paralel
+*
+*
+*
+*
+*
+*
+* MUTABILITATE:
+* - o variabila isi poate schimba valoarea
+*
+* IMUTABILITATE:
+* - o variabila nu isi poate schimba valoarea
+*
+*
+*
+*
+* STREAM-urile sunt LAZY
+*  - orice operatie pe un stream nu se executa decat daca operatia respectiva intoarce o valoare, unde valoarea != Stream
+*
+* operatii intermediare = intorc Stream<T>
+* operatii finale = intorc orice altceva in afara de stream
+*
+* operatiile intermediare sunt lazy - nu se executa atunci cand sunt scrise/apelate
+* operatiile finale - se executa atunci cand sunt apelate
+*
+* functional:
+* - imutability
+*               final int a =5;
+*               a=6; // nu merge pentru ca am final in fata
+* - higher order functions
+* - functions first class citizen
+*
+*
+*
+* void f(int a, int b){return a+b}   //void_f_int_int     ---> o functie cu identitate (are nume)
+*                                   //void_int_int      ---> o functie anonima (fara nume)
+*
+* (int a, int b) -> {return a+b}  //functie anonima  //lambda
+*
+*
+*
+*
+* functii pure vs functii impure
+* - functiile pure nu au side effects
+* - functiile impure au side effects
+* - side effect = ceva ce face o modificare in contextul aplicatiei
+*
+* */
+
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {

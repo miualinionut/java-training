@@ -59,7 +59,7 @@ public class Main {
     }
 
     private static void getHighestScoreV4(List<Student> students) {
-        double highestScore = students.stream()
+        double highestScore = students.stream()    //aici daca adaugam .parallel dupa stream() se va imparti automat pe mai multe threaduri si o sa treaca de la secvential la paralel
                 .filter((Student s) -> s.getGradYear() == 2011)
                 .map((Student s) -> s.getScore())
                 .max(Student.byScore).get();
