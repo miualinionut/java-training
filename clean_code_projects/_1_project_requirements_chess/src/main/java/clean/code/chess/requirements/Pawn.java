@@ -1,5 +1,8 @@
 package clean.code.chess.requirements;
 
+import clean.code.chess.requirements.enums.MovementType;
+import clean.code.chess.requirements.enums.PieceColor;
+
 public class Pawn {
 
     private ChessBoard chessBoard;
@@ -44,15 +47,9 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        if(movementType == MovementType.MOVE)
-        {
-            if(IsMoveLegal(newX, newY))
-            {
+        if(movementType == MovementType.MOVE) {
+            if(IsMoveLegal(newX, newY)) {
                 this.chessBoard.Move(this, newX, newY);
-            }
-            else
-            {
-                this.chessBoard.Move(this, -1, -1);
             }
         }
     }

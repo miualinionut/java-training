@@ -1,6 +1,6 @@
 package clean.code.chess.requirements;
 
-import junit.framework.TestCase;
+import clean.code.chess.requirements.enums.PieceColor;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

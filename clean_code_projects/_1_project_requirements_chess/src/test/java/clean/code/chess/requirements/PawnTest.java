@@ -1,5 +1,7 @@
 package clean.code.chess.requirements;
 
+import clean.code.chess.requirements.enums.MovementType;
+import clean.code.chess.requirements.enums.PieceColor;
 import org.junit.Before;
 import org.junit.Test;
 

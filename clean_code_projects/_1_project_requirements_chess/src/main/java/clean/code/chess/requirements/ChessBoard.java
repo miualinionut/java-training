@@ -1,5 +1,7 @@
 package clean.code.chess.requirements;
 
+import clean.code.chess.requirements.enums.PieceColor;
+
 public class ChessBoard {
 
     public static int MAX_BOARD_WIDTH = 7;
@@ -11,36 +13,15 @@ public class ChessBoard {
         pieces = new Pawn[MAX_BOARD_WIDTH][MAX_BOARD_HEIGHT];
     }
 
-    public boolean isPositionFree(int xCoordinate, int yCoordinate) {
-        try {
-            if (pieces[xCoordinate][yCoordinate] == null) {
-                return true;
-            } else return false;
-        } catch(ArrayIndexOutOfBoundsException e)
-        {
-            return false;
-        }
-    }
 
-    public boolean checkValidCoordinates(int xCoordinate, int yCoordinate) {
-        return IsLegalXPosition(xCoordinate) && IsLegalYPosition(yCoordinate);
-    }
-
-    public boolean validatePositionForColors(int xCoordinate, PieceColor color) {
-        if (color == PieceColor.WHITE) {
-            return xCoordinate == 0 || xCoordinate == 1;
-        }
-        return xCoordinate == MAX_BOARD_HEIGHT - 1 || xCoordinate == MAX_BOARD_HEIGHT;
-    }
-
-    public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor) {
-        if (IsLegalBoardPosition(xCoordinate, yCoordinate)) {
-            if (validatePositionForColors(xCoordinate, pawn.getPieceColor())) {
+    public void Add(Pawn pawn, int x, int y, PieceColor pieceColor) {
+        if (IsLegalBoardPosition(x, y)) {
+            if (validatePositionForColors(x, pawn.getPieceColor())) {
                 pawn.setChessBoard(this);
-                pawn.setXCoordinate(xCoordinate);
-                pawn.setYCoordinate(yCoordinate);
+                pawn.setXCoordinate(x);
+                pawn.setYCoordinate(y);
                 pawn.setPieceColor(pieceColor);
-                pieces[xCoordinate][yCoordinate] = pawn;
+                pieces[x][y] = pawn;
             } else {
                 setUnexistingCoordinates(pawn);
             }
@@ -54,19 +35,15 @@ public class ChessBoard {
         pawn.setYCoordinate(-1);
     }
 
-    public void Move(Pawn pawn, int xCoordinate, int yCoordinate) {
-        if(IsLegalBoardPosition(xCoordinate, yCoordinate)) {
+    public void Move(Pawn pawn, int x, int y) {
+        if(IsLegalBoardPosition(x, y)) {
             int oldX = pawn.getXCoordinate();
             int oldY = pawn.getYCoordinate();
 
             pieces[oldX][oldY] = null;
-            pawn.setXCoordinate(xCoordinate);
-            pawn.setYCoordinate(yCoordinate);
-            pieces[xCoordinate][yCoordinate] = pawn;
-        }
-        else
-        {
-            setUnexistingCoordinates(pawn);
+            pawn.setXCoordinate(x);
+            pawn.setYCoordinate(y);
+            pieces[x][y] = pawn;
         }
     }
 
@@ -78,10 +55,32 @@ public class ChessBoard {
         return 0 <= y && y <= MAX_BOARD_WIDTH;
     }
 
-    public boolean IsLegalBoardPosition(int xCoordinate, int yCoordinate) {
-        if(checkValidCoordinates(xCoordinate, yCoordinate)) {
-            return isPositionFree(xCoordinate, yCoordinate);
+    public boolean IsLegalBoardPosition(int x, int y) {
+        if(checkValidCoordinates(x, y)) {
+            return isPositionFree(x, y);
         }
         else return false;
+    }
+
+    public boolean isPositionFree(int x, int y) {
+        try {
+            if (pieces[x][y] == null) {
+                return true;
+            } else return false;
+        } catch(ArrayIndexOutOfBoundsException e)
+        {
+            return false;
+        }
+    }
+
+    public boolean checkValidCoordinates(int x, int y) {
+        return IsLegalXPosition(x) && IsLegalYPosition(y);
+    }
+
+    public boolean validatePositionForColors(int x, PieceColor color) {
+        if (color == PieceColor.WHITE) {
+            return x == 0 || x == 1;
+        }
+        return x == MAX_BOARD_HEIGHT - 1 || x == MAX_BOARD_HEIGHT;
     }
 }

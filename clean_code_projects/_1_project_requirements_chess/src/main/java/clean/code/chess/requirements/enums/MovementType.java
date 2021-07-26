@@ -1,4 +1,4 @@
-package clean.code.chess.requirements;
+package clean.code.chess.requirements.enums;
 
 public enum MovementType {
 
