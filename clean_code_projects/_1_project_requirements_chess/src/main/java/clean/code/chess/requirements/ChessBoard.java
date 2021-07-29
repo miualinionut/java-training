@@ -17,23 +17,29 @@ public class ChessBoard {
 
     }
     public boolean IsInRangeX(int xCoordinate){
-        return (xCoordinate<=7 && xCoordinate >=0);
+        return (xCoordinate<7 && xCoordinate >=0);
     }
     public boolean IsInRangey(int yCoordinate){
-        return (yCoordinate<=7 && yCoordinate >=0);
+        return (yCoordinate<7 && yCoordinate >=0);
     }
 
     public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor) {
         //throw new UnsupportedOperationException("Need to implement ChessBoard.add()");
-        if(this.IsInRangeX(xCoordinate ) && this.IsInRangeX(yCoordinate) && this.pieces[xCoordinate][yCoordinate]!=1) {
+        if(IsLegalBoardPosition(xCoordinate, yCoordinate) && this.pieces[xCoordinate][yCoordinate]!=1 && this.pieces[xCoordinate][yCoordinate]!=2 ) {
             pawn.setXCoordinate(xCoordinate);
             pawn.setYCoordinate(yCoordinate);
-            this.pieces[xCoordinate][yCoordinate]=1;
+            if(pieceColor==PieceColor.WHITE) {
+                this.pieces[xCoordinate][yCoordinate] = 1;
+            }
+            else{
+                this.pieces[xCoordinate][yCoordinate] = 2;
+
+            }
         }
         else{
             pawn.setXCoordinate(-1);
             pawn.setYCoordinate(-1);
-            this.pieces[xCoordinate][yCoordinate]=0;
+
         }
 
         pawn.setPieceColor(pieceColor);
