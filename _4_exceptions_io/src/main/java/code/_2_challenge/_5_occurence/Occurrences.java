@@ -3,10 +3,7 @@ package code._2_challenge._5_occurence;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Occurrences {
     public static void main(String[] args) throws FileNotFoundException {
