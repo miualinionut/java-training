@@ -17,19 +17,7 @@ public class Sandwich {
         this.sauce = builder.sauce;
     }
 
-    @Override
-    public String toString() {
-        return "Sandwich {" +
-                "name='" + name + '\'' +
-                ", bread='" + bread + '\'' +
-                ", meat='" + meat + '\'' +
-                ", vegetables='" + vegetables + '\'' +
-                ", cheese='" + cheese + '\'' +
-                ", sauce='" + sauce + '\'' +
-                '}';
-    }
-
-    static class Builder {
+    public static class Builder {
         private String name;
         private String bread;
         private String meat;

@@ -17,9 +17,5 @@ public class Main {
                 .setCheese("Gouda")
                 .setVegetables("Tomatoes")
                 .build();
-
-
-        System.out.println(s1);
-        System.out.println(s2);
     }
 }
