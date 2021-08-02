@@ -154,7 +154,7 @@ public class Main {
         //sa impart in 2 vectori, unul cu elem negative si unul cu elemente pozitive
 
 
-        /*int[] array = {3,2,-3,-2,3,0};
+        int[] array = {3,2,-3,-2,3,0};
         int[] verified = new int[array.length];
         int count=0;
         int k=0;
@@ -174,7 +174,7 @@ public class Main {
         }
         for(int item:verified)
             count+=item;
-        System.out.println(count);*/
+        System.out.println(count);
 
 
 
