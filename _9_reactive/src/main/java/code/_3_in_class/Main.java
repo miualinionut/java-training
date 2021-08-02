@@ -4,6 +4,16 @@ import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import reactor.core.publisher.DirectProcessor;
 
+/*
+*
+*   -de cautat pe net Agile Manifest (Agile software development)-
+*   -de cautat pe net The reactive manifest-
+*   -de cautat pe net Elvis Operator-
+*
+*
+*
+* */
+
 public class Main {
 
     public static void main(String[] args) {
