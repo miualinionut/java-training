@@ -148,38 +148,60 @@ public class Main {
         System.out.println(compute2(10101));*/
 
 
-        //Code Challenge 3:    Ceva este gresit. Nu pot sa imi dau seama ce. Merge pentru unele cazuri, dar nu pentru toate. Am incercat si fara vector de frecventa dar nu am reusit.
-        //sa incerc sa fac sortare ( sa fac un "merge sort")
-        //cand gaseste o pereche, sa le faca 0
-        //sa impart in 2 vectori, unul cu elem negative si unul cu elemente pozitive
+        //Code Challenge 3:
 
 
-        int[] array = {3,2,-3,-2,3,0};
+        /*int[] array = {3,2,-3,-2,3,0};
         int[] verified = new int[array.length];
-        int count=0;
-        int k=0;
-        boolean found = false;
-        for (int i:array){
-            found=false;
-            for(int j:array){
-                if(!found){
-                    if(i+j==0){
-                        if(i>0){
-                            verified[i]++;
+        int pairs=0;
+        int indexes=0;
+        for(int i=0;i<array.length-1;i++){
+            for(int j = i+1; j< array.length-1; j++){
+                boolean ok = false;
+                for(int k = 0; k<indexes; k++){
+                    if(verified[k] == i || verified[k] == j){
+                        ok = true;
+                    }
+                }
+                if(!ok && (array[i] + array[j] == 0)){
+                    verified[indexes++] = i;
+                    verified[indexes++] = j;
+                    pairs++;
+                    break;
+                }
+            }
+        }
+        System.out.println(pairs);*/
+
+
+
+
+        //Code Challenge 4:
+
+        /*int[] array = {-1,-1,-1,2};
+        int[] verified = new int[array.length];
+        int pairs=0;
+        int indexes=0;
+        for(int i=0;i<array.length-2;i++){
+            for(int j = i+1; j< array.length-1; j++){
+                for(int k = j+1; k<array.length; k++) {
+                    boolean ok = false;
+                    for (int p = 0; p < indexes; p++) {
+                        if (verified[p] == i || verified[p] == j || verified[p] == k) {
+                            ok = true;
                         }
-                        found=true;
+                    }
+                    if (!ok && (array[i] + array[j] + array[k]== 0)) {
+                        verified[indexes++] = i;
+                        verified[indexes++] = j;
+                        verified[indexes++] = k;
+                        pairs++;
+                        break;
                     }
                 }
             }
         }
-        for(int item:verified)
-            count+=item;
-        System.out.println(count);
-
-
-
-
-        //Code Challenge 4: Trebuie sa imi dau seama de greseala de la code challenge 3 inainte de a ma apuca de 4.
+        System.out.println(pairs);*/
         
     }
 }
