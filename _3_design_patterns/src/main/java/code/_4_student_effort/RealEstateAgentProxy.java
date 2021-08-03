@@ -4,21 +4,24 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class RealEstateAgentProxy {
-    /*Apartment[] _apartment;
-    Apartment[] _apartment2;
-    public void represent(Apartment apartment){
-        for(int i=0;i<_apartment.length-1;i++){
-            _apartment2[i]=_apartment[i];
-        }
-        _apartment2[_apartment.length]=apartment;
-        _apartment= new Apartment[_apartment.length+1];
-        for(int i=0;i<_apartment.length;i++){
-            _apartment[i]=_apartment2[i];
-        }
+    private Apartment[] appartments = new Apartment[0];
+
+    public void represent(Apartment appartment) {
+        this.appartments = Arrays.copyOf(this.appartments, this.appartments.length + 1);
+        this.appartments[this.appartments.length - 1] = appartment;
     }
     public Apartment rent(Student student){
-        if(!student._name.startsWith("P")){
-            //neterminat
+        Apartment rentedAppartment = null;
+        if(!student.get_name().startsWith("P")){
+            for (int i = 0; i < appartments.length; i++) {
+                if (this.appartments[i].get_monthlyRentCost() < student.get_money()) {
+                    rentedAppartment = this.appartments[i];
+
+                    int removedIndex = i;
+                    System.arraycopy(this.appartments, removedIndex + 1, this.appartments, removedIndex, this.appartments.length - 1 - removedIndex);
+                }
+            }
         }
-    }*/
+        return rentedAppartment;
+    }
 }
