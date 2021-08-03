@@ -74,6 +74,19 @@ public class Main {
 
 
 
+        //Code Challenge 3
+
+        /*Fish d = new Fish();
+        Cat c = new Cat("Fluffy");
+        Animal a = new Fish();
+        Animal e = new Spider();
+        Pet p = new Cat();
+
+        c.eat();
+        c.play();
+        c.walk();
+        System.out.println(c.getName());*/
+
 
 
 
