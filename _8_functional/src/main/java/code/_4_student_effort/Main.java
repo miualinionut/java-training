@@ -13,5 +13,9 @@ public class Main {
         //Code Challenge 2 - Predicate
         /*complete*/
 
+        //Code Challenge 3 - Lambda
+
+        /*complete*/
+
     }
 }
