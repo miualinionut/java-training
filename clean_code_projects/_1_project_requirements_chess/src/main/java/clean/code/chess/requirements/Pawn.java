@@ -39,12 +39,41 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+
+        if(movementType==MovementType.MOVE){
+            if(IsMoveLegal(newX,newY)) {
+                this.chessBoard.Move(this,newX,newY);
+            }
+        }
+
+    }
+
+    public boolean IsMoveLegal(int newX, int newY)
+    {
+        int pastX = getXCoordinate();
+        int pastY=getYCoordinate();
+        int movingDirection= getMovingDirection();
+        if ((newX==pastX || newX==pastX+ movingDirection) && (newY==pastY || newY ==pastY-1 || newY==pastY+1)){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+
+    public int getMovingDirection(){
+        if (getPieceColor()==PieceColor.BLACK){
+            return -1;
+        }
+        else {
+            return 1;
+        }
     }
 
     @Override
