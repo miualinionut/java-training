@@ -6,6 +6,22 @@ public class Pawn {
     private int xCoordinate;
     private int yCoordinate;
     private PieceColor pieceColor;
+    private Pawn pawn;
+
+    public boolean validMove(int x, int y) {
+        //negru- verific daca e culoarea neagra, dupa verific daca noul y coincide cu y-ul actual
+        // si daca x-ul nou e mai mic ca x-ul vechi cu 1(decrementez un rand)
+        if (getPieceColor() == PieceColor.BLACK) {
+            if ((x == getXCoordinate() - 1 && y==getYCoordinate()) )
+                return true;
+        }
+        //alb
+        else if(getPieceColor() == PieceColor.WHITE){
+            if ((x == getXCoordinate() + 1 && y==getYCoordinate()) )
+                return true;
+        }
+        return false;
+    }
 
     public Pawn(PieceColor pieceColor) {
         this.pieceColor = pieceColor;
@@ -39,12 +55,19 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        //throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if(movementType==movementType.Move) {
+            if(validMove(newX, newY)) {
+                pawn.setXCoordinate(newX);
+                pawn.setXCoordinate(newY);
+            }
+
+        }
     }
 
     @Override
