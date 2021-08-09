@@ -1,6 +1,6 @@
 package code._2_challenge._1_fizzbuzz;
 
-public class NumberWordCorrelation {
+public class   NumberWordCorrelation {
     private Integer number;
     private String word;
 

@@ -1,4 +1,4 @@
-package clean.code.design_patterns.requirements;
+package proxy.code.design_patterns.requirements;
 
 import java.util.Arrays;
 

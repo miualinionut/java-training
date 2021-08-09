@@ -1,4 +1,4 @@
-package clean.code.design_patterns.requirements;
+package proxy.code.design_patterns.requirements;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Main {
 
         Customer customer1=new Customer("Popescu Ion",26,1920304017,5);
 
-        System.out.println(customer1+"rented");
+        System.out.println(customer1);
     }
 
 

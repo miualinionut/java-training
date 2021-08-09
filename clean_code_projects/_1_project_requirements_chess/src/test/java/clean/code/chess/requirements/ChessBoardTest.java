@@ -37,12 +37,6 @@ public class ChessBoardTest extends TestCase {
     }
 
     @Test
-    public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
-        assertTrue(isValidPosition);
-    }
-
-    @Test
     public void testIsLegalBoardPosition_False_X_equals_0_Y_equals_9() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(0, 9);
         assertFalse(isValidPosition);
@@ -72,19 +66,5 @@ public class ChessBoardTest extends TestCase {
         assertEquals(-1, secondPawn.getYCoordinate());
     }
 
-    @Test
-    public void testLimits_The_Number_Of_Pawns() {
-        for (int i = 0; i < 10; i++) {
-            Pawn pawn = new Pawn(PieceColor.BLACK);
-            int row = i / ChessBoard.MAX_BOARD_WIDTH;
-            testSubject.Add(pawn, 6 + row, i % ChessBoard.MAX_BOARD_WIDTH, PieceColor.BLACK);
-            if (row < 1) {
-                assertEquals(6 + row, pawn.getXCoordinate());
-                assertEquals(i % ChessBoard.MAX_BOARD_WIDTH, pawn.getYCoordinate());
-            } else {
-                assertEquals(-1, pawn.getXCoordinate());
-                Assert.assertEquals(-1, pawn.getYCoordinate());
-            }
-        }
-    }
+
 }
