@@ -51,7 +51,8 @@ public class ChessBoard {
     }
 
     public boolean isLegalBoardPosition(int xCoordinate, int yCoordinate) {
-        return chessBoardValidator.isValidCoordinates(xCoordinate, yCoordinate) && chessBoardValidator.isFreePosition(xCoordinate, yCoordinate);
+        return chessBoardValidator.isValidCoordinates(xCoordinate, yCoordinate)
+                && chessBoardValidator.isFreePosition(xCoordinate, yCoordinate);
     }
 
     private class ChessBoardValidator {
