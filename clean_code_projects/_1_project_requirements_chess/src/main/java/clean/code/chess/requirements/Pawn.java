@@ -11,8 +11,8 @@ public class Pawn {
         this.pieceColor = pieceColor;
     }
 
-    public ChessBoard getChesssBoard() {
-        return chessBoard;
+    public ChessBoard getChessBoard() {
+        return this.chessBoard;
     }
 
     public void setChessBoard(ChessBoard chessBoard) {
@@ -20,7 +20,7 @@ public class Pawn {
     }
 
     public int getXCoordinate() {
-        return xCoordinate;
+        return this.xCoordinate;
     }
 
     public void setXCoordinate(int value) {
@@ -28,7 +28,7 @@ public class Pawn {
     }
 
     public int getYCoordinate() {
-        return yCoordinate;
+        return this.yCoordinate;
     }
 
     public void setYCoordinate(int value) {
@@ -39,12 +39,33 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
-        pieceColor = value;
+    public void setPieceColor(PieceColor value) {
+        this.pieceColor = value;
     }
 
+    // Requests a Move command
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        // throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if (movementType.equals(MovementType.MOVE)) {
+            if (IsMoveValid(newX, newY)) {
+                this.setXCoordinate(newX);
+                this.setYCoordinate(newY);
+            }
+        }
+    }
+
+    // Verify if move is valid
+    public boolean IsMoveValid(int newX, int newY) {
+        if (newX != this.xCoordinate) {
+            return false;
+        }
+
+        if (pieceColor.equals(PieceColor.WHITE)) {
+            return newY == yCoordinate + 1;
+        }
+        else {
+            return newY == yCoordinate - 1;
+        }
     }
 
     @Override
