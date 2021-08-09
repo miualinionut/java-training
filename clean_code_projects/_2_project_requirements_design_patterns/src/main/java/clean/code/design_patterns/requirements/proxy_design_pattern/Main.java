@@ -49,9 +49,17 @@ public class Main {
 
         proxy.changeValueOfTax(admin,tax1,1000);
 
+        System.out.println("\n_______________________\n");
+
 
         for (Tax tax: taxes){
             System.out.println(tax.getSum());
         }
+
+        System.out.println("\n_______________________\n");
+
+        proxy.changeValueOfTax(user1,tax1,1000);
+
+
     }
 }

@@ -21,6 +21,9 @@ public class ProxyUserRights {
                 }
             }
         }
+        else{
+            System.out.println("User is not an admin.");
+        }
     }
 
     public Tax[] getTaxes(){ return taxes; }
