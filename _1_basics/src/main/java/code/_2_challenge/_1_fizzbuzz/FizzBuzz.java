@@ -11,7 +11,7 @@ public class FizzBuzz {
         };
         boolean isDivisible = false;
         for (NumberWordCorrelation correlation : correlations) {
-            if (i % correlation.getNumber() == 0) {
+            if (Ca % correlation.getNumber() == 0) {
                 isDivisible = true;
                 s += correlation.getWord();
             }
