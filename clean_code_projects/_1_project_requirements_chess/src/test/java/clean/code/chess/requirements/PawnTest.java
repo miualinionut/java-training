@@ -48,9 +48,13 @@ public class PawnTest {
     @Test
     public void testPawn_Move_LegalCoordinates_Forward_UpdatesCoordinates() {
         chessBoard.Add(testSubject, 6, 3, PieceColor.BLACK);
-        testSubject.Move(MovementType.MOVE, 6, 2);
-        assertEquals(6, testSubject.getXCoordinate());
-        assertEquals(2, testSubject.getYCoordinate());
+        testSubject.Move(MovementType.MOVE, 5, 3);
+        assertEquals(5, testSubject.getXCoordinate());
+        assertEquals(3, testSubject.getYCoordinate());
+        // x(nr randului) initial egal 6
+        //y(nr coloanei) initial egal 3
+        // dupa mutare, x=5, y =3
+        // expected x = 5, y = 3
     }
 
 }
