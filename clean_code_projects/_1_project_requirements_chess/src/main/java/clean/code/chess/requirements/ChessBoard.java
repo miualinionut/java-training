@@ -40,4 +40,8 @@ public class ChessBoard {
         pawn.setXCoordinate(-1);
         pawn.setYCoordinate(-1);
     }
+
+    public Pawn[][] getPieces() {
+        return pieces;
+    }
 }
