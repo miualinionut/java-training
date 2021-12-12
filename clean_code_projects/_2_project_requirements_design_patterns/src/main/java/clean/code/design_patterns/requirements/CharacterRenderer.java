@@ -117,10 +117,16 @@ public class CharacterRenderer {
                 + bodyTop.substring(xAxisUnit * body.getWidth() / 2 + 1);
         bodyIMG[0] = bodySkin;
 
-        String legSkinLeft;
-        String legSkinRight;
-        String bottomLegLeftSkin;
-        String bottomLegRightSkin;
+        String legSkinLeft = stars(xAxisUnit * legWidth - 1) + pipes(1);
+        String legSkinRight = pipes(1) + stars(xAxisUnit * legWidth - 1);
+        String bottomLegLeftSkin = hashtags(xAxisUnit * legWidth - 1) + spaces(1);
+        String bottomLegRightSkin = spaces(1) + hashtags(xAxisUnit * legWidth - 1);
+        for (int i = 0; i < yAxisUnit * leg.getHeight() - 1; i++) {
+            leftLegIMG[i] = legSkinLeft;
+            rightLegIMG[i] = legSkinRight;
+        }
+        leftLegIMG[yAxisUnit * leg.getHeight() - 1] = bottomLegLeftSkin;
+        rightLegIMG[yAxisUnit * leg.getHeight() - 1] = bottomLegRightSkin;
 
         // TO DO: Finish full implementation
         int baseWidth = 2 * arm.getWidth() + body.getWidth();
