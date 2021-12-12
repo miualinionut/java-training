@@ -128,6 +128,10 @@ public final class CourseDao extends Dao {
                 Thread.sleep(500);
             }
         }
-        return new Course(resultSet.getInt(1), teacher, resultSet.getString(3), resultSet.getString(4));
+        return new Course.Builder(teacher)
+                .setId(resultSet.getInt(1))
+                .setCourseName(resultSet.getString(3))
+                .setDescription(resultSet.getString(4))
+                .build();
     }
 }

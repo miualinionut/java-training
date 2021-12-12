@@ -8,3 +8,5 @@ Loading database in memory using jdbc, 2021-12-12 20:56:24.579
 Exception in Dao.java: createDatabase(create): java.sql.SQLException: No suitable driver found for jdbc:mariadb://localhost:3306/, 2021-12-12 20:56:24.636
 Loading database in memory using jdbc, 2021-12-12 20:57:18.817
 No csv read, 2021-12-12 20:57:25.154
+Loading database in memory using jdbc, 2021-12-12 23:41:50.595
+Loading csv files in memory, 2021-12-12 23:41:55.675

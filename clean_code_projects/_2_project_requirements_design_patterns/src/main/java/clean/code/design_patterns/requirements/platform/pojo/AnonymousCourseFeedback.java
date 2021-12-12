@@ -10,20 +10,11 @@ public final class AnonymousCourseFeedback {
     final Course course;
     @NotNull
     final String feedback;
-    private static int co = 0;
 
-    public AnonymousCourseFeedback(@NotNull Course course, @NotNull String feedback) {
-        this.course = course;
-        this.feedback = feedback;
-        this.id = ++co;
-    }
-
-    public AnonymousCourseFeedback(int id, @NotNull Course course, @NotNull String feedback) {
-        this.course = course;
-        this.feedback = feedback;
-        this.id = id;
-        if (id > co)
-            co = id;
+    public AnonymousCourseFeedback(@NotNull AnonymousCourseFeedback.Builder builder) {
+        this.course = builder.course;
+        this.feedback = builder.feedback;
+        this.id = builder.id;
     }
 
     public @NotNull Course getCourse() {
@@ -62,5 +53,37 @@ public final class AnonymousCourseFeedback {
 
     public String toStringCsv() {
         return id + ", " + course.id + ", " + feedback;
+    }
+
+    public static final class Builder {
+        Integer id;
+        @NotNull
+        private final Course course;
+        @NotNull
+        private String feedback;
+        private static int co = 0;
+
+        public Builder(@NotNull Course course) {
+            this.course = course;
+            this.feedback = "";
+        }
+
+        public AnonymousCourseFeedback build() {
+            if (id == null)
+                id = ++co;
+            return new AnonymousCourseFeedback(this);
+        }
+
+        public Builder setFeedback(String feedback) {
+            this.feedback = feedback;
+            return this;
+        }
+
+        public Builder setId(int id) {
+            this.id = id;
+            if (id > co)
+                co = id;
+            return this;
+        }
     }
 }

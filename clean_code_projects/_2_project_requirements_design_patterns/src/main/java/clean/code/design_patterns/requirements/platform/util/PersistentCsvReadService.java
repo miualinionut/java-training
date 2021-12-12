@@ -39,7 +39,11 @@ public class PersistentCsvReadService {
                     int courseId = Integer.parseInt(args.get(1));
                     Course course = ELearningPlatformService.findCourseById(courseId);
                     int feedbackId = Integer.parseInt(args.get(0));
-                    AnonymousCourseFeedback feedback = new AnonymousCourseFeedback(feedbackId, course, args.get(2));
+
+                    AnonymousCourseFeedback feedback = new AnonymousCourseFeedback.Builder(course)
+                            .setFeedback(args.get(2))
+                            .setId(feedbackId)
+                            .build();
                     if (!AdminInterface.feedbacks.contains(feedback)) {
                         AdminInterface.feedbacks.add(feedback);
                         repository.getAnonymousCourseFeedbackDao().writeAnonymousCourseFeedback(feedback);
@@ -65,7 +69,12 @@ public class PersistentCsvReadService {
                     Date date = AdminInterface.parseDate(args.get(2), "yyyy-MM-dd");
                     int teacherId = Integer.parseInt(args.get(3));
                     Teacher teacher = (Teacher) ELearningPlatformService.findUserById(teacherId);
-                    TeachingAssistant teachingAssistant = new TeachingAssistant(id, args.get(1), date, teacher, args.get(4), args.get(5));
+                    TeachingAssistant teachingAssistant =
+                            new TeachingAssistant.Builder(args.get(1), date, teacher)
+                                    .setAddress(args.get(4))
+                                    .setPhoneNumber(args.get(5))
+                                    .setId(id)
+                                    .build();
                     if (!AdminInterface.users.contains(teachingAssistant)) {
                         AdminInterface.users.add(teachingAssistant);
                         repository.getTeachingAssistantDao().writeTeachingAssistant(teachingAssistant);
@@ -90,7 +99,10 @@ public class PersistentCsvReadService {
                     int quizId = Integer.parseInt(args.get(0));
                     int courseId = Integer.parseInt(args.get(1));
                     Course course = ELearningPlatformService.findCourseById(courseId);
-                    Quiz quiz = new Quiz(quizId, course, args.get(2));
+                    Quiz quiz = new Quiz.Builder(course)
+                            .setQuizContent(args.get(2))
+                            .setId(quizId)
+                            .build();
                     if (!AdminInterface.quizzes.contains(quiz)) {
                         AdminInterface.quizzes.add(quiz);
                         repository.getQuizDao().writeQuiz(quiz);
@@ -143,7 +155,11 @@ public class PersistentCsvReadService {
                     int id = Integer.parseInt(args.get(0));
                     int teacherId = Integer.parseInt(args.get(1));
                     Teacher teacher = (Teacher) ELearningPlatformService.findUserById(teacherId);
-                    Course course = new Course(id, teacher, args.get(2), args.get(3));
+                    Course course = new Course.Builder(teacher)
+                            .setId(id)
+                            .setCourseName(args.get(2))
+                            .setDescription(args.get(3))
+                            .build();
                     if (!AdminInterface.courses.contains(course)) {
                         AdminInterface.courses.add(course);
                         repository.getCourseDao().writeCourse(course);
@@ -167,7 +183,11 @@ public class PersistentCsvReadService {
                     final List<String> args = Arrays.stream(s.split(",")).map(aux -> aux.strip()).collect(Collectors.toList());
                     int id = Integer.parseInt(args.get(0));
                     Date date = AdminInterface.parseDate(args.get(2), "yyyy-MM-dd");
-                    Student student = new Student(id, args.get(1), date, args.get(3), args.get(4));
+                    Student student = new Student.Builder(args.get(1), date)
+                            .setId(id)
+                            .setAddress(args.get(3))
+                            .setPhoneNumber(args.get(4))
+                            .build();
                     if (!AdminInterface.users.contains(student)) {
                         AdminInterface.users.add(student);
                         repository.getStudentDao().writeStudent(student);
@@ -191,7 +211,12 @@ public class PersistentCsvReadService {
                     final List<String> args = Arrays.stream(s.split(",")).map(aux -> aux.strip()).collect(Collectors.toList());
                     int id = Integer.parseInt(args.get(0));
                     Date date = AdminInterface.parseDate(args.get(2).strip(), "yyyy-MM-dd");
-                    Teacher teacher = new Teacher(id, args.get(1), date, args.get(3), args.get(4), args.get(5));
+                    Teacher teacher = new Teacher.Builder(args.get(1), date)
+                            .setId(id)
+                            .setRanking(args.get(3))
+                            .setAddress(args.get(4))
+                            .setPhoneNumber(args.get(5))
+                            .build();
                     if (!AdminInterface.users.contains(teacher)) {
                         AdminInterface.users.add(teacher);
                         repository.getTeacherDao().writeTeacher(teacher);

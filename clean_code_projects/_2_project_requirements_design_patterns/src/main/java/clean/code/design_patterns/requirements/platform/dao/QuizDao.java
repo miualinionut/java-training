@@ -108,7 +108,10 @@ public final class QuizDao extends Dao {
                 Thread.sleep(500);
             }
         }
-        return new Quiz(resultSet.getInt(1), course, resultSet.getString(3));
+        return new Quiz.Builder(course)
+                .setId(resultSet.getInt(1))
+                .setQuizContent(resultSet.getString(3))
+                .build();
     }
 
     public void updateQuizContent(int quizId, @NotNull String content) {

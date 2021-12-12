@@ -7,27 +7,17 @@ import java.util.Objects;
 public final class Course {
     final int id;
     @NotNull
-    final User teacher;
+    final Teacher teacher;
     @NotNull
     final String courseName;
     @NotNull
     String description;
-    private static int co = 0;
 
-    public Course(@NotNull User teacher, @NotNull String courseName, @NotNull String description) {
-        this.teacher = teacher;
-        this.courseName = courseName;
-        this.description = description;
-        this.id = ++co;
-    }
-
-    public Course(int id, @NotNull User teacher, @NotNull String courseName, @NotNull String description) {
-        this.teacher = teacher;
-        this.courseName = courseName;
-        this.description = description;
-        this.id = id;
-        if (id > co)
-            co = id;
+    public Course(@NotNull Builder builder) {
+        this.id = builder.id;
+        this.teacher = builder.teacher;
+        this.courseName = builder.courseName;
+        this.description = builder.description;
     }
 
     public @NotNull String getDescription() {
@@ -75,5 +65,47 @@ public final class Course {
 
     public String toStringCsv() {
         return id + ", " + teacher.id + ", " + courseName + ", " + description;
+    }
+
+    public static final class Builder {
+        private Integer id;
+        @NotNull
+        private final Teacher teacher;
+        private String courseName;
+        @NotNull
+        private String description;
+        private static int co = 0;
+
+        public Builder(@NotNull Teacher teacher) {
+            this.teacher = teacher;
+            this.description = "";
+        }
+
+        public Builder setId(int id) {
+            this.id = id;
+            if (id > co)
+                co = id;
+            return this;
+        }
+
+        public Builder setCourseName(@NotNull String courseName) throws IllegalArgumentException {
+            if (courseName.length() == 0)
+                throw new IllegalArgumentException("Course name cannot be empty");
+            this.courseName = courseName;
+            return this;
+        }
+
+        public Builder setDescription(@NotNull String description) {
+            this.description = description;
+            return this;
+        }
+
+        public Course build() throws IllegalArgumentException {
+            if (courseName == null || courseName.length() == 0)
+                throw new IllegalArgumentException("Course name must be set");
+            if (id == null)
+                id = ++co;
+            return new Course(this);
+        }
     }
 }

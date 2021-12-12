@@ -10,20 +10,11 @@ public final class Quiz {
     final Course course;
     @NotNull
     String quiz;
-    private static int co = 0;
 
-    public Quiz(@NotNull Course course, @NotNull String quiz) {
-        this.course = course;
-        this.quiz = quiz;
-        this.id = ++co;
-    }
-
-    public Quiz(int id, @NotNull Course course, @NotNull String quiz) {
-        this.course = course;
-        this.quiz = quiz;
-        this.id = id;
-        if (id > co)
-            co = id;
+    public Quiz(@NotNull Builder builder) {
+        this.id=builder.id;
+        this.course = builder.course;
+        this.quiz = builder.quiz;
     }
 
     public @NotNull Course getCourse() {
@@ -66,5 +57,39 @@ public final class Quiz {
 
     public String toStringCsv() {
         return id + ", " + course.id + ", " + quiz;
+    }
+
+    public static final class Builder {
+        private Integer id;
+        @NotNull
+        private final Course course;
+        String quiz;
+        private static int co = 0;
+
+        public Builder(@NotNull Course course) {
+            this.course = course;
+        }
+
+        public Builder setId(int id) {
+            this.id = id;
+            if (id > co)
+                co = id;
+            return this;
+        }
+
+        public Builder setQuizContent(@NotNull String quiz) throws IllegalArgumentException {
+            if (quiz.length() == 0)
+                throw new IllegalArgumentException("Quiz must not be empty");
+            this.quiz = quiz;
+            return this;
+        }
+
+        public Quiz build() throws IllegalArgumentException{
+            if(quiz==null || quiz.length()==0)
+                throw new IllegalArgumentException("Quiz must be set");
+            if(id==null)
+                id=++co;
+            return new Quiz(this);
+        }
     }
 }

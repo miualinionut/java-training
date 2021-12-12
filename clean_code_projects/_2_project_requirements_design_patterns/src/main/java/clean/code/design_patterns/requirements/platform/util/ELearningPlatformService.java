@@ -62,14 +62,11 @@ public class ELearningPlatformService implements AdminInterface {
         System.out.println("address");
         address.setLength(0);
         address.append(in.nextLine().strip());
-        if (address.length() == 0)
-            throw new IllegalArgumentException("empty address");
-
 
         System.out.println("phone");
         phoneNumber.setLength(0);
         phoneNumber.append(in.nextLine().strip());
-        if (!phoneNumber.toString().matches("[0-9]{10}")) {
+        if (phoneNumber.length() > 0 && !phoneNumber.toString().matches("[0-9]{10}")) {
             throw new IllegalArgumentException("incorrect phone number");
         }
     }
@@ -87,10 +84,14 @@ public class ELearningPlatformService implements AdminInterface {
         if (rank.length() == 0)
             throw new IllegalArgumentException("empty rank");
 
-
-        Teacher teacher = new Teacher(name.toString(), birthDate, rank, address.toString(), phoneNumber.toString());
+        Teacher teacher = new Teacher.Builder(name.toString(), birthDate)
+                .setRanking(rank)
+                .setAddress(address.toString())
+                .setPhoneNumber(phoneNumber.toString())
+                .build();
         users.add(teacher);
         repository.getTeacherDao().writeTeacher(teacher);
+
         return persistentCsvWriteService.writeTeacher(teacher);
     }
 
@@ -102,9 +103,13 @@ public class ELearningPlatformService implements AdminInterface {
         StringBuilder phoneNumber = new StringBuilder();
         addUser(in, name, birthDate, address, phoneNumber);
 
-        Student student = new Student(name.toString(), birthDate, address.toString(), phoneNumber.toString());
+        Student student = new Student.Builder(name.toString(), birthDate)
+                .setAddress(address.toString())
+                .setPhoneNumber(phoneNumber.toString())
+                .build();
         users.add(student);
         repository.getStudentDao().writeStudent(student);
+
         return persistentCsvWriteService.writeStudent(student);
     }
 
@@ -122,7 +127,10 @@ public class ELearningPlatformService implements AdminInterface {
         Teacher teacher = (Teacher) findUserById(teacherId);
 
         TeachingAssistant teachingAssistant =
-                new TeachingAssistant(name.toString(), birthDate, teacher, address.toString(), phoneNumber.toString());
+                new TeachingAssistant.Builder(name.toString(), birthDate, teacher)
+                        .setAddress(address.toString())
+                        .setPhoneNumber(phoneNumber.toString())
+                        .build();
         users.add(teachingAssistant);
         repository.getTeachingAssistantDao().writeTeachingAssistant(teachingAssistant);
         return persistentCsvWriteService.writeTeachingAssistant(teachingAssistant);
@@ -133,7 +141,7 @@ public class ELearningPlatformService implements AdminInterface {
         System.out.println("id prof");
         int teacherId = in.nextInt();
         in.nextLine();
-        User teacher = findUserById(teacherId);
+        Teacher teacher = (Teacher) findUserById(teacherId);
 
         System.out.println("course name");
         String courseName = in.nextLine().strip();
@@ -145,9 +153,13 @@ public class ELearningPlatformService implements AdminInterface {
         if (description.length() == 0)
             throw new IllegalArgumentException("empty course description");
 
-        Course course = new Course(teacher, courseName, description);
+        Course course = new Course.Builder(teacher)
+                .setCourseName(courseName)
+                .setDescription(description)
+                .build();
         courses.add(course);
         repository.getCourseDao().writeCourse(course);
+
         return persistentCsvWriteService.writeCourse(course);
     }
 
@@ -187,9 +199,12 @@ public class ELearningPlatformService implements AdminInterface {
         if (quizContent.length() == 0)
             throw new IllegalArgumentException("empty quiz content");
 
-        Quiz quiz = new Quiz(course, quizContent);
+        Quiz quiz = new Quiz.Builder(course)
+                .setQuizContent(quizContent).
+                build();
         quizzes.add(quiz);
         repository.getQuizDao().writeQuiz(quiz);
+
         return persistentCsvWriteService.writeQuiz(quiz);
     }
 
@@ -205,9 +220,13 @@ public class ELearningPlatformService implements AdminInterface {
         if (feedbackContent.length() == 0)
             throw new IllegalArgumentException("empty feedback content");
 
-        AnonymousCourseFeedback feedback = new AnonymousCourseFeedback(course, feedbackContent);
+        AnonymousCourseFeedback feedback =
+                new AnonymousCourseFeedback.Builder(course)
+                        .setFeedback(feedbackContent)
+                        .build();
         feedbacks.add(feedback);
         repository.getAnonymousCourseFeedbackDao().writeAnonymousCourseFeedback(feedback);
+
         return persistentCsvWriteService.writeFeedback(feedback);
     }
 

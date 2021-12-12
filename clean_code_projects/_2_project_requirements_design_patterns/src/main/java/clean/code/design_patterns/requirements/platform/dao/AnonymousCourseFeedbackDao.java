@@ -97,6 +97,9 @@ public final class AnonymousCourseFeedbackDao extends Dao {
                 Thread.sleep(500);
             }
         }
-        return new AnonymousCourseFeedback(resultSet.getInt(1), course, resultSet.getString(3));
+        return new AnonymousCourseFeedback.Builder(course)
+                .setId(resultSet.getInt(1))
+                .setFeedback(resultSet.getString(3))
+                .build();
     }
 }

@@ -117,8 +117,12 @@ public final class TeacherDao extends UserDao {
     }
 
     private Teacher mapToTeacher(ResultSet resultSet) throws SQLException {
-        return new Teacher(resultSet.getInt(1), resultSet.getString(2), resultSet.getDate(3), resultSet.getString(4), resultSet.getString(5), resultSet.getString(6));
+        return new Teacher.Builder(resultSet.getString(2), resultSet.getDate(3))
+                .setId(resultSet.getInt(1))
+                .setRanking(resultSet.getString(4))
+                .setAddress(resultSet.getString(5))
+                .setPhoneNumber(resultSet.getString(6))
+                .build();
     }
-
 
 }

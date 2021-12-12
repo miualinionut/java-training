@@ -82,7 +82,11 @@ public final class StudentDao extends UserDao {
     }
 
     private Student mapToStudent(ResultSet resultSet) throws SQLException {
-        return new Student(resultSet.getInt(1), resultSet.getString(2), resultSet.getDate(3), resultSet.getString(4), resultSet.getString(5));
+        return new Student.Builder(resultSet.getString(2), resultSet.getDate(3))
+                .setId(resultSet.getInt(1))
+                .setAddress(resultSet.getString(4))
+                .setPhoneNumber(resultSet.getString(5))
+                .build();
     }
 
 

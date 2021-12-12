@@ -94,7 +94,11 @@ public final class TeachingAssistantDao extends UserDao {
                 Thread.sleep(500);
             }
         }
-        return new TeachingAssistant(resultSet.getInt(1), resultSet.getString(3), resultSet.getDate(4), supervisorTeacher, resultSet.getString(5), resultSet.getString(6));
+        return new TeachingAssistant.Builder( resultSet.getString(3), resultSet.getDate(4), supervisorTeacher)
+                .setId(resultSet.getInt(1))
+                .setAddress(resultSet.getString(5))
+                .setPhoneNumber(resultSet.getString(6))
+                .build();
     }
 
 }
