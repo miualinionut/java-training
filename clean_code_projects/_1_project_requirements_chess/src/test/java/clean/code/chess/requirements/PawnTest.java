@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class PawnTest {
 
@@ -50,7 +51,7 @@ public class PawnTest {
         chessBoard.Add(testSubject, 6, 3, PieceColor.BLACK);
         testSubject.Move(MovementType.MOVE, 6, 2);
         assertEquals(6, testSubject.getXCoordinate());
-        assertEquals(2, testSubject.getYCoordinate());
+        assertNotEquals(2, testSubject.getYCoordinate());
     }
 
 }
