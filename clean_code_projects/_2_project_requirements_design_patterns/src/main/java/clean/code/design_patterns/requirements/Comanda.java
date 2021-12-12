@@ -21,16 +21,16 @@ public class Comanda {
     //@Override
     public void afisareBon() {
 
-        System.out.println("\n Bon fiscal: \n"
-                + "ID:"+this.ID+" \n"
+        System.out.println("\n Bon fiscal \n "
+                + "ID:"+this.ID+" \n "
                 + "Meniu:"+this.meniu + " \n "
                 + "Pret:"+this.pret+" \n "
                 + "Casier:"+this.numeCasier + " \n "
                 + "Data: " + this.data );
         if (this.pachet)
-            System.out.println("La pachet");
+            System.out.println(" La pachet! ");
         else
-            System.out.println("Aici!");
+            System.out.println(" Aici! ");
     }
 
     public static class UserBuilder
