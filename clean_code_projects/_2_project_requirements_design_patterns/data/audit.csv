@@ -1,0 +1,10 @@
+Loading database in memory using jdbc, 2021-12-12 20:36:39.579
+No csv read, 2021-12-12 20:36:42.812
+Loading database in memory using jdbc, 2021-12-12 20:37:12.901
+Loading csv files in memory, 2021-12-12 20:37:16.917
+Loading database in memory using jdbc, 2021-12-12 20:51:05.475
+Loading csv files in memory, 2021-12-12 20:51:10.173
+Loading database in memory using jdbc, 2021-12-12 20:56:24.579
+Exception in Dao.java: createDatabase(create): java.sql.SQLException: No suitable driver found for jdbc:mariadb://localhost:3306/, 2021-12-12 20:56:24.636
+Loading database in memory using jdbc, 2021-12-12 20:57:18.817
+No csv read, 2021-12-12 20:57:25.154
