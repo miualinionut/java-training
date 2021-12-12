@@ -14,7 +14,6 @@ public class ChessBoard {
     }
 
     public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor) {
-
         //pentru o pozitie valida
         if (IsLegalBoardPosition(xCoordinate, yCoordinate)) {
 
