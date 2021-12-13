@@ -1,7 +1,7 @@
 package clean.code.design_patterns.requirements;
 
 public class CharacterBuilder {
-    private String name;
+    private final String name;
     private CharacterComponent head = new CharacterComponent(1, 1);
     private CharacterComponent body = new CharacterComponent(1, 1);
     private CharacterComponent arm = new CharacterComponent(1, 1);

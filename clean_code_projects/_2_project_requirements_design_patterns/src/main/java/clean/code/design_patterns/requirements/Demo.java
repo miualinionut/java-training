@@ -16,7 +16,7 @@ public class Demo {
         int startingCol = 2;
         int [][] maze = {
                 {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1},
                 {1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1},
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1},
                 {1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1},
@@ -116,7 +116,8 @@ public class Demo {
                         break;
                 }
             } else {
-                System.out.println("Congrats! You found the exit!\n\n");
+                System.out.println("Congrats! You found the exit!");
+                System.out.println("[Press q to exit]\n");
                 m.show();
                 System.out.println();
                 commands = listener.nextLine();

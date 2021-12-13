@@ -1,7 +1,7 @@
 package clean.code.design_patterns.requirements;
 
 public class Character {
-    private String name;
+    private final String name;
 
 //    private String headShape;
 //    private int headHeight;
@@ -12,10 +12,10 @@ public class Character {
 //    private int bodyWidth;
 //    private int legsLength;
 
-    private CharacterComponent head;
-    private CharacterComponent body;
-    private CharacterComponent arm;
-    private CharacterComponent leg;
+    private final CharacterComponent head;
+    private final CharacterComponent body;
+    private final CharacterComponent arm;
+    private final CharacterComponent leg;
 
     public Character(String name, CharacterComponent head, CharacterComponent body, CharacterComponent arm, CharacterComponent leg) {
         this.name = name;

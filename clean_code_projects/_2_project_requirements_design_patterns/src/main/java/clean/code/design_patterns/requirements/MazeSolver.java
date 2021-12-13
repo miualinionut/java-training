@@ -3,8 +3,8 @@ package clean.code.design_patterns.requirements;
 public class MazeSolver {
 
     private MazeSolverState state = new InitState();
-    private int[][] mazeSolution;
-    private int mazeDim;
+    private final int[][] mazeSolution;
+    private final int mazeDim;
     private int row;
     private int col;
     private int rowc;
