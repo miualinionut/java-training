@@ -26,6 +26,13 @@ public class Main {
 //                .setLeg(4, 6)
 //                .createCharacter();
 
+//        character = cb
+//                .setHead(3,2)
+//                .setArm(2 ,8)
+//                .setBody(4, 4)
+//                .setLeg(2, 3)
+//                .createCharacter();
+
         character.show();
 
         // Maze solving

@@ -130,6 +130,7 @@ public class CharacterRenderer {
 
         // TO DO: Finish full implementation
         int baseWidth = 2 * arm.getWidth() + body.getWidth();
+        int baseHeight = body.getHeight() + leg.getHeight();
 
         if (head.getWidth() > baseWidth) {
             for (int i = 0; i < yAxisUnit * head.getHeight(); i++) {
@@ -153,6 +154,31 @@ public class CharacterRenderer {
             }
 
             if (arm.getHeight() > body.getHeight()) {
+                int bodyArmDiff = yAxisUnit * (arm.getHeight() - body.getHeight());
+
+                for (int i = 0; i < yAxisUnit * body.getHeight(); i++) {
+                    System.out.println(leftArmIMG[i] + bodyIMG[i] + rightArmIMG[i]);
+                }
+
+                if (arm.getHeight() > baseHeight) {
+                    for (int i = 0; i < yAxisUnit * leg.getHeight(); i++) {
+                        System.out.println(leftArmIMG[i + yAxisUnit * body.getHeight()] + leftLegIMG[i] +
+                                rightLegIMG[i] + rightArmIMG[i + yAxisUnit * body.getHeight()]);
+                    }
+
+                    for (int i = yAxisUnit * baseHeight; i < yAxisUnit * arm.getHeight(); i++) {
+                        System.out.println(leftArmIMG[i] + spaces(2 * xAxisUnit * legWidth) + rightArmIMG[i]);
+                    }
+                } else {
+                    for (int i = yAxisUnit * body.getHeight(); i < yAxisUnit * arm.getHeight(); i++) {
+                        System.out.println(leftArmIMG[i] + leftLegIMG[i - yAxisUnit * body.getHeight()] +
+                                rightLegIMG[i - yAxisUnit * body.getHeight()] + rightArmIMG[i]);
+                    }
+
+                    for (int i = bodyArmDiff; i < yAxisUnit * leg.getHeight(); i++) {
+                        System.out.println(spaces(xAxisUnit * arm.getWidth()) + leftLegIMG[i] + rightLegIMG[i]);
+                    }
+                }
 
             } else {
                 for (int i = 0; i < yAxisUnit * arm.getHeight(); i++) {
