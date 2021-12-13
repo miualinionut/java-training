@@ -44,7 +44,22 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+
+        if (movementType == MovementType.MOVE) {
+
+            //daca pionul este negru
+            if (pieceColor == PieceColor.BLACK)
+                //avansez de sus in jos
+                if (newX == getXCoordinate() && newY < getYCoordinate()) {
+                    setYCoordinate(newY);
+                }
+            //daca pionul este alb
+            if (pieceColor == PieceColor.WHITE)
+                //avansez de jos in sus
+                if (newX == getXCoordinate() && newY > getYCoordinate()) {
+                    setYCoordinate(newY);
+                }
+        }
     }
 
     @Override
