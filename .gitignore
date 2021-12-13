@@ -3,4 +3,4 @@
 *.iws
 .idea/
 target/
-Notes.java
+**/Notes.java

@@ -26,7 +26,7 @@ public class Character {
     }
 
     public void show() {
-        System.out.println(this.toString());
+        System.out.println(this.name);
 
         int widthUnit = 4;
         int lengthUnit = 2;
