@@ -12,6 +12,7 @@ public class CheckPathState implements MazeSolverState {
                 ms.setDir(ms.getDir() + 1);
             } else ms.setDir(0);
 
+            ms.setFoundPath(0);
             ms.setState(new CheckDirectionState());
         } else {
             ms.writeEnable(ms.getRow(), ms.getCol());
@@ -21,6 +22,7 @@ public class CheckPathState implements MazeSolverState {
                 ms.setDir(ms.getDir() - 1);
             } else ms.setDir(3);
 
+            ms.setFoundPath(1);
             ms.setState(new CheckDirectionState());
 
             if (ms.getRow() == 0 || ms.getRow() == ms.getMazeDim() - 1 || ms.getCol() == 0 || ms.getCol() == ms.getMazeDim()  - 1) {

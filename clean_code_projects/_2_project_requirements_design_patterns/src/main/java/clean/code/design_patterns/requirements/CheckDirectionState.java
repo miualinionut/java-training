@@ -3,6 +3,7 @@ package clean.code.design_patterns.requirements;
 public class CheckDirectionState implements MazeSolverState {
     public void next(MazeSolver ms) {
         ms.setStatus(0);
+        ms.setFoundPath(0);
 
         switch (ms.getDir()) {
             case 0: {
