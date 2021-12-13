@@ -1,6 +1,6 @@
 package clean.code.design_patterns.requirements;
 
-public class CharacterCreator {
+public class Notes {
 // width - 4 characters
 // height/length - 2 characters
 //
