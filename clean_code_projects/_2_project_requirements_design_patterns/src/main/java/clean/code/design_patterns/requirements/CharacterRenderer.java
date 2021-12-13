@@ -1,8 +1,8 @@
 package clean.code.design_patterns.requirements;
 
 public class CharacterRenderer {
-    private int xAxisUnit;
-    private int yAxisUnit;
+    private final int xAxisUnit;
+    private final int yAxisUnit;
 
     public CharacterRenderer(int xAxisUnit, int yAxisUnit) {
         this.xAxisUnit = xAxisUnit;

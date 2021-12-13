@@ -110,6 +110,7 @@ public class Main {
 
                 case 3: {                       //ExitState
                     done = 1;
+                    System.out.println();
                     System.out.println("Old style:");
                     for (int i = 0; i < maze_dim; i++) {
                         for (int j = 0; j < maze_dim; j++) {
@@ -121,8 +122,6 @@ public class Main {
             }
         }
 
-        System.out.println();
-
         // After using state dp
         Maze m = new Maze(b, maze_dim);
         MazeSolver ms = new MazeSolver(m, 1, 1);
@@ -132,6 +131,7 @@ public class Main {
             ms.nextState();
         }
         Maze solution = new Maze(ms.getSolution(), ms.getMazeDim());
+        System.out.println();
         System.out.println("After using state design pattern:");
         solution.show();
 
@@ -155,14 +155,15 @@ public class Main {
             {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
         };
 
-        m = new Maze(c, 15);
-        ms = new MazeSolver(m, 13, 2);
+        Maze m2 = new Maze(c, 15);
+        MazeSolver ms2 = new MazeSolver(m2, 13, 2);
         done = 0;
         while (done != 1) {
-            done = ms.getStatus();
-            ms.nextState();
+            done = ms2.getStatus();
+            ms2.nextState();
         }
-        solution = new Maze(ms.getSolution(), ms.getMazeDim());
+        solution = new Maze(ms2.getSolution(), ms2.getMazeDim());
+        System.out.println();
         System.out.println("Complex maze:");
         solution.show();
 

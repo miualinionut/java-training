@@ -3,20 +3,22 @@ package clean.code.design_patterns.requirements;
 public class MazeSolver {
 
     private MazeSolverState state = new InitState();
-    private int[][] mazeSolution;
-    private int mazeDim;
+    private final int[][] mazeSolution;
+    private final int mazeDim;
     private int row;
     private int col;
     private int rowc;
     private int colc;
     private int dir;
     private int done;
+    private int foundPath;
 
     public MazeSolver(Maze maze, int startingRow, int startingCol) {
         this.mazeSolution = maze.getLayout();
         this.mazeDim = maze.getDim();
         this.row = startingRow;
         this.col = startingCol;
+        this.dir = 1;
     }
 
     public MazeSolverState getState() {
@@ -83,6 +85,14 @@ public class MazeSolver {
         this.done = status;
     }
 
+    public int getFoundPath() {
+        return foundPath;
+    }
+
+    public void setFoundPath(int foundPath) {
+        this.foundPath = foundPath;
+    }
+
     public void writeEnable(int row, int col) {
         this.mazeSolution[row][col] = 7;
     }
@@ -96,6 +106,13 @@ public class MazeSolver {
     }
 
     public void reset(int startingRow, int startingCol) {
+        this.row = startingRow;
+        this.col = startingCol;
+        this.state = new InitState();
+    }
+
+    public void reset(int startingRow, int startingCol, int dir) {
+        this.dir = dir;
         this.row = startingRow;
         this.col = startingCol;
         this.state = new InitState();
