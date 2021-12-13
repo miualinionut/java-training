@@ -58,8 +58,6 @@ public class Pawn {
                 }
             }
         }
-
-        //throw new UnsupportedOperationException("Need to implement Pawn.Move()");
     }
 
     @Override

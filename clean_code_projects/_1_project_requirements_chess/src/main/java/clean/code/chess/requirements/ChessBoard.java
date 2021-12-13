@@ -28,12 +28,10 @@ public class ChessBoard {
             } else this.DeclinePawnPlacement(pawn);
 
         } else this.DeclinePawnPlacement(pawn);
-        //throw new UnsupportedOperationException("Need to implement ChessBoard.add()");
     }
 
     public boolean IsLegalBoardPosition(int xCoordinate, int yCoordinate) {
         return xCoordinate >= 0 && xCoordinate <= MAX_BOARD_WIDTH && yCoordinate >= 0 && yCoordinate <= MAX_BOARD_HEIGHT;
-        //throw new UnsupportedOperationException("Need to implement ChessBoard.IsLegalBoardPosition()");
     }
 
     public void DeclinePawnPlacement(Pawn pawn) {
