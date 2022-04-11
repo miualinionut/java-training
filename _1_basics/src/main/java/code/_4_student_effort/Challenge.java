@@ -45,4 +45,18 @@ public class Challenge {
         return s;
         return computedString;
     }
+
+    public int pairsOf2(ArrayList<Integer> numbers){
+        int pairs = 0;
+        for (int i = 0; i < numbers.size()-1; i++){
+        System.out.println(numbers.get(i));
+        for (int j = i + 1; j < numbers.size(); j++){
+            if (numbers.get(i) + numbers.get(j) == 0){
+                numbers.remove(j);
+                pairs++;
+            }
+          }
+        }
+        return pairs;
+    }
 }
