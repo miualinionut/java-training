@@ -1,7 +1,5 @@
 package code._4_student_effort;
 
-import code._2_challenge._1_fizzbuzz.FizzBuzz;
-
 public class Main {
     public static void main(String[] args) {
         Challenge challenge = new Challenge();
