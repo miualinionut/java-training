@@ -1,4 +1,5 @@
 package main.java.code._4_student_effort;
+import java.util.ArrayList;
 
 public class Challenge {
     public void FizzBuzz() {
@@ -42,7 +43,6 @@ public class Challenge {
                 computedString += "*";
         }
 
-        return s;
         return computedString;
     }
 
@@ -54,6 +54,25 @@ public class Challenge {
             if (numbers.get(i) + numbers.get(j) == 0){
                 numbers.remove(j);
                 pairs++;
+            }
+          }
+        }
+        return pairs;
+    }
+
+    public int pairsOf3(ArrayList<Integer> numbers){
+        int pairs = 0;
+        for (int i = 0; i < numbers.size()-2; i++){
+        System.out.println(numbers.get(i));
+        for (int j = i + 1; j < numbers.size()-1; j++){
+        	for (int k = j + 1; k < numbers.size(); k++){
+            if (numbers.get(i) + numbers.get(j) + numbers.get(k) == 0){
+                numbers.remove(j);
+                numbers.remove(k);
+                pairs++;
+            }
+            if(numbers.size()<3)
+            break;
             }
           }
         }
