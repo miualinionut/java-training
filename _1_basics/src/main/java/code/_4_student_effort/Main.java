@@ -7,7 +7,7 @@ public class Main {
         Challenge challenge = new Challenge();
         challenge.FizzBuzz();
         // FooBarQix
-        for(int i = 1; i <= 53; i++)
+        for (int i = 1; i <= 53; i++)
             System.out.println(challenge.compute(i));
 
     }
