@@ -30,6 +30,19 @@ public class Challenge {
         if (number % 7 == 0)
             computedString += "Qix";
 
+        char[] cifre = String.valueOf(number).toCharArray();
+        for (char cifra : cifre) {
+            if (cifra == '3')
+                computedString += "Foo";
+            else if (cifra == '5')
+                computedString += "Bar";
+            else if (cifra == '7')
+                computedString += "Qix";
+            else if (cifra == '0')
+                computedString += "*";
+        }
+
+        return s;
         return computedString;
     }
 }
