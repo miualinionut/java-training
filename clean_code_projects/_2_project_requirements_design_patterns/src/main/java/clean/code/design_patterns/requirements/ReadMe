@@ -1,0 +1,7 @@
+Primul Design Patter ales este un Structural Pattern, mai exact Composite Pattern. L-am folosit pentru a implementa o solutie pentru  ierarhia unei companii, pe scurt, pe 2 nivele.
+Managerul reprezinta varful ierarhiei, fiind singurul care are drept de adaugare/eliminare a angajatilor, precum si de modificarea datelor acestora.
+Pe al doilea nivel am ales doua alte categorii de angajati, programatorii si contabilii, care sunt clasele frunza ale metodei.
+Toate cele 3 clase implementeaza interfata Employee.
+
+Al doilea Design Pattern este un Template Method, gandit astfel incat sa fie un calculator simplist care efectueaza 3 operatii (determinarea valorii absolute, a sumei si doferentei) a doua numere, fie ele intregi sau complexe.
+Programul se adreseaza copiilor din invatamantul primar care doresc sa isi verifice cunostintele elementare de calcul matematic.
