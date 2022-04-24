@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.AnimalHierarchy;
 
 abstract class Animal {
    protected int legs;

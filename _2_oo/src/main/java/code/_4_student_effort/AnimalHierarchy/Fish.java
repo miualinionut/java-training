@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.AnimalHierarchy;
 
 public class Fish extends Animal implements Pet {
     private String name;

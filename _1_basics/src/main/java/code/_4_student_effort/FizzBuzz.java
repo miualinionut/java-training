@@ -13,6 +13,7 @@ public class FizzBuzz {
         NumberWordMapping map1 = new NumberWordMapping(3, "fizz");
         NumberWordMapping map2 = new NumberWordMapping(5, "buzz");
         NumberWordMapping map3 = new NumberWordMapping(7, "rizz");
+        NumberWordMapping map4 = new NumberWordMapping(15, "rfzz");
 
         mappings.add(map1);
         mappings.add(map2);

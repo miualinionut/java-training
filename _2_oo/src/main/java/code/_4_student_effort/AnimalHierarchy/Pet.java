@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.AnimalHierarchy;
 
 public interface Pet {
     public String getName();
