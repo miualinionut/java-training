@@ -15,6 +15,16 @@ class Parent {
         System.out.println("parent regular init block");
     }
 
+    {
+        System.out.println("parent regular init block");
+    }
+
+    int i = 10;
+
+    public int getI() {
+        return i;
+    }
+
     public Parent() {
         System.out.println("parent constructor");
     }
@@ -29,7 +39,19 @@ class Child extends Parent {
         System.out.println("child  regular init block");
     }
 
+    int i = 9;
+
+    @Override
+    public int getI() {
+        return i;
+    }
+
     public Child() {
+        super();
         System.out.println("child  constructor");
+        System.out.println(this.i);
+        System.out.println(super.i);
+        System.out.println(this.getI());
+        System.out.println(super.getI());
     }
 }
