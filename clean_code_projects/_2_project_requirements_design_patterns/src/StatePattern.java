@@ -1,4 +1,4 @@
-package clean_code_projects._2_project_requirements_design_patterns.src.main.java.clean.code.design_patterns.requirements;
+package clean_code_projects._2_project_requirements_design_patterns.src;
 
 public class StatePattern
 {

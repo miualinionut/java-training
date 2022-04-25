@@ -1,7 +1,4 @@
-package clean.code.design_patterns.requirements;
-
-import clean_code_projects._2_project_requirements_design_patterns.src.main.java.clean.code.design_patterns.requirements.House;
-import clean_code_projects._2_project_requirements_design_patterns.src.main.java.clean.code.design_patterns.requirements.StatePattern;
+package clean_code_projects._2_project_requirements_design_patterns.src;
 
 import java.util.ArrayList;
 
