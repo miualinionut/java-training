@@ -3,5 +3,5 @@ Managerul reprezinta varful ierarhiei, fiind singurul care are drept de adaugare
 Pe al doilea nivel am ales doua alte categorii de angajati, programatorii si contabilii, care sunt clasele frunza ale metodei.
 Toate cele 3 clase implementeaza interfata Employee.
 
-Al doilea Design Pattern este un Template Method, gandit astfel incat sa fie un calculator simplist care efectueaza 3 operatii (determinarea valorii absolute, a sumei si doferentei) a doua numere, fie ele intregi sau complexe.
+Al doilea Design Pattern este un Template Method, gandit astfel incat sa fie un calculator simplist care efectueaza 3 operatii (determinarea valorii absolute, a sumei si diferentei) a doua numere, fie ele intregi sau complexe.
 Programul se adreseaza copiilor din invatamantul primar care doresc sa isi verifice cunostintele elementare de calcul matematic.
