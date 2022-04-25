@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     static ATM atm1 = new ATM();
+    static Receipt receipt1 = new Receipt();
     private static CreditCard checkCreditNumber(String creditCardNumber, List<CreditCard> creditCards) {
         for (CreditCard cards : creditCards) {
             if (cards.getCardNumber().equals(creditCardNumber)) {
@@ -19,15 +20,15 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CreditCard card1 = new CreditCard.Builder("Credit")
-                .setBalance(1000)
+        CreditCard card1 = new CreditCard.Builder("Credit","7685")
+                .setBalance(10000)
                 .setCardNumber("4321 3124 1234 5431")
-                .printReceipt("NO")
-                .build();
-        CreditCard card2 = new CreditCard.Builder("Debit")
-                .setBalance(1000)
-                .setCardNumber("6855 6456 3452 4235")
                 .printReceipt("YES")
+                .build();
+        CreditCard card2 = new CreditCard.Builder("Debit", "5342")
+                .setBalance(600)
+                .setCardNumber("6855 6456 3452 4235")
+                .printReceipt("NO")
                 .build();
         ArrayList<CreditCard> creditCardList = new ArrayList<>();
         creditCardList.add(card1);
@@ -47,7 +48,7 @@ public class Main {
                 boolean check = false;
                 while (pinTries < 3) {
                     String cardPin = scanner.nextLine();
-                    if (cardPin.equals("1234")) {
+                    if (cardPin.equals(cards.getPin())) {
                         check = true;
                         break;
                     } else {
@@ -56,7 +57,7 @@ public class Main {
                     }
                 }
                 if (check) {
-                    while (check) {
+                    while (true) {
                         System.out.println("""
 
                                 Hello! Please choose one of the following
@@ -110,6 +111,29 @@ public class Main {
                                     cards.depositToCard(amount);
                                     atm1.deposit(amount);
                                     System.out.println("Deposit successful");
+                                }
+                            }
+                            case "4" ->{
+                                String lastFourDigits= "";
+                                if (cards.getReceipt().equals("YES")){
+                                     if (cards.getCardNumber().length()>4){
+                                          lastFourDigits = cards.getCardNumber().substring(cards.getCardNumber().length()-4);
+                                     } else {
+                                         lastFourDigits = cards.getCardNumber();
+                                     }
+                                    System.out.println("....................");
+                                    System.out.println("   ATM TRANSACTION");
+                                    System.out.println("....................");
+                                    System.out.println("CARD NUMBER          "+"XXXXXXXXXXX" +lastFourDigits);
+                                    Receipt.getDate();
+                                    System.out.println("TYPE OF CARD            "+cards.getTypeOfCard());
+                                    System.out.println("ATM MONEY REMAINING     "+atm1.getAtmMoney());
+                                    System.out.println("NUMBER OF WITHDRAWS     "+atm1.getWithdrawCount());
+                                    System.out.println("NUMBER OF DEPOSITS      "+atm1.getDepositCount());
+                                    System.out.println("....................");
+
+                                }else {
+                                    System.out.println("You did not wish to get a receipt");
                                 }
                             }
                             default -> System.out.println("Not a valid option, please try again!");

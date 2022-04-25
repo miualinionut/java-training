@@ -1,10 +1,10 @@
 package clean.code.design_patterns.requirements;
 
 public class CreditCard {
-    private String typeOfCard; //optional
+    private String typeOfCard; //required
     private String cardNumber;//required
     private int balance;//required
-    private String pin;
+    private String pin; //required
     private String receipt;//optional
 
     private CreditCard(Builder builder) {
@@ -12,7 +12,7 @@ public class CreditCard {
         this.cardNumber = builder.cardNumber;
         this.balance = builder.balance;
         this.receipt=builder.receipt;
-        this.pin = "1234";
+        this.pin = builder.pin;
     }
 
     public String getTypeOfCard() {
@@ -31,16 +31,18 @@ public class CreditCard {
         return receipt;
     }
 
-
+    public String getPin() {return pin;}
 
     public static class Builder {
         private final String typeOfCard;
         private String cardNumber;
         private int balance;
         private String receipt;
+        private String pin;
 
-        public Builder (String typeOfCard) {
+        public Builder (String typeOfCard, String pin) {
             this.typeOfCard = typeOfCard;
+            this.pin = pin;
 
         }
 
@@ -54,10 +56,6 @@ public class CreditCard {
             return this;
         }
 
-        /*public Builder setPIN(int pin) {
-            this.pin = pin;
-            return this;
-        }*/
         public Builder printReceipt(String receipt) {
             this.receipt = receipt;
             return this;
@@ -72,7 +70,7 @@ public class CreditCard {
             this.balance -= amount;
             System.out.println(amount + Bill.currency);
         }else {
-            System.out.println("Insufficient founds");
+            System.out.println("Insufficient funds");
         }
     }
     public int depositToCard(int amount){
