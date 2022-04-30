@@ -39,12 +39,17 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        //implement Pawn.Move()
+        if(movementType == MovementType.MOVE){
+            if(newX == getXCoordinate())
+                if(newY == getYCoordinate()-1 || newY == getYCoordinate()+1)
+                    setYCoordinate(newY);
+        }
     }
 
     @Override
