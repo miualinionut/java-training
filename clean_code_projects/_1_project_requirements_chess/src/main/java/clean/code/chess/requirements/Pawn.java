@@ -2,51 +2,67 @@ package clean.code.chess.requirements;
 
 public class Pawn {
 
-    private ChessBoard chessBoard;
+    protected ChessBoard chessBoard;
     private int xCoordinate;
     private int yCoordinate;
-    private PieceColor pieceColor;
+    private  PieceColor pieceColor;
+    private boolean isMoved;
 
     public Pawn(PieceColor pieceColor) {
         this.pieceColor = pieceColor;
+        this.isMoved = false;
     }
 
     public ChessBoard getChesssBoard() {
         return chessBoard;
     }
-
-    public void setChessBoard(ChessBoard chessBoard) {
-        this.chessBoard = chessBoard;
-    }
-
     public int getXCoordinate() {
         return xCoordinate;
     }
-
-    public void setXCoordinate(int value) {
-        this.xCoordinate = value;
-    }
-
     public int getYCoordinate() {
         return yCoordinate;
     }
-
-    public void setYCoordinate(int value) {
-        this.yCoordinate = value;
-    }
-
     public PieceColor getPieceColor() {
         return this.pieceColor;
     }
-
-    private void setPieceColor(PieceColor value) {
-        pieceColor = value;
-    }
+    public void setChessBoard(ChessBoard chessBoard) {this.chessBoard = chessBoard;}
+    public void setXCoordinate(int value) {this.xCoordinate = value;}
+    public void setYCoordinate(int value) {this.yCoordinate = value;}
+    private void setPieceColor(PieceColor value) { pieceColor = value;}
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
-    }
 
+        if(movementType == MovementType.MOVE)
+            if(chessBoard.isFree(newX, newY))
+            {
+                if(this.isXValid(newX) && this.isYValid(newY))
+                {
+
+                    chessBoard.pieces[this.getXCoordinate()][this.getYCoordinate()] = null;
+                    this.setXCoordinate(newX);
+                    this.setYCoordinate(newY);
+                    chessBoard.pieces[newX][newY] =  this;
+                    if(!isMoved)
+                        isMoved = true;
+                }
+            }
+    }
+    public boolean isXValid(int newX)
+    {
+        if(newX < ChessBoard.MAX_BOARD_WIDTH)
+            return newX == this.getXCoordinate();
+        else
+            return false;
+    }
+    public boolean isYValid(int newY)
+    {
+        if(!this.isMoved)
+        {
+            return  newY == this.getYCoordinate() || newY == this.getYCoordinate() + 1 || newY == this.getYCoordinate() + 2 || newY == this.getYCoordinate() - 1;
+        }
+        else
+            return newY == this.getYCoordinate() + 1 ||  newY == this.getYCoordinate()|| newY == this.getYCoordinate() - 1;
+    }
     @Override
     public String toString() {
         return CurrentPositionAsString();
@@ -57,3 +73,4 @@ public class Pawn {
         return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
     }
 }
+
