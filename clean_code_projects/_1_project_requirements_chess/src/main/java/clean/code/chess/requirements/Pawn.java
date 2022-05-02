@@ -1,5 +1,7 @@
 package clean.code.chess.requirements;
 
+import java.util.Objects;
+
 public class Pawn {
 
     private ChessBoard chessBoard;
@@ -44,7 +46,8 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if (newX - this.xCoordinate <= 1 && newX - this.xCoordinate >= -1 && newY - this.yCoordinate <= 1 && newY - this.yCoordinate >= -1)
+            chessBoard.UpdateChessboard(this, newX, newY);
     }
 
     @Override
@@ -56,4 +59,5 @@ public class Pawn {
         String eol = System.lineSeparator();
         return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
     }
+
 }
