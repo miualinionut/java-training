@@ -14,6 +14,10 @@ public class Vehicle {
         this.currentVelocity = builder.currentVelocity;
     }
 
+    public Vehicle(String name) {
+        this.name = name;
+    }
+
     static class Builder {
         private String name;
         private String type;

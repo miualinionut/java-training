@@ -19,6 +19,7 @@ public class Main {
                 .currentDirection(90)
                 .currentVelocity(15)
                 .build();
+
         System.out.println(bike);
         System.out.println(car);
         bike.stop();
