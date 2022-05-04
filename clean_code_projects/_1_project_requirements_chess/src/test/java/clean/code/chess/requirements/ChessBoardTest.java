@@ -1,6 +1,9 @@
-package clean.code.chess.requirements;
+package test.java.clean.code.chess.requirements;
 
 import junit.framework.TestCase;
+import main.java.clean.code.chess.requirements.ChessBoard;
+import main.java.clean.code.chess.requirements.Pawn;
+import main.java.clean.code.chess.requirements.PieceColor;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,37 +29,38 @@ public class ChessBoardTest extends TestCase {
 
     @Test
     public void testIsLegalBoardPosition_True_X_equals_0_Y_equals_0() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(0, 0);
+        boolean isValidPosition = testSubject.isLegalBoardPosition(0, 0);
         assertTrue(isValidPosition);
     }
 
     @Test
     public void testIsLegalBoardPosition_True_X_equals_5_Y_equals_5() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(5, 5);
+        boolean isValidPosition = testSubject.isLegalBoardPosition(5, 5);
         Assert.assertTrue(isValidPosition);
     }
 
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
+        boolean isValidPosition = testSubject.isLegalBoardPosition(5, 5);
+        // aici cred ca trb assertFalse, nu True pentru x=11 si y=5
         assertTrue(isValidPosition);
     }
 
     @Test
     public void testIsLegalBoardPosition_False_X_equals_0_Y_equals_9() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(0, 9);
+        boolean isValidPosition = testSubject.isLegalBoardPosition(0, 9);
         assertFalse(isValidPosition);
     }
 
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_0() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 0);
+        boolean isValidPosition = testSubject.isLegalBoardPosition(11, 0);
         assertFalse(isValidPosition);
     }
 
     @Test
     public void testIsLegalBoardPosition_False_For_Negative_Y_Values() {
-        boolean isValidPosition = testSubject.IsLegalBoardPosition(5, -1);
+        boolean isValidPosition = testSubject.isLegalBoardPosition(5, -1);
         Assert.assertFalse(isValidPosition);
     }
 
@@ -64,8 +68,8 @@ public class ChessBoardTest extends TestCase {
     public void Avoids_Duplicate_Positioning() {
         Pawn firstPawn = new Pawn(PieceColor.BLACK);
         Pawn secondPawn = new Pawn(PieceColor.BLACK);
-        testSubject.Add(firstPawn, 6, 3, PieceColor.BLACK);
-        testSubject.Add(secondPawn, 6, 3, PieceColor.BLACK);
+        testSubject.add(firstPawn, 6, 3, PieceColor.BLACK);
+        testSubject.add(secondPawn, 6, 3, PieceColor.BLACK);
         assertEquals(6, firstPawn.getXCoordinate());
         assertEquals(3, firstPawn.getYCoordinate());
         assertEquals(-1, secondPawn.getXCoordinate());
@@ -77,7 +81,7 @@ public class ChessBoardTest extends TestCase {
         for (int i = 0; i < 10; i++) {
             Pawn pawn = new Pawn(PieceColor.BLACK);
             int row = i / ChessBoard.MAX_BOARD_WIDTH;
-            testSubject.Add(pawn, 6 + row, i % ChessBoard.MAX_BOARD_WIDTH, PieceColor.BLACK);
+            testSubject.add(pawn, 6 + row, i % ChessBoard.MAX_BOARD_WIDTH, PieceColor.BLACK);
             if (row < 1) {
                 assertEquals(6 + row, pawn.getXCoordinate());
                 assertEquals(i % ChessBoard.MAX_BOARD_WIDTH, pawn.getYCoordinate());

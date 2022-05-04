@@ -1,4 +1,4 @@
-package clean.code.chess.requirements;
+package main.java.clean.code.chess.requirements;
 
 public class Pawn {
 
@@ -11,7 +11,7 @@ public class Pawn {
         this.pieceColor = pieceColor;
     }
 
-    public ChessBoard getChesssBoard() {
+    public ChessBoard getChessBoard() {
         return chessBoard;
     }
 
@@ -43,16 +43,34 @@ public class Pawn {
         pieceColor = value;
     }
 
-    public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+    public boolean isNewPositionValid(int xCoordinate, int yCoordinate) {
+        return (xCoordinate >= 0 && yCoordinate >= 0 && xCoordinate < ChessBoard.MAX_BOARD_WIDTH &&
+                yCoordinate < ChessBoard.MAX_BOARD_HEIGHT);
+    }
+
+    public void move(MovementType movementType, int newX, int newY) {
+        if (movementType.equals(MovementType.MOVE) && isNewPositionValid(newX, newY)) {
+            if (this.pieceColor.equals(PieceColor.WHITE)) {
+                if (newY == yCoordinate + 1 && newY <= ChessBoard.MAX_BOARD_HEIGHT &&
+                    newX == xCoordinate) {
+                    this.setXCoordinate(newX);
+                    this.setYCoordinate(newY);
+                }
+            } else {
+                if (newY == yCoordinate - 1 && newY >= 0 && newX == xCoordinate) {
+                    this.setXCoordinate(newX);
+                    this.setYCoordinate(newY);
+                }
+            }
+        }
     }
 
     @Override
     public String toString() {
-        return CurrentPositionAsString();
+        return currentPositionAsString();
     }
 
-    protected String CurrentPositionAsString() {
+    protected String currentPositionAsString() {
         String eol = System.lineSeparator();
         return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
     }
