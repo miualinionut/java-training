@@ -11,8 +11,19 @@ public class Main {
                 .build();
         Bank bt = new Bank("bt", "ron", "RO");
 
-        IBANGenerator IBAN = IBANGenerator.getInstance();
+        Account account2 = new Account.AccountBuilder("Calin", "Pop", "142")
+                .setAddress(new Address.AddressBuilder()
+                        .setCity("Bucuresti")
+                        .setStreet("Florilor")
+                        .build())
+                .setEmail("calin.pop@gmail.com")
+                .build();
+        Bank brd = new Bank("BRD", "euro", "RO");
 
+        IBANGenerator IBAN = IBANGenerator.getInstance();
+        System.out.println(account1);
         System.out.println(IBAN.generateIban(account1, bt));
+        System.out.println(account2);
+        System.out.println(IBAN.generateIban(account2, brd));
     }
 }
