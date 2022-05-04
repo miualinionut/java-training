@@ -44,7 +44,19 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if (chessBoard.IsLegalBoardPosition(newX, newY) == false)
+            return;
+        if (movementType == movementType.MOVE)
+        {
+            if (newX - this.xCoordinate != 0)
+                return;
+            int ok = 0;
+            if (newY - this.yCoordinate == 1 || newY - this.yCoordinate == -1)
+                ok = 1;
+            if (ok == 0)
+                return;
+            this.yCoordinate = newY;
+        }
     }
 
     @Override
