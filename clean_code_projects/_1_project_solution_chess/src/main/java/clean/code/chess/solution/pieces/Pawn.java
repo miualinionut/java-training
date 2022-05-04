@@ -7,8 +7,12 @@ public class Pawn extends Piece {
     private PawnValidator pawnValidator;
 
     public Pawn(Color color) {
-        super(color);
+        super();
         this.pawnValidator = new PawnValidator();
+    }
+
+    public Pawn(boolean b, int i, int i1) {
+        super();
     }
 
     @Override

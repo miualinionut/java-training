@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public abstract class Piece {
 
     private final static Logger logger = Logger.getLogger(Piece.class.getName());
-    protected final Color color;
+    public final Color color;
     protected ChessBoard chessBoard;
 
     public Piece(Color color) {

@@ -23,6 +23,12 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>brevity</groupId>
+            <artifactId>_1_chess_solution</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>
