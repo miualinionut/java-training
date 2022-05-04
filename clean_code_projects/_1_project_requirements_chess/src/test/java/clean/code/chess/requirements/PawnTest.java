@@ -14,6 +14,7 @@ public class PawnTest {
     public void setUp() {
         this.chessBoard = new ChessBoard();
         this.testSubject = new Pawn(PieceColor.BLACK);
+        this.testSubject.setChessBoard(chessBoard);
     }
 
     @Test

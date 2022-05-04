@@ -1,6 +1,6 @@
 import GUI.CreatePlayer;
 
-public class Main {
+public class ProiectMain {
 
     public static void main(String[] args) {
         new CreatePlayer();

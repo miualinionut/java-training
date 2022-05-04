@@ -39,21 +39,42 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+
+        this.xCoordinate=newX;
+        this.yCoordinate=newY;
+
+        if(movementType.equals(MovementType.MOVE)){
+            this.chessBoard.Add(this, this.xCoordinate, this.yCoordinate, this.pieceColor);
+        }else if(movementType.equals(MovementType.CAPTURE)){
+            if(this.pieceColor.equals(PieceColor.WHITE)){
+                this.yCoordinate++;
+                this.xCoordinate++;
+                if(this.chessBoard.IsLegalBoardPosition(this.xCoordinate, this.yCoordinate))
+                    System.out.println("Finished the check board");
+            }else if(this.pieceColor.equals(PieceColor.BLACK)){
+                this.yCoordinate--;
+                this.xCoordinate--;
+                if(this.chessBoard.IsLegalBoardPosition(this.xCoordinate, this.yCoordinate)){
+                    System.out.println("Finished the check board");
+                }
+            }
+        }
+
     }
 
     @Override
     public String toString() {
-        return CurrentPositionAsString();
+        return "Pawn{" +
+                "chessBoard=" + chessBoard +
+                ", xCoordinate=" + xCoordinate +
+                ", yCoordinate=" + yCoordinate +
+                ", pieceColor=" + pieceColor +
+                '}';
     }
 
-    protected String CurrentPositionAsString() {
-        String eol = System.lineSeparator();
-        return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
-    }
 }
