@@ -9,15 +9,19 @@ public class ContentionExample {
 
     public static void main(String[] args) throws InterruptedException {
         long threadsNr = 5_000;
+
         List<MyThread> list = new ArrayList<>();
         for (int i = 0; i < threadsNr; i++) {
-            list.add(new MyThread());
+            list.add(new MyThread("T_" + i));
         }
 
         //start all
         for (MyThread thread : list) {
             thread.start();
         }
+
+        Thread.sleep(5*1_000);
+
 
         //wait for all
         for (MyThread thread : list) {

@@ -1,4 +1,4 @@
-package clean.code.design_patterns.requirements;
+package clean.code.design_patterns.requirements.builder;
 
 public class Main {
 
@@ -27,13 +27,15 @@ public class Main {
                 .bluetooth("penutlima versiune")
                 .build();
 
-        MasinaPresedinteSUA masinaPresedinteSUA = MasinaPresedinteSUA.getInstance();
-
-        masinaPresedinteSUA.fuge();
 
         System.out.println(masina1.getCuloare());
         System.out.println(masina2.getModel());
         System.out.println(masina3.getCuloare());
+
+
+
+        //MasinaPresedinteSUA masinaPresedinteSUA = MasinaPresedinteSUA.getInstance();
+        //masinaPresedinteSUA.fuge();
 
     }
 }

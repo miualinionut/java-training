@@ -1,4 +1,4 @@
-package clean.code.design_patterns.requirements;
+package clean.code.design_patterns.requirements.builder;
 
 public class MasinaPresedinteSUA {
 

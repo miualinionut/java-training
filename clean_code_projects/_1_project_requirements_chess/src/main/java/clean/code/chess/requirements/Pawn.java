@@ -1,5 +1,7 @@
 package clean.code.chess.requirements;
 
+import static org.junit.Assert.assertEquals;
+
 public class Pawn {
 
     private ChessBoard chessBoard;
@@ -39,13 +41,36 @@ public class Pawn {
         return this.pieceColor;
     }
 
-    private void setPieceColor(PieceColor value) {
+    public void setPieceColor(PieceColor value) {
         pieceColor = value;
     }
 
+//    public void testPawn_Move_IllegalCoordinates_Left_DoesNotMove() {
+//        chessBoard.Add(testSubject, 6, 3, PieceColor.BLACK);
+//        testSubject.Move(MovementType.MOVE, 4, 3);
+//        assertEquals(6, testSubject.getXCoordinate());
+//        assertEquals(3, testSubject.getYCoordinate());
+//    }
+
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        //throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+
+        if(movementType == MovementType.MOVE && chessBoard.IsLegalBoardPosition(newX, newY)) {
+            if(xCoordinate == newX) {
+                 if(pieceColor == PieceColor.BLACK) {
+                         chessBoard.pieces[getXCoordinate()][getYCoordinate()] = null;
+                         setXCoordinate(newX);
+                         setYCoordinate(newY);
+                 }
+            }
+            else if (yCoordinate == newY && (xCoordinate - newX == 1)) {
+                chessBoard.pieces[getXCoordinate()][getYCoordinate()] = null;
+                setXCoordinate(newX);
+                setYCoordinate(newX);}
+        }
     }
+
+
 
     @Override
     public String toString() {

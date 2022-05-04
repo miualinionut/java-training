@@ -1,6 +1,4 @@
-package clean.code.design_patterns.requirements;
-
-import java.util.Locale;
+package clean.code.design_patterns.requirements.builder;
 
 public class Masina {
 
