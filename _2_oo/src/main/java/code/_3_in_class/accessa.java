@@ -10,7 +10,6 @@ public class accessa {
         v.add(8); v.add(8); v.add(8); v.add(8); v.add(8);
         v.add(1); v.add(2); v.add(2);
         v.add(4);
-       Collections.sort(v);
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(Integer var : v){
             map.merge(var, 1, Integer::sum);

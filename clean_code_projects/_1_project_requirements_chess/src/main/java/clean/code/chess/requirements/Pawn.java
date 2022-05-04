@@ -12,7 +12,7 @@ public class Pawn {
     }
 
     public ChessBoard getChesssBoard() {
-        return chessBoard;
+        return this.chessBoard;
     }
 
     public void setChessBoard(ChessBoard chessBoard) {
@@ -20,7 +20,7 @@ public class Pawn {
     }
 
     public int getXCoordinate() {
-        return xCoordinate;
+        return this.xCoordinate;
     }
 
     public void setXCoordinate(int value) {
@@ -28,7 +28,7 @@ public class Pawn {
     }
 
     public int getYCoordinate() {
-        return yCoordinate;
+        return this.yCoordinate;
     }
 
     public void setYCoordinate(int value) {
@@ -40,11 +40,20 @@ public class Pawn {
     }
 
     private void setPieceColor(PieceColor value) {
-        pieceColor = value;
+        this.pieceColor = value;
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if(movementType == MovementType.MOVE){
+            if(this.getPieceColor() == PieceColor.BLACK){
+                if(this.getXCoordinate() == newX && (this.getYCoordinate() -1) == newY){
+                    this.setYCoordinate(newY);
+                }
+            }
+        } else if(this.getXCoordinate() == newX && (this.getYCoordinate()+1) == newY){
+            this.setYCoordinate(newY);
+        }
+        //throw new UnsupportedOperationException("Need to implement Pawn.Move()");
     }
 
     @Override
