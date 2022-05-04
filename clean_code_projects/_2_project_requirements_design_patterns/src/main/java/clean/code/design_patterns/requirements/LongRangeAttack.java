@@ -4,6 +4,6 @@ public class LongRangeAttack implements IAttack {
 
     @Override
     public void attack() {
-        System.out.println("Attacking from distance");
+        System.out.println("Attacking from distance!");
     }
 }
