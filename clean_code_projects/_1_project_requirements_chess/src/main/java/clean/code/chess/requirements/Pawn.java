@@ -44,7 +44,21 @@ public class Pawn {
     }
 
     public void Move(MovementType movementType, int newX, int newY) {
-        throw new UnsupportedOperationException("Need to implement Pawn.Move()");
+        if(movementType == MovementType.MOVE) {
+            if (pieceColor == PieceColor.BLACK)
+                if (getChesssBoard().IsLegalBoardPosition(newX, newY))
+                    if (newY == getYCoordinate() - 1 && newX == getXCoordinate()) {
+                        setXCoordinate(newX);
+                        setYCoordinate(newY);
+                    }
+            else if (pieceColor == PieceColor.WHITE)
+                    if(getChesssBoard().IsLegalBoardPosition(newX,newY))
+                        if(newY == getYCoordinate() + 1 && newX == getXCoordinate()){
+                            setXCoordinate(newX);
+                            setYCoordinate(newY);
+                        }
+        }
+
     }
 
     @Override
