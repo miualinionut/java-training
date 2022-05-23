@@ -23,10 +23,12 @@ class Printer {
             System.out.println(i*10 + "% completed...");
             Thread.sleep(1000);
         }
-        System.out.println(i*10 + "% completed.");
+        
         }catch(InterruptedException e) {
         }
         System.out.println("100% completed. Done");
 
     }
  }
+
+ 
