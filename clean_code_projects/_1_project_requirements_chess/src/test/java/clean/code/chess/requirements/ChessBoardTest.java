@@ -24,6 +24,12 @@ public class ChessBoardTest extends TestCase {
         assertEquals(7, ChessBoard.MAX_BOARD_HEIGHT);
     }
 
+    //test verificare lungime/latime tabla de joc
+    @Test
+    public  void test_CheckDimension(){
+        assertEquals(true, testSubject.checkDimension(ChessBoard.MAX_BOARD_HEIGHT, ChessBoard.MAX_BOARD_WIDTH));
+    }
+
     @Test
     public void testIsLegalBoardPosition_True_X_equals_0_Y_equals_0() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(0, 0);
@@ -39,7 +45,7 @@ public class ChessBoardTest extends TestCase {
     @Test
     public void testIsLegalBoardPosition_False_X_equals_11_Y_equals_5() {
         boolean isValidPosition = testSubject.IsLegalBoardPosition(11, 5);
-        assertTrue(isValidPosition);
+        assertFalse(isValidPosition);
     }
 
     @Test
