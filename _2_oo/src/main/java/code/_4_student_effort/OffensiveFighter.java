@@ -1,9 +1,8 @@
 package code._4_student_effort;
 
-public class OffensiveFighter extends Fighter {
+public class OffensiveFighter extends Fighter {//not used
 
-    public OffensiveFighter(String name, Integer damage, Integer health, Integer defence) {
-        super(name, damage, health, defence);
-        this.defence=1;
+    public OffensiveFighter(String name, Double damage, Double health) {
+        super(name, damage, health);
     }
 }
