@@ -14,7 +14,7 @@ public class BoxingMatch {
         Fighter f2 = new Fighter("F2", 100, 10);
         BoxingMatch boxingMatch = new BoxingMatch(f1, f2);
         String winner = boxingMatch.fight();
-        System.out.println(winner);
+        System.out.println(winner+" has won!\n");
     }
 
     public String fight() {
