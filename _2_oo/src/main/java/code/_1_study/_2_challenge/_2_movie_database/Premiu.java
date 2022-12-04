@@ -1,4 +1,4 @@
-package code._2_challenge._2_movie_database;
+package code._1_study._2_challenge._2_movie_database;
 
 public class Premiu {
     public String nume;

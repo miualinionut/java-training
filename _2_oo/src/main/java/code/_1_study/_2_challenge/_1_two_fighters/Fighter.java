@@ -1,4 +1,4 @@
-package code._2_challenge._1_two_fighters;
+package code._1_study._2_challenge._1_two_fighters;
 
 public class Fighter {
     public final String name;

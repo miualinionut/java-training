@@ -1,7 +1,11 @@
-package code._2_challenge._2_movie_database;
+package code._4_student_effort._movieDatabase_;
+import code._4_student_effort._movieDatabase_.Actor;
+import code._4_student_effort._movieDatabase_.Film;
+import code._4_student_effort._movieDatabase_.Premiu;
+import code._4_student_effort._movieDatabase_.Studio;
 
-public class Database {
-
+import java.util.*;
+public class StudioDatabase {
     public static Studio[] getData() {
         Premiu oscar1990 = new Premiu("oscar", 1990);
         Premiu oscar2000 = new Premiu("oscar", 2000);
@@ -28,42 +32,43 @@ public class Database {
 
         return studioDatabase;
     }
-
-    public static void printAllStudioNamesThatHavePublishedMoreThen2Movies() {
-        for (Studio studio : getData()) {
-            if (studio.filme.length > 2) {
+    static Studio[] studioData=getData();
+    public static void moreThan2movieStudios(){
+        for (Studio studio : studioData ){
+            if(studio.filme.length>2){
                 System.out.println(studio.nume);
             }
         }
     }
-
-    public static void printStudioNamesInWitchPlaysTheActorWithNameActorCu2Oscaruri() {
-        for (Studio studio : getData()) {
-            for (Film film : studio.filme) {
-                for (Actor actor : film.actori) {
-                    if (actor.nume.equals("actor cu 2 oscaruri")) {
+    public static void actorcu2oscaruriStudios(){
+        for (Studio studio: studioData){
+            for(Film film :studio.filme){
+                for(Actor actor:film.actori){
+                    if(actor.nume.equals("actor cu 2 oscaruri")){
                         System.out.println(studio.nume);
                     }
                 }
             }
         }
     }
-
-    public static void printMovieNamesInWitchPlaysAtLeastAnActorWithAgeAbove50() {
-        for (Studio studio : getData()) {
-            for (Film film : studio.filme) {
-                for (Actor actor : film.actori) {
-                    if (actor.varsta > 50) {
-                        System.out.println(film.nume);
+    public static void actorAbove50Movies(){
+        HashSet<String> lista_filme= new HashSet<String>();
+        for (Studio studio: studioData){
+            for (Film film:studio.filme){
+                for(Actor actor:film.actori){
+                    if(actor.varsta>50 && !(lista_filme.contains(film.nume))){
+                        lista_filme.add(film.nume);
                     }
                 }
             }
         }
+        System.out.println(lista_filme);
     }
 
     public static void main(String[] args) {
-        printAllStudioNamesThatHavePublishedMoreThen2Movies();
-        printStudioNamesInWitchPlaysTheActorWithNameActorCu2Oscaruri();
-        printMovieNamesInWitchPlaysAtLeastAnActorWithAgeAbove50();
+        moreThan2movieStudios();
+        actorcu2oscaruriStudios();
+        actorAbove50Movies();
+
     }
 }

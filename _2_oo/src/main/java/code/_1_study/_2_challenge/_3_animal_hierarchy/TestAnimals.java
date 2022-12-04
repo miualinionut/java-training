@@ -1,4 +1,4 @@
-package code._2_challenge._3_animal_hierarchy;
+package code._1_study._2_challenge._3_animal_hierarchy;
 
 public class TestAnimals {
     public static void main(String[] args) {
