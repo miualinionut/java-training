@@ -6,6 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         Person person = new Person.PersonBuilder("Jeff")
-                        .setJob("Boschetar").build();
+                        .setJob("Inginer").build();
     }
 }
