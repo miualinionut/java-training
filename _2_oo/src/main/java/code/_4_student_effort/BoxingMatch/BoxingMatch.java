@@ -1,7 +1,8 @@
-package code._4_student_effort;
+package code._4_student_effort.BoxingMatch;
+
 import java.util.Random;
 
-public class BoxingMatch extends Fighter{
+public class BoxingMatch extends Fighter {
     Fighter f1;
     Fighter f2;
     BoxingMatch(Fighter f1,Fighter f2) {

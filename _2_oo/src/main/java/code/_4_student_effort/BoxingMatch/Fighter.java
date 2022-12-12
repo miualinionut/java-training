@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.BoxingMatch;
 
 public class Fighter {
     String name;
