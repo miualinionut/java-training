@@ -10,8 +10,8 @@ public class BoxingMatch {
     }
 
     public static void main(String[] args) {
-        Fighter f1 = new Fighter("F1", 100, 10);
-        Fighter f2 = new Fighter("F2", 100, 10);
+        Fighter f1 = new Fighter("F1", 200, 10);
+        Fighter f2 = new Fighter("F2", 155, 10);
         BoxingMatch boxingMatch = new BoxingMatch(f1, f2);
         String winner = boxingMatch.fight();
         System.out.println(winner);
@@ -19,8 +19,9 @@ public class BoxingMatch {
 
     public String fight() {
         while (f1.health > 0 && f2.health > 0) {
-            f1.attack(f2);
             f2.attack(f1);
+            f1.attack(f2);
+
         }
         if (f1.health <= 0) {
             return f1.name;
