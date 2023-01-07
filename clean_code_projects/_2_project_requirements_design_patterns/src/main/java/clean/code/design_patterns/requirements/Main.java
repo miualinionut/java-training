@@ -1,5 +1,6 @@
 package clean.code.design_patterns.requirements;
 
+import clean.code.design_patterns.requirements.facade_pattern.SpaceshipFacade;
 import clean.code.design_patterns.requirements.observer_pattern.Collector;
 import clean.code.design_patterns.requirements.observer_pattern.Critic;
 import clean.code.design_patterns.requirements.observer_pattern.Publisher;
@@ -9,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         //Observer Pattern
+        /*
         Publisher publisher = new Publisher("Java Times");
         Reader reader = new Reader("Tudor", "Str. Baritiu 12");
         Collector collector = new Collector("Alin", "Bdul 1 Decembrie 21A");
@@ -26,5 +28,23 @@ public class Main {
         publisher.removeSubscriber(reader);
         publisher.removeSubscriber(critic);
         publisher.publishMagazine("Latest trends in tech", 199, 2024);
+         */
+
+        //Facade pattern
+        SpaceshipFacade spaceship = new SpaceshipFacade();
+
+        spaceship.takeoff();
+
+        System.out.println();
+        spaceship.attackEnemy();
+
+        System.out.println();
+        spaceship.jumpTo("Mars");
+
+        System.out.println();
+        spaceship.diagnoseSpaceship();
+
+        System.out.println();
+        spaceship.land();
     }
 }
