@@ -1,0 +1,5 @@
+Decorator and State Pattern Java program for a food order
+
+Decorator Pattern: interface Food, class BasicFood, abstract class FoodDecorator, class ExtraCheese, class ExtraMeat.
+State Pattern: interface OrderState, class FoodOrder, class OrderedState, class InProgressState, class CancelledState.
+Test: class Main
