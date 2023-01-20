@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Phonebook {
-    private static int MAX_NUMBER = 1_000;
+    private static int MAX_NUMBER = 1000;
 
     public static void main(String[] args) {
         try {

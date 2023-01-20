@@ -17,8 +17,7 @@ public class RealEstateAgentProxy {
                 if (this.appartments[i].getMonthlyRentCost() < student.getMoney()) {
                     rentedAppartment = this.appartments[i];
 
-                    int removedIndex = i;
-                    System.arraycopy(this.appartments, removedIndex + 1, this.appartments, removedIndex, this.appartments.length - 1 - removedIndex);
+                    System.arraycopy(this.appartments, i + 1, this.appartments, i, this.appartments.length - 1 - i);
                 }
             }
         }

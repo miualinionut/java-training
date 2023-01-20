@@ -3,11 +3,11 @@ package code._2_challenge._3_proxy;
 public class ProxyExample {
 
     public static void main(String[] args) {
-        Apartment app01 = new Apartment("Crangasi01", 300);
+        Apartment app01 = new Apartment("Crangasi01", 100);
         Apartment app02 = new Apartment("Crangasi01", 600);
         Apartment app03 = new Apartment("Crangasi01", 350);
-        Apartment app04 = new Apartment("Crangasi01", 400);
-        Apartment app05 = new Apartment("Crangasi01", 200);
+        Apartment app04 = new Apartment("Crangasi01", 40);
+        Apartment app05 = new Apartment("Crangasi01", 30);
 
         RealEstateAgentProxy proxy = new RealEstateAgentProxy();
         proxy.represent(app01);
@@ -17,7 +17,7 @@ public class ProxyExample {
         proxy.represent(app05);
 
         Student student01 = new Student("Ionescu", 500);
-        Student student02 = new Student("Popescu", 330);
+        Student student02 = new Student("gopescu", 70);
 
         Apartment apartmentForStudent01 = proxy.rent(student01);
         System.out.println(student01 + " rented " + apartmentForStudent01);
