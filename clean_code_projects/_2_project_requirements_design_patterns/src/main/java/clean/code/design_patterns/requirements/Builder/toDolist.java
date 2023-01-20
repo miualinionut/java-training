@@ -3,9 +3,9 @@ package clean.code.design_patterns.requirements.Builder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class todolist {
+public class toDolist {
     private List<Task> tasks;
-    public todolist(){
+    public toDolist(){
         tasks = new ArrayList<Task>();
     }
     public void addTask(Task task){
