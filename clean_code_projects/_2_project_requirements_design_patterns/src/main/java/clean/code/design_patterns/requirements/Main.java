@@ -6,8 +6,12 @@ public class Main {
         ConsoleInputReader inputReader = new ConsoleInputReader();
         inputReader.readInput();
 
-        CarListDisplayer displayer = new CarListDisplayer(inputReader.getCarCollection());
+        CarListDisplayer displayer = new CarListDisplayer();
+        PriceCalculator calculator = new PriceCalculator();
 
-        displayer.displayList();
+        displayer.displayList(inputReader.getCarCollection().iterator());
+
+        calculator.calculatePrice(inputReader.getCarCollection().iterator());
+        calculator.displayPrice();
     }
 }

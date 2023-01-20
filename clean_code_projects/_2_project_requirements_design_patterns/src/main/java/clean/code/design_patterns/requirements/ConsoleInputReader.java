@@ -21,7 +21,15 @@ public class ConsoleInputReader {
         userInput = scanner.next();
 
         while(!userInput.toLowerCase().equals("stop")) {
-            collection.add(factory.getCar(userInput));
+            Car car = factory.getCar(userInput);
+
+            if(car != null) {
+                collection.add(car);
+            } else {
+                throw new RuntimeException("The brand " + userInput + " isn't produced here.");
+            }
+
+
             userInput = scanner.next();
         }
     }
