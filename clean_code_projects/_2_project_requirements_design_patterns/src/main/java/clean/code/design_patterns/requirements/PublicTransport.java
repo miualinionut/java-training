@@ -9,35 +9,50 @@ interface Transport{
 class Bus implements Transport{
     @Override
     public void planJourney(){
-        System.out.println("Journey planned on a bus.");
-
         Random busNumber=new Random();
-        int chance= busNumber.nextInt(40);
-
+        int chance= busNumber.nextInt(40)+1;
+        System.out.println("Journey planned on bus number "+chance+".");
     }
 }
 class Train implements Transport{
     @Override
     public void planJourney() {
-        System.out.println("Journey planned on a train.");
+        Random trainNumber=new Random();
+        int chance= trainNumber.nextInt(1000)+1;
+        System.out.println("Journey planned on train number "+chance+".");
     }
 }
 class Plane implements Transport{
     @Override
     public void planJourney(){
         System.out.println("Journey planned on a plane.");
+        Random planeNumber=new Random();
+        int chance= planeNumber.nextInt(100)+1;
+        System.out.println("Seat number C"+chance+".");
     }
 }
 class Taxi implements Transport{
     @Override
     public void planJourney() {
         System.out.println("Journey planned on a taxi.");
+        Random taxiNumber=new Random();
+        int chance= taxiNumber.nextInt(99)+1;
+        Random rnd = new Random();
+        char c = (char) ('A' + rnd.nextInt(26));
+        Random rnd1 = new Random();
+        char c1 = (char) ('A' + rnd1.nextInt(26));
+        Random rnd2 = new Random();
+        char c2 = (char) ('A' + rnd2.nextInt(26));
+        System.out.println("The taxi has the following license plate: NT "+chance+" "+c+c1+c2+".");
     }
 }
 class Boat implements Transport{
     @Override
     public void planJourney() {
-        System.out.println("Journey planned on a boat");
+
+        Random boatNumber=new Random();
+        int chance= boatNumber.nextInt(100)+1;
+        System.out.println("Journey planned on boat number "+chance+".");
     }
 }
 class TransportFactory{
