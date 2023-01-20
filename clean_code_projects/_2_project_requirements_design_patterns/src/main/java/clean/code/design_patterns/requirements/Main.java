@@ -3,6 +3,10 @@ package clean.code.design_patterns.requirements;
 public class Main {
 
     public static void main(String[] args) {
-        //TODO implement your design patterns in this package
+        String test = "Bmw";
+        CarFactory carfactory = new CarFactory();
+        Car car = carfactory.getCar(test);
+
+        System.out.println(car.getModel());
     }
 }
