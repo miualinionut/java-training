@@ -1,0 +1,2 @@
+	Primul Design Pattern ales este un Factory Pattern. L-am folosit pentru a implementa o solutie de gestionare a diverselor legume ce pot fi cultivate intr-un solar.Fiecare tip de leguma (rosie, cartof) implementeaza interfata Leguma.
+	Al doilea Design Pattern ales este un Decorator Pattern. L-am folosit pentru a simula decorarea(tunarea) unei masini prin adaugarea diferitelor componente estetice precum Jante, Spoiler si BaraFata. Clasa Tuner implementeaza interfata MasinaStock iar componentele aplicate sunt extensii ale clasei Tuner.

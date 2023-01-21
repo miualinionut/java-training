@@ -1,15 +1,13 @@
 package clean.code.design_patterns.requirements.Decorator;
 
 public class Jante extends Tuner {
-    public Jante(MasinaTunata masina) {
-        super(masina);
+    public Jante(MasinaStock m) {
+        super(m);
     }
 
-    public String Tuneaza() {
-        return super.Tuneaza() + adaugaJante();
-    }
-
-    private String adaugaJante() {
-        return "cu Jante";
+    @Override
+    public void Tuneaza() {
+        super.Tuneaza();
+        System.out.println("Schimbam Jante!");
     }
 }

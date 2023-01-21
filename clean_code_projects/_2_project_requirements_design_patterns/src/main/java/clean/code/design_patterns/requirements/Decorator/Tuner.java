@@ -1,14 +1,14 @@
 package clean.code.design_patterns.requirements.Decorator;
 
-public abstract class Tuner implements MasinaTunata {
-    private MasinaTunata masina;
+public class Tuner implements MasinaStock {
+    protected MasinaStock masina;
 
-    public Tuner(MasinaTunata masina) {
-        this.masina = masina;
+    public Tuner(MasinaStock m) {
+        this.masina = m;
     }
 
     @Override
-    public String Tuneaza() {
-        return masina.Tuneaza();
+    public void Tuneaza() {
+        this.masina.Tuneaza();
     }
 }
