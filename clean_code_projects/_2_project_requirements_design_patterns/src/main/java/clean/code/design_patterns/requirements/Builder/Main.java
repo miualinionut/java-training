@@ -7,7 +7,7 @@ public class Main {
         System.out.println("How many tasks do you want to add?");
         Scanner numbers = new Scanner(System.in);
         int maxNumberOfTasks = numbers.nextInt();
-        todolist todayList = new todolist();
+        toDolist todayList = new toDolist();
 
       do {
           System.out.println("Add a task: ");
@@ -25,12 +25,17 @@ public class Main {
               taskDueDate = dueDate;
           }
           else { taskDueDate = null;}
-          Task t = new Task.TaskBuilder(text, taskStatus).setPriority(taskImportance).setDueDate(taskDueDate).build();
-          todayList.addTask(t);
-          System.out.println("Did you already completed the task? T/F");
-          Scanner changeStatus = new Scanner(System.in);
-          boolean newStatus = changeStatus.nextBoolean();
-          if(newStatus) todayList.changeCompleteStatus(i, newStatus);
+          if(taskImportance && taskDueDate != null) {
+              Task t = new Task.TaskBuilder(text, taskStatus).setPriority(taskImportance).setDueDate(taskDueDate).build();
+              todayList.addTask(t);
+          }else if(taskImportance){
+              Task t = new Task.TaskBuilder(text, taskStatus).setPriority(taskImportance).build();
+              todayList.addTask(t);
+          }
+          else {
+              Task t = new Task.TaskBuilder(text, taskStatus).build();
+              todayList.addTask(t);
+          }
           i++;
       }while(i < maxNumberOfTasks);
 
