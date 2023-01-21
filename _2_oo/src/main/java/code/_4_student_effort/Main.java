@@ -1,8 +1,22 @@
 package code._4_student_effort;
 
-public class Main {
+public class Fighter implements IFighter {
+    String name;
+    int health;
+    int damagePerAttack;
 
-    public static void main(String[] args) {
-        //TODO put your code changes in here
+    public Fighter (String name, int health, int damagePerAttack){
+        this.name = name;
+        this.health = health;
+        this.damagePerAttack = damagePerAttack;
+    }
+    @Override
+    public void attack(Fighter opponent) {
+       opponent.health = opponent.health - this.damagePerAttack;
+    }
+
+    @Override
+    public void collectPunch(int damage){
+
     }
 }
