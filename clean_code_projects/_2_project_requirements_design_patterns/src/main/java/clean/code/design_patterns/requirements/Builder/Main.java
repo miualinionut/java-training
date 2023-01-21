@@ -38,7 +38,11 @@ public class Main {
           }
           i++;
       }while(i < maxNumberOfTasks);
-
+        todayList.display();
+        System.out.println("Did you complete any of the tasks? If yes, type the number of the task (0-first task)");
+        Scanner n = new Scanner(System.in);
+        int taskNumber = n.nextInt();
+        todayList.changeCompleteStatus(taskNumber, true);
         todayList.display();
 
     }
