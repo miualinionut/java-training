@@ -1,5 +1,7 @@
 package code._3_in_class;
 
+import java.util.Random;
+
 public class Boxer {
 
     String name;
@@ -18,9 +20,14 @@ public class Boxer {
     }
 
     void attack(Boxer opponent){
-        opponent.health = opponent.health - this.damagePerAttack;
+        int defend = (this.damagePerAttack * this.defend())/100;
+        opponent.health = opponent.health - (this.damagePerAttack - defend);
         System.out.println(this.name + " il ataca pe " + opponent.name + '\n' +
                 this.name + " health = " + this.health + " " + opponent.name + " health = " + opponent.health );
     }
-    void defend () {}
+
+    int defend () {
+        Random ran = new Random();
+        return ran.nextInt(101);
+    }
 }
