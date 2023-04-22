@@ -9,6 +9,8 @@ public class Boxer implements IBoxer {
     String nume;
     int health=100;
     int damagePerAttack=10;
+    Glove left;//compozitie
+    Glove right;//compozitie
 
     public Boxer(String nume, int health, int damagePerAttack)
     {
@@ -19,6 +21,16 @@ public class Boxer implements IBoxer {
     public Boxer(String nume)
     {
         this.nume=nume;
+    }
+
+    void puneManusile()//delegare
+    {
+        left.tie();
+        right.tie();
+    }
+    void daJosManusile(){//delegare
+        left.untie();
+        right.untie();
     }
 
     public void attack(Boxer opponent) {
