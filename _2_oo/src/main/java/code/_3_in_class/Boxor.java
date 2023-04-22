@@ -1,6 +1,8 @@
 package code._3_in_class;
 
-public class Boxor {
+import java.util.Random;
+
+public class Boxor implements IBoxer{
 
     String name;
     int health;
@@ -17,12 +19,29 @@ public class Boxor {
     {
         this.name = nume;
     }
-    void attack(Boxor opponent)
+    public void attack(IBoxer opponent)
     {
-        opponent.health = opponent.health - this.damagePerAttack;
+        int defendValue = (this.damagePerAttack * this.defend()) / 100;
+        opponent.receiveAttack(this.damagePerAttack - defendValue);
     }
-    void defend()
+    public int defend()
     {
+        Random random = new Random();
+        int defendPercentage = random.nextInt(101);
 
+        return defendPercentage;
+    }
+
+    public boolean isAlive()
+    {
+        return this.health > 0;
+    }
+
+    @Override
+    public void receiveAttack(int damage) {
+
+        this.health = this.health - damage;
+        System.out.println("defendValue: " + damage);
+        System.out.println("newHealth: " + this.health);
     }
 }
