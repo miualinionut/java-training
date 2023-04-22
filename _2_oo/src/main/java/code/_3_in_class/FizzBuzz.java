@@ -1,24 +1,25 @@
 package code._3_in_class;
 
+import java.sql.ClientInfoStatus;
+
 public class FizzBuzz {
     public static void main(String[] args) {
 
         int nr, i;
-        fizzbuzzcuif();
+//        fizzbuzzcuif();
         FizzBuzzCuObiecte();
     }
 
     private static void FizzBuzzCuObiecte() {
         int i;
-
         for (i = 1; i <= 100 ; i ++) {
             CorelatieNrString [] arr = {
                     new CorelatieNrString(3, "Fizz"),
-                    new CorelatieNrString(3, "Buzz"),
+                    new CorelatieNrString(5, "Buzz"),
                     new CorelatieNrString(7, "Rizz"),
                     new CorelatieNrString(11, "Tizz"),
             };
-            for (i =1 ; i < 100; i ++){
+            for (i = 1 ; i < 100; i ++){
                 boolean nrEDivizibil = false;
                 String textPtNrDivizibil = "";
                 for(CorelatieNrString arre:arr){
