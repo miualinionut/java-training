@@ -15,6 +15,8 @@ public class SlowLoops {
         Instant stop2 = Instant.now();
         Duration duration2 = Duration.between(start2, stop2);
         System.out.println("using wrapper: " + duration2); //why is duration1 so different from duration2 ?
+        //durata este diferita din cauza ca aici accesam niste clase deja create prin intermediu Integer, astfel este o metoda
+        //apelata in contiunu creand o durata mai mare de iteratie
     }
 
     private static void loopUsingPrimitive() {
