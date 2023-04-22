@@ -10,7 +10,7 @@ public class BruceLee extends Boxer {
         super(name);
     }
 
-    void attack(Boxer opponent) {
+    public void attack(Boxer opponent) {
         opponent.health = 0;
         System.out.println(this.name + " il ataca pe " + opponent.name +  '\n' +
                 this.name + " health = " + this.health + " " + opponent.name + " health = " + opponent.health );

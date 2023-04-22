@@ -2,7 +2,7 @@ package code._3_in_class;
 
 import java.util.Random;
 
-public class Boxer {
+public class Boxer implements IBoxer {
 
     String name;
     int health=100;
@@ -19,14 +19,14 @@ public class Boxer {
         this.name = name;
     }
 
-    void attack(Boxer opponent){
+    public void attack(Boxer opponent){
         int defend = (this.damagePerAttack * this.defend())/100;
         opponent.health = opponent.health - (this.damagePerAttack - defend);
         System.out.println(this.name + " il ataca pe " + opponent.name + '\n' +
                 this.name + " health = " + this.health + " " + opponent.name + " health = " + opponent.health );
     }
 
-    int defend () {
+    public int defend() {
         Random ran = new Random();
         return ran.nextInt(101);
     }
