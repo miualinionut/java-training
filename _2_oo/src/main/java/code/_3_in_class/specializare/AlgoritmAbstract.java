@@ -1,7 +1,6 @@
 package code._3_in_class.specializare;
 
-public class AlgoritmSortare extends AlgoritmAbstract {
-
+public abstract class AlgoritmAbstract {
     void sort(int[] arr)
     {
         for(int i=0;i<arr.length-1;i++)
@@ -15,7 +14,6 @@ public class AlgoritmSortare extends AlgoritmAbstract {
             }
         }
     }
-    boolean sortDirection(int[] arr, int i, int j){
-        return arr[i]>arr[j];
-    }
+    abstract boolean sortDirection(int[] arr, int i, int j);
 }
+
