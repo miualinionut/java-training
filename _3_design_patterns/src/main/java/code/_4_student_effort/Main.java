@@ -1,7 +1,6 @@
 package code._4_student_effort;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Main {
 
@@ -21,19 +20,20 @@ public class Main {
     }
 }
 */
- public static void main(String[] args) {
-     OrderFactory factory = new OrderFactory();
-     OrderNotifier notifier = new OrderNotifier();
-     KitchenStaff staff = new KitchenStaff();
-   //  notifier.addObserver(staff);
 
-     Order foodOrder = factory.createOrder("food");
-     Order drinkOrder = factory.createOrder("drink");
-     Order dessertOrder = factory.createOrder("dessert");
+    public Main() {
+    }
 
-     notifier.addOrder(foodOrder);
-     notifier.addOrder(drinkOrder);
-     notifier.addOrder(dessertOrder);
- }
-
+    public static void main(String[] args) {
+        OrderFactory factory = new OrderFactory();
+        Order foodOrder = factory.createOrder("food");
+        Order drinkOrder = factory.createOrder("drink");
+        Order dessertOrder = factory.createOrder("dessert");
+        List<Order> orders = new ArrayList();
+        orders.add(foodOrder);
+        orders.add(drinkOrder);
+        orders.add(dessertOrder);
+        Person person = new Person(orders);
+        person.makeAnOrder();
+    }
 }

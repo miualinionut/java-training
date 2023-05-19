@@ -1,7 +1,11 @@
 package code._4_student_effort;
 
 public class FoodOrder implements Order{
-    public void prepare() {
+    public FoodOrder()
+    {
+
+    }
+    public void create() {
         System.out.println("Preparing food order");
     }
 }
