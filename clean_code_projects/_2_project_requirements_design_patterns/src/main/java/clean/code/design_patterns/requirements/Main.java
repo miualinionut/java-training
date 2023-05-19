@@ -9,20 +9,34 @@ public class Main {
         DisplayFactory displayFactory = new DisplayFactory();
         Display lcdDisplay = displayFactory.createDisplay("LCD");
         Display ledDisplay = displayFactory.createDisplay("LED");
+        Display tubeDisplay = displayFactory.createDisplay("TUBE");
+
 
         // Add displays to the weather station
         weatherStation.addObserver(lcdDisplay);
         weatherStation.addObserver(ledDisplay);
+        weatherStation.addObserver(tubeDisplay);
 
         // Simulate weather data changes
-        weatherStation.updateWeatherData(25.5f, 60.0f, 1013.25f);
+        weatherStation.updateWeatherData(15.6f, 68.0f, 1013.25f,50f);
 
         // Remove the LCD display
         weatherStation.removeObserver(lcdDisplay);
 
         // Simulate weather data changes again
-        weatherStation.updateWeatherData(26.0f, 55.0f, 1015.0f);
+        weatherStation.updateWeatherData(37.0f, 39.0f, 1015.0f,100f);
 
+        // Also remove the LED Display
+        weatherStation.removeObserver(ledDisplay);
+
+        // Simulate weather data changes again
+        weatherStation.updateWeatherData(12.4f, 55.0f, 1015.0f,25f);
+
+        // Add the LCD again
+        weatherStation.addObserver(lcdDisplay);
+
+        // Simulate weather data changes again
+        weatherStation.updateWeatherData(-2.0f, 90.0f, 1015.0f,10f);
 
     }
 }
