@@ -37,6 +37,11 @@ public class FizzBuzz {
         }
     }
 
+    public FizzBuzz() {
+
+    }
+
+
     private static void fizzbuzzcuif() {
         int i;
         for (i = 1; i <= 100 ; i ++)
@@ -51,5 +56,6 @@ public class FizzBuzz {
                 System.out.println(i + " ");
             }
         }
+
     }
 }
