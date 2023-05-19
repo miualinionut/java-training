@@ -1,13 +1,23 @@
 package clean.code.design_patterns.requirements;
-
+import java.util.List;
+import java.util.ArrayList;
 
 // State Pattern
 // Context class
 class TrafficLight {
+    public List<Vehicle> vehicule = new ArrayList<>();
     private TrafficLightState state;
 
     public TrafficLight() {
         state = new RedState();
+    }
+
+    public void AddCarTraffic(Vehicle new_vehicle){
+        vehicule.add(new_vehicle);
+    }
+
+    public void RemoveCarTraffic(Vehicle new_vehicle){
+        vehicule.remove(new_vehicle);
     }
 
     public void setState(TrafficLightState state) {
@@ -34,6 +44,10 @@ class RedState implements TrafficLightState {
     public void change(TrafficLight light) {
         System.out.println("Changing light from red to green");
         light.setState(new GreenState());
+
+        for (Vehicle vehicle : light.vehicule){
+            vehicle.start();
+        }
     }
 
     public void printState() {
@@ -56,6 +70,10 @@ class YellowState implements TrafficLightState {
     public void change(TrafficLight light) {
         System.out.println("Changing light from yellow to red");
         light.setState(new RedState());
+
+        for (Vehicle vehicle : light.vehicule){
+            vehicle.stop();
+        }
     }
 
     public void printState() {
