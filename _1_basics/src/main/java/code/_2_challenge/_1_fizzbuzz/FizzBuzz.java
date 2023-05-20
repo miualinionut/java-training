@@ -20,7 +20,6 @@ public class FizzBuzz {
             s = String.valueOf(i);
         }
 
-
         return s;
     }
 
@@ -43,7 +42,6 @@ public class FizzBuzz {
         if (!isDivisible) {
             s = String.valueOf(i);
         }
-
 
         return s;
     }
