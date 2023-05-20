@@ -20,7 +20,7 @@ class Parent {
     }
 }
 
-class Child extends Parent {
+class Child extends Parent { //clasa copil mosteneste de la clasa parinte
     static {
         System.out.println("child  static init block ");
     }
@@ -30,6 +30,7 @@ class Child extends Parent {
     }
 
     public Child() {
+        //constructorul initializeaza starea unui obiect
         System.out.println("child  constructor");
     }
 }
