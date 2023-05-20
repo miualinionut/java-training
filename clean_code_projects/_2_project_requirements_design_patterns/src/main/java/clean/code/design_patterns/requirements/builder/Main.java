@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         // Crearea unui obiect Salata utilizând SalataBuilder
-        Salata salata = new Salata.SalataBuilder()
+        Salata salata = new SalataBuilder()
                 .salata("Mix de salată verde")
                 .sos("Iaurt")
                 .branza(true)

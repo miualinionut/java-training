@@ -1,18 +1,16 @@
-// Definirea clasei Salata
+//builder
 public class Salata {
-    private String salata;
-    private String sos;
-    private boolean branza;
-    private boolean crutoane;
+    private String salata; // baza
+    private String sos; // sos
+    private boolean branza; // indicator pentru prezența brânzei
+    private boolean crutoane; // indicator pentru prezența crutoanelor
 
-
-    private Salata(SalataBuilder builder) {
-        this.salata = builder.salata;
-        this.sos = builder.sos;
-        this.branza = builder.branza;
-        this.crutoane = builder.crutoane;
+    Salata(String salata, String sos, boolean branza, boolean crutoane) {
+        this.salata = salata;
+        this.sos = sos;
+        this.branza = branza;
+        this.crutoane = crutoane;
     }
-
 
     public String getSalata() {
         return salata;
@@ -29,3 +27,4 @@ public class Salata {
     public boolean areCrutoane() {
         return crutoane;
     }
+}
