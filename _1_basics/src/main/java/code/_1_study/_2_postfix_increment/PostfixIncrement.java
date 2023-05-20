@@ -12,7 +12,7 @@ public class PostfixIncrement {
     private static void checkForXValue(int x) {
         int expectedXValue = 11;
 
-        System.out.println("Guessed correctly the value of x ? - " + (x == expectedXValue));
+        System.out.println("Guessed correctly the value of x ? - " + (x == 11));
 
     }
 
