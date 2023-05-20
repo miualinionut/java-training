@@ -4,7 +4,6 @@ public class CoffeeShop {
     private String typeOfFlavour;
     private String typeOfCup;
 
-    //Singelton Design pattern
     public boolean getMilk(){
         return this.milk;
     }
@@ -32,8 +31,7 @@ public class CoffeeShop {
         private boolean flavour;
         private String typeOfFlavour;
         private String typeOfCup;
-
-        //builder design patern
+        
         public BuilderCoffeeShop(String cup){
             this.typeOfCup = cup;
         }
