@@ -5,14 +5,14 @@ public class Main {
 
     public static void main(String[] args) {
         //TODO put your code changes in here
-        Boxer ion = new Boxer("ion", 100, 10);
-        Boxer vasile = new Boxer("vasile");
-        Boxer bruceLee = new BruceLee("bruzli", 100, 10);
+        IBoxer ion = new Boxer("ion", 100, 10);
+        IBoxer vasile = new Boxer("vasile");
+//        IBoxer bruceLee = new BruceLee("bruzli", 100, 10);
 //        startBoxingMatch(ion, vasile);
 //        announceVictory(ion);
 
-        startBoxingMatch(bruceLee, ion);
-        announceVictory(bruceLee);
+//        startBoxingMatch(bruceLee, ion);
+//        announceVictory(bruceLee);
     }
 
 
@@ -30,7 +30,7 @@ public class Main {
         // start meci
         while(ion.health >= 0 && vasile.health >= 0) {
             int zeroOrOne = random.nextInt(2);
-            if(zeroOrOne == 0 ) {
+            if(zeroOrOne == 1 ) {
                 ion.attack(vasile);
             } else {
                 vasile.attack(ion);

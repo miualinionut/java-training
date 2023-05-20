@@ -8,9 +8,7 @@ public class Main {
 //            s = test_obj.compute(i);
 //            System.out.print(s + " ");
 //        }
-//        System.out.println();
-
-        s = test_obj.compute2(101);
+//      System.out.println();
         System.out.println(test_obj.compute2(101));
         s = test_obj.compute2(303);
         System.out.println(s);
