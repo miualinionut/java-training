@@ -1,4 +1,5 @@
-class AfisPublicitar {
+package clean.code.design_patterns.requirements.prototype;
+public class AfisPublicitar {
     private String text;
     private Logo logo;
 

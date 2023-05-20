@@ -1,3 +1,4 @@
+package clean.code.design_patterns.requirements.builder;
 public class SalataBuilder {
     private String salata;
     private String sos;

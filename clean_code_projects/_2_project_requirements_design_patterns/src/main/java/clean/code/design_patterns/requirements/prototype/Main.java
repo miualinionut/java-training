@@ -1,6 +1,8 @@
+package clean.code.design_patterns.requirements.prototype;
+
 public class Main {
     public static void main(String[] args) {
-        // Initializarea unui obiect AfisPublicitar
+        // Initializarea unui obiect AfisPublicitar.java
         Logo logo = new Logo("logo_original");
         AfisPublicitar afisOriginal = new AfisPublicitar("Acesta este un afiș publicitar", logo);
 

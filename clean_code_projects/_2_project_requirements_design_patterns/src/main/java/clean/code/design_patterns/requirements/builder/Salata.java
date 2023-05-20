@@ -1,3 +1,4 @@
+package clean.code.design_patterns.requirements.builder;
 //builder
 public class Salata {
     private String salata; // baza

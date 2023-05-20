@@ -1,3 +1,4 @@
+package clean.code.design_patterns.requirements.builder;
 public class Main {
     public static void main(String[] args) {
         // Crearea unui obiect Salata utilizând SalataBuilder

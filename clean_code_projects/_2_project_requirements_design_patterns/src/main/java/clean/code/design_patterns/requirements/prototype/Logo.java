@@ -1,5 +1,7 @@
+package clean.code.design_patterns.requirements.prototype;
+
 // Clasa Logo, care va fi clonată
-class Logo implements Cloneable {
+public class Logo implements Cloneable {
     private String imagine;
 
     public Logo(String imagine) {
