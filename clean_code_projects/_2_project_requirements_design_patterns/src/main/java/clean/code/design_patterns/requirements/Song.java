@@ -1,5 +1,6 @@
 package clean.code.design_patterns.requirements;
 
+//builder design pattern
 public class Song {
     private String name;
     private String artistName;
@@ -17,6 +18,7 @@ public class Song {
         System.out.println("---");
     }
 
+    //Song constructor
     private Song(Builder builder)
     {
         this.userName = builder.userName;
@@ -26,12 +28,15 @@ public class Song {
         this.name = builder.name;
     }
 
+    //builder class
     public static class Builder {
         private String name;
         private String artistName;
         private String duration;
         private String genre;
         private String userName;
+        //the song is required to have a name
+        //so we use it in the builder constructor
         public Builder(String nameVal)
         {
             this.name = nameVal;
@@ -61,6 +66,7 @@ public class Song {
             return this;
         }
 
+        //build the Song
         public Song build()
         {
             return new Song(this);

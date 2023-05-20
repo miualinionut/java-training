@@ -10,6 +10,7 @@ public class Main {
         User Angela = new User("ur_angel");
         User Robin = new User("epicSidekick_12");
 
+        //the builder in action
         Damian.addSong(new Song.Builder("Torna a casa")
                 .setArtist("Maneskin")
                 .setDuration("3:51")
@@ -21,6 +22,7 @@ public class Main {
 
         Angela.showPlaylist();
 
+        //the builder in action
         Robin.addSong(new Song.Builder("Summertime Sadness")
                 .setArtist("Lana Del Rey")
                 .setUser(Robin.getUserName())
