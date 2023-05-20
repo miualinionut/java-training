@@ -1,4 +1,7 @@
-package code._4_student_effort;
+package code._4_student_effort.DesignPatterns;
+import code._4_student_effort.DesignPatterns.Kitchen;
+import code._4_student_effort.DesignPatterns.Order;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

@@ -1,6 +1,6 @@
-package code._4_student_effort;
+package code._4_student_effort.DesignPatterns;
 
-public class FoodOrder implements Order{
+public class FoodOrder implements Order {
     public FoodOrder()
     {
 

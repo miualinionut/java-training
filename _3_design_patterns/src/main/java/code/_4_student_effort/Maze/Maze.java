@@ -1,4 +1,4 @@
-package code._4_student_effort;
+package code._4_student_effort.Maze;
 
 public class Maze {
     // Private static instance of the maze
