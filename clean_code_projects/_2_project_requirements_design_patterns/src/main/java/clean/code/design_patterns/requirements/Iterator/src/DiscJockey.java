@@ -31,7 +31,7 @@ public class DiscJockey {
 
         System.out.println("Songs of the 70s\n");
         printTheSongs(Songs70s);
-
+        // :)
         System.out.println("Songs of the 80s\n");
         printTheSongs(Songs80s);
 
