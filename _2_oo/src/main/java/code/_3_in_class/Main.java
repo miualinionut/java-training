@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class Main {
 
+    Gloves stanga;
+    Gloves dreapta;
+
     public static void main(String[] args) {
         //TODO put your code changes in here
         Boxer ionBoxer = new Boxer("Ion", 100, 10);
