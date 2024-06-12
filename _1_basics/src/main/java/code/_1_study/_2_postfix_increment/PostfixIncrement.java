@@ -5,6 +5,7 @@ public class PostfixIncrement {
         int x = 0;
         while (x++ < 10) {
         }
+        System.out.println(x);
         checkForXValue(x);
 
     }
@@ -13,7 +14,7 @@ public class PostfixIncrement {
         int expectedXValue = 11;
 
         System.out.println("Guessed correctly the value of x ? - " + (x == expectedXValue));
-
+        System.out.println("Valoarea \\n in codul ascii este  "+(int)'\n');
     }
 
 }

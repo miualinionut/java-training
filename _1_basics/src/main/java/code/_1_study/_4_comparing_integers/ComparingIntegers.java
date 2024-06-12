@@ -17,8 +17,8 @@ public class ComparingIntegers {
         /*EX 3 */
         Integer i111 = 128;
         Integer i222 = 128;
-        System.out.println(i111.equals(i222)); //why ?
-        System.out.println(i111 == i222); //why ?
+        System.out.println(i111.equals(i222)); //why ? true
+        System.out.println(i111 == i222); //why ? false
 
     }
 }
